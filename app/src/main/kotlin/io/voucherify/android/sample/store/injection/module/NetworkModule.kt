@@ -22,7 +22,7 @@ object NetworkModule {
 
     @Provides
     @Singleton
-    fun provideBaseUrl(): String = "https://app.voucherify.io"
+    fun provideBaseUrl(): String = "https://api.voucherify.io"
 
     @Provides
     @Reusable
@@ -39,7 +39,7 @@ object NetworkModule {
 
     @Provides
     @Reusable
-    fun provideMoshiConverter(): Converter.Factory = MoshiConverterFactory.create()
+    fun provideMoshiConverter(): Converter.Factory =  MoshiConverterFactory.create()
 
     @Provides
     @Reusable
