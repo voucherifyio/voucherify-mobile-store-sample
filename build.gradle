@@ -8,6 +8,8 @@ buildscript {
     ext.retrofit_version = '2.5.0'
     ext.okhttp3_version = '3.13.1'
     ext.okhttp3_logging_interceptor_version = '3.13.1'
+    ext.moshi_kotlin_codegen_version = '1.8.0'
+    ext.moshi_version = '1.8.0'
     ext.dagger2_version = '2.21'
     ext.timber_version = '4.7.1'
     ext.rxjava2_version = '2.2.7'

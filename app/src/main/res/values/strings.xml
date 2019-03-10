@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">voucherify-mobile-store-sample</string>
+
+    <string name="common_error">Error</string>
+    <string name="common_hint_email">Email</string>
+    <string name="common_hint_password">Password</string>
+
 </resources>
