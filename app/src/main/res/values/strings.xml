@@ -6,6 +6,12 @@
     <string name="common_hint_email">Email</string>
     <string name="common_hint_password">Password</string>
 
+    <!-- Titles -->
+    <string name="title_vouchers">Vouchers</string>
+    <string name="title_customers">Customers</string>
+    <string name="title_products">Products</string>
+    <string name="title_settings">Settings</string>
+
     <!-- Dashboard admin navigation -->
     <string name="dashboard_admin_bottom_navigation_vouchers">Vouchers</string>
     <string name="dashboard_admin_bottom_navigation_customers">Customers</string>

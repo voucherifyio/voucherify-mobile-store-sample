@@ -21,7 +21,7 @@
         </activity>
 
         <activity android:name=".ui.login.LoginActivity"/>
-        <activity android:name=".ui.dashboard.DashboardAdminActivity"/>
+        <activity android:name=".ui.dashboard.admin.DashboardAdminActivity"/>
 
     </application>
 </manifest>
