@@ -32,7 +32,7 @@ class SplashActivity : DaggerAppCompatActivity() {
         viewModel.outputUserLogged().observe(this, Observer<Boolean> { isUserLogged ->
 
             if (isUserLogged) {
-                appNavigator.openDashboardActivity(this)
+                appNavigator.openDashboardAdminActivity(this)
             } else {
                 appNavigator.openLoginActivity(this)
             }

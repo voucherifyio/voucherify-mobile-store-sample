@@ -6,5 +6,5 @@ interface Navigator {
 
     fun openLoginActivity(context: Context)
 
-    fun openDashboardActivity(context: Context)
+    fun openDashboardAdminActivity(context: Context)
 }
