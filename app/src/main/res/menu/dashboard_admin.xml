@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+            android:id="@+id/dashboard_admin_navigation_vouchers"
+            android:icon="@mipmap/ic_launcher"
+            android:title="@string/dashboard_admin_bottom_navigation_vouchers" />
+
+    <item
+            android:id="@+id/dashboard_admin_navigation_customers"
+            android:icon="@mipmap/ic_launcher"
+            android:title="@string/dashboard_admin_bottom_navigation_customers" />
+
+    <item
+            android:id="@+id/dashboard_admin_navigation_products"
+            android:icon="@mipmap/ic_launcher"
+            android:title="@string/dashboard_admin_bottom_navigation_products" />
+
+    <item
+            android:id="@+id/dashboard_admin_navigation_settings"
+            android:icon="@mipmap/ic_launcher"
+            android:title="@string/dashboard_admin_bottom_navigation_settings" />
+
+</menu>

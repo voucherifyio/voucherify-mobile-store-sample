@@ -1,8 +1,15 @@
 <resources>
-    <string name="app_name">voucherify-mobile-store-sample</string>
+    <string name="app_name">Voucherify</string>
 
+    <!-- Common -->
     <string name="common_error">Error</string>
     <string name="common_hint_email">Email</string>
     <string name="common_hint_password">Password</string>
+
+    <!-- Dashboard admin navigation -->
+    <string name="dashboard_admin_bottom_navigation_vouchers">Vouchers</string>
+    <string name="dashboard_admin_bottom_navigation_customers">Customers</string>
+    <string name="dashboard_admin_bottom_navigation_products">Products</string>
+    <string name="dashboard_admin_bottom_navigation_settings">Settings</string>
 
 </resources>

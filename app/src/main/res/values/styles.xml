@@ -1,5 +1,11 @@
 <resources>
 
+    <style name="Voucherify" />
+
+    <style name="Voucherify.Base" />
+
+    <style name="Voucherify.Base.Widget.BottomNavigationView" parent="Widget.MaterialComponents.BottomNavigationView"/>
+
     <!-- Base application theme. -->
     <style name="AppTheme" parent="Theme.MaterialComponents.Light.NoActionBar">
         <!-- Customize your theme here. -->
