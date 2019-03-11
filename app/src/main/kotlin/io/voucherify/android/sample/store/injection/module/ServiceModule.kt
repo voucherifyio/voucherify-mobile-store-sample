@@ -6,6 +6,8 @@ import io.voucherify.android.sample.store.data.local.UserLocalPreferencesStorabl
 import io.voucherify.android.sample.store.data.repository.LoginRepository
 import io.voucherify.android.sample.store.data.service.login.LoginService
 import io.voucherify.android.sample.store.data.service.login.VoucherifyLoginService
+import io.voucherify.android.sample.store.data.service.logout.LogoutService
+import io.voucherify.android.sample.store.data.service.logout.VoucherifyLogoutService
 import io.voucherify.android.sample.store.data.service.user.UserService
 import io.voucherify.android.sample.store.data.service.user.VoucherifyUserService
 import javax.inject.Singleton
@@ -26,6 +28,15 @@ object ServiceModule {
     ): LoginService =
         VoucherifyLoginService(
             loginRepository = loginRepository,
+            userLocalPreferences = userLocalPreferences
+        )
+
+    @Provides
+    @Singleton
+    fun provideLogoutService(
+        userLocalPreferences: UserLocalPreferencesStorable
+    ): LogoutService =
+        VoucherifyLogoutService(
             userLocalPreferences = userLocalPreferences
         )
 }
