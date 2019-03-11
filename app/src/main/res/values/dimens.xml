@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <dimen name="spacing_xsmall">4dp</dimen>
+    <dimen name="spacing_small">8dp</dimen>
+    <dimen name="spacing_medium">16dp</dimen>
+    <dimen name="spacing_large">24dp</dimen>
+    <dimen name="spacing_xlarge">48dp</dimen>
+
+    <dimen name="margin_xsmall">4dp</dimen>
+    <dimen name="margin_small">8dp</dimen>
+    <dimen name="margin_medium">16dp</dimen>
+    <dimen name="margin_large">24dp</dimen>
+    <dimen name="margin_xlarge">48dp</dimen>
+    <dimen name="margin_xxlarge">64dp</dimen>
+
+    <dimen name="text_size_header">32sp</dimen>
+    <dimen name="text_size_subHeader">24sp</dimen>
+
+    <dimen name="text_size_section">8sp</dimen>
+
+    <dimen name="text_size_primary_button">16sp</dimen>
+
+    <dimen name="text_size_small">12dp</dimen>
+    <dimen name="text_size_normal">14dp</dimen>
+    <dimen name="text_size_medium">16dp</dimen>
+    <dimen name="text_size_big">24dp</dimen>
+    <dimen name="text_size_large">40dp</dimen>
+
+    <dimen name="elevation_low">6dp</dimen>
+    <dimen name="elevation_medium">12dp</dimen>
+    <dimen name="elevation_high">24dp</dimen>
+
+</resources>
