@@ -2,7 +2,7 @@ package io.voucherify.android.sample.store.ui.flow
 
 import android.content.Context
 import android.content.Intent
-import io.voucherify.android.sample.store.ui.dashboard.DashboardAdminActivity
+import io.voucherify.android.sample.store.ui.dashboard.admin.DashboardAdminActivity
 import io.voucherify.android.sample.store.ui.login.LoginActivity
 
 class AppNavigator : Navigator {

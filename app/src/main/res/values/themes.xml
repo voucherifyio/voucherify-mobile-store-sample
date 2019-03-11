@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- Toolbars -->
+    <style name="Voucherify.Toolbar.Theme" parent="ThemeOverlay.MaterialComponents.Dark.ActionBar">
+        <item name="android:textColorPrimary">@color/voucherify_text_primary</item>
+        <item name="android:textColorSecondary">@color/voucherify_grey</item>
+        <item name="android:textAllCaps">true</item>
+    </style>
+
+</resources>
