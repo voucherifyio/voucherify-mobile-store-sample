@@ -2,7 +2,7 @@ package io.voucherify.android.sample.store.ui.flow
 
 import android.content.Context
 import android.content.Intent
-import io.voucherify.android.sample.store.ui.dashboard.DashboardActivity
+import io.voucherify.android.sample.store.ui.dashboard.DashboardAdminActivity
 import io.voucherify.android.sample.store.ui.login.LoginActivity
 
 class AppNavigator : Navigator {
@@ -17,8 +17,8 @@ class AppNavigator : Navigator {
         context.startActivity(createLoginActivityIntent(context))
     }
 
-    override fun openDashboardActivity(context: Context) {
-        context.startActivity(DashboardActivity.createIntent(context).addFlags(FLAGS_HOME_CLEAR_STACK))
+    override fun openDashboardAdminActivity(context: Context) {
+        context.startActivity(DashboardAdminActivity.createIntent(context).addFlags(FLAGS_HOME_CLEAR_STACK))
     }
 
     private fun createLoginActivityIntent(context: Context) = LoginActivity.createIntent(context)

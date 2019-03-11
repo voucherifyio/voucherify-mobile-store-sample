@@ -3,15 +3,15 @@ package io.voucherify.android.sample.store.injection.module.dashboard
 import dagger.Module
 import dagger.android.ContributesAndroidInjector
 import io.voucherify.android.sample.store.injection.scope.ActivityScope
-import io.voucherify.android.sample.store.ui.dashboard.DashboardActivity
+import io.voucherify.android.sample.store.ui.dashboard.DashboardAdminActivity
 
 @Module
-abstract class DashboardActivityModule {
+abstract class DashboardAdminActivityModule {
 
     @ActivityScope
     @ContributesAndroidInjector(
         modules = [
-            DashboardModule::class]
+            DashboardAdminModule::class]
     )
-    abstract fun dashboardActivity(): DashboardActivity
+    abstract fun dashboardAdminActivity(): DashboardAdminActivity
 }

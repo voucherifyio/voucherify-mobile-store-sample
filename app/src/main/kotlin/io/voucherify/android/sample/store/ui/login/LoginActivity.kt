@@ -33,7 +33,7 @@ class LoginActivity : DaggerAppCompatActivity() {
             }
 
             DataResult.Status.SUCCESS -> {
-                appNavigator.openDashboardActivity(this)
+                appNavigator.openDashboardAdminActivity(this)
             }
         }
     }
