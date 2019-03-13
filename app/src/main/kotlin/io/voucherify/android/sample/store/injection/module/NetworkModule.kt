@@ -5,6 +5,8 @@ import dagger.Provides
 import dagger.Reusable
 import io.reactivex.schedulers.Schedulers
 import io.voucherify.android.sample.store.BuildConfig
+import io.voucherify.android.sample.store.data.local.AccountLocalPreferencesStorable
+import io.voucherify.android.sample.store.data.remote.api.interceptors.AuthorizationHeaderInterceptor
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
 import retrofit2.Converter
@@ -39,11 +41,14 @@ object NetworkModule {
 
     @Provides
     @Reusable
-    fun provideMoshiConverter(): Converter.Factory =  MoshiConverterFactory.create()
+    fun provideMoshiConverter(): Converter.Factory = MoshiConverterFactory.create()
 
     @Provides
     @Reusable
-    fun provideClient(logger: HttpLoggingInterceptor): OkHttpClient {
+    fun provideClient(
+        logger: HttpLoggingInterceptor,
+        accountLocalPreferences: AccountLocalPreferencesStorable
+    ): OkHttpClient {
 
         val okHttpClientBuilder: OkHttpClient.Builder = OkHttpClient.Builder()
         okHttpClientBuilder.readTimeout(NETWORK_TIMEOUT_SECONDS, TimeUnit.SECONDS)
@@ -56,6 +61,7 @@ object NetworkModule {
         }
 
         return okHttpClientBuilder
+            .addInterceptor(AuthorizationHeaderInterceptor(accountLocalPreferences))
             .addInterceptor(logger)
             .build()
 
