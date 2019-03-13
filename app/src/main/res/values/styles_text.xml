@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="Voucherify.TextAppearance" />
+
+    <!-- Buttons -->
+    <style name="Voucherify.TextAppearance.Button">
+        <item name="android:textAllCaps">true</item>
+        <item name="android:textColor">?android:attr/textColorPrimary</item>
+        <item name="android:textSize">@dimen/text_size_primary_button</item>
+    </style>
+
+    <style name="Voucherify.TextAppearance.Button.Accent">
+        <item name="android:textColor">@color/text_selector_button_accent</item>
+    </style>
+
+</resources>

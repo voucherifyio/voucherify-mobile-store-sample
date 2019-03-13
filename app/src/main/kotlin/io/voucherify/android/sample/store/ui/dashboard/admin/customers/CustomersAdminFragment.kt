@@ -1,9 +1,8 @@
 package io.voucherify.android.sample.store.ui.dashboard.admin.customers
 
-import io.voucherify.android.sample.store.R
-import io.voucherify.android.sample.store.ui.base.BaseFragment
+import androidx.fragment.app.Fragment
 
-class CustomersAdminFragment : BaseFragment() {
+class CustomersAdminFragment : Fragment() {
 
     companion object {
         const val TAG = "CustomersAdminFragment"
@@ -11,6 +10,6 @@ class CustomersAdminFragment : BaseFragment() {
         fun newInstance() = CustomersAdminFragment()
     }
 
-    override fun fragmentLayoutId(): Int = R.layout.fragment_customers_admin
+//    override fun fragmentLayoutId(): Int = R.layout.fragment_customers_admin
 
 }

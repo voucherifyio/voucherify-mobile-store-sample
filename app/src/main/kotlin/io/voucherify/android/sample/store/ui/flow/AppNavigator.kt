@@ -4,6 +4,7 @@ import android.content.Context
 import android.content.Intent
 import io.voucherify.android.sample.store.ui.dashboard.admin.DashboardAdminActivity
 import io.voucherify.android.sample.store.ui.login.LoginActivity
+import io.voucherify.android.sample.store.ui.splash.SplashActivity
 
 class AppNavigator : Navigator {
 
@@ -11,6 +12,15 @@ class AppNavigator : Navigator {
         private const val FLAGS_HOME_CLEAR_STACK = Intent.FLAG_ACTIVITY_SINGLE_TOP or
                 Intent.FLAG_ACTIVITY_CLEAR_TASK or
                 Intent.FLAG_ACTIVITY_NEW_TASK
+    }
+
+    override fun openSplashActivity(context: Context) {
+        context.startActivity(
+            SplashActivity.createIntent(context)
+                .apply {
+                    addFlags(FLAGS_HOME_CLEAR_STACK)
+                }
+        )
     }
 
     override fun openLoginActivity(context: Context) {

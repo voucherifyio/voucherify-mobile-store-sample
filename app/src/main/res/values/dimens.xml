@@ -31,4 +31,6 @@
     <dimen name="elevation_medium">12dp</dimen>
     <dimen name="elevation_high">24dp</dimen>
 
+    <dimen name="default_touch_target">40dp</dimen>
+
 </resources>
