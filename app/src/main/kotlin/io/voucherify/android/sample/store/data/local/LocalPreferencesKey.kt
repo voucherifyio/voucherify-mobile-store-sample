@@ -5,4 +5,8 @@ object LocalPreferencesKey {
     object User {
         val user = "user"
     }
+
+    object Account {
+        val account = "account"
+    }
 }
