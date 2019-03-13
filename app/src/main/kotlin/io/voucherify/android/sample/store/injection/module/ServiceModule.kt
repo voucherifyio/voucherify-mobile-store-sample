@@ -2,6 +2,7 @@ package io.voucherify.android.sample.store.injection.module
 
 import dagger.Module
 import dagger.Provides
+import io.voucherify.android.sample.store.data.local.AccountLocalPreferencesStorable
 import io.voucherify.android.sample.store.data.local.UserLocalPreferencesStorable
 import io.voucherify.android.sample.store.data.repository.LoginRepository
 import io.voucherify.android.sample.store.data.service.login.LoginService
@@ -24,11 +25,13 @@ object ServiceModule {
     @Singleton
     fun provideLoginService(
         loginRepository: LoginRepository,
-        userLocalPreferences: UserLocalPreferencesStorable
+        userLocalPreferences: UserLocalPreferencesStorable,
+        accountLocalPreferences: AccountLocalPreferencesStorable
     ): LoginService =
         VoucherifyLoginService(
             loginRepository = loginRepository,
-            userLocalPreferences = userLocalPreferences
+            userLocalPreferences = userLocalPreferences,
+            accountLocalPreferences = accountLocalPreferences
         )
 
     @Provides
