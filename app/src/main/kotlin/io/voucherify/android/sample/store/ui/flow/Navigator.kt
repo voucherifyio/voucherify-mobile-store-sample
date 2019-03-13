@@ -4,6 +4,8 @@ import android.content.Context
 
 interface Navigator {
 
+    fun openSplashActivity(context: Context)
+
     fun openLoginActivity(context: Context)
 
     fun openDashboardAdminActivity(context: Context)

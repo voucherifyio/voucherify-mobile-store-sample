@@ -1,10 +1,25 @@
 <resources>
 
-    <style name="Voucherify" />
+    <style name="Voucherify"/>
 
-    <style name="Voucherify.Base" />
+    <style name="Voucherify.Base"/>
 
     <style name="Voucherify.Base.Widget.BottomNavigationView" parent="Widget.MaterialComponents.BottomNavigationView"/>
+
+    <!-- Buttons -->
+    <style name="Voucherify.Base.Button">
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:gravity">center</item>
+        <item name="android:minHeight">@dimen/default_touch_target</item>
+        <item name="android:paddingStart">@dimen/margin_medium</item>
+        <item name="android:paddingEnd">@dimen/margin_medium</item>
+    </style>
+
+    <style name="Voucherify.Base.Button.Accent">
+        <item name="android:background">@drawable/background_button_accent</item>
+        <item name="android:textAppearance">@style/Voucherify.TextAppearance.Button.Accent</item>
+    </style>
 
     <!-- Base application theme. -->
     <style name="AppTheme" parent="Theme.MaterialComponents.Light.NoActionBar">

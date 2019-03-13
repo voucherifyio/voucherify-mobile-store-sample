@@ -42,7 +42,7 @@ class LoginViewModel(private val loginService: LoginService) : BaseViewModel() {
         )
     }
 
-    fun outoutDataResponse(): LiveData<DataResult<LocalUser>> {
+    fun outputDataResponse(): LiveData<DataResult<LocalUser>> {
         return responseLiveData
     }
 

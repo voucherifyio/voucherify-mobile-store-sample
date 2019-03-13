@@ -64,7 +64,7 @@ class LoginActivity : DaggerAppCompatActivity() {
             .observe(this, loadingObserver)
 
         viewModel
-            .outoutDataResponse()
+            .outputDataResponse()
             .observe(this, dataObserver)
     }
 }

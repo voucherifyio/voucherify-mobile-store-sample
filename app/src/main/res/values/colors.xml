@@ -4,6 +4,8 @@
     <color name="colorPrimaryDark">@color/voucherify_grey_dark</color>
     <color name="colorAccent">@color/voucherify_blue</color>
 
+    <color name="accent_highlight">@color/voucherify_blue_50</color>
+
     <!-- -->
     <color name="voucherify_green_dark">#213F40</color>
     <color name="voucherify_white">#FFFFFF</color>
@@ -17,6 +19,7 @@
     <color name="voucherify_text_secondary">@color/voucherify_grey</color>
     <color name="voucherify_text_light">@color/voucherify_white</color>
     <color name="voucherify_text_accent">@color/colorAccent</color>
+    <color name="voucherify_text_accent_highlight">@color/voucherify_blue_50</color>
     <color name="voucherify_background">@color/voucherify_white</color>
     <color name="voucherify_background_dark">@color/voucherify_grey_dark</color>
 
