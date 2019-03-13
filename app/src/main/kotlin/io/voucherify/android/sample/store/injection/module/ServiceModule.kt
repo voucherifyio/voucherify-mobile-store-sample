@@ -37,9 +37,11 @@ object ServiceModule {
     @Provides
     @Singleton
     fun provideLogoutService(
-        userLocalPreferences: UserLocalPreferencesStorable
+        userLocalPreferences: UserLocalPreferencesStorable,
+        accountLocalPreferences: AccountLocalPreferencesStorable
     ): LogoutService =
         VoucherifyLogoutService(
-            userLocalPreferences = userLocalPreferences
+            userLocalPreferences = userLocalPreferences,
+            accountLocalPreferences = accountLocalPreferences
         )
 }
