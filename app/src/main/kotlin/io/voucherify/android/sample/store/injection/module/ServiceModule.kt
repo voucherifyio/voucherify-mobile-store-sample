@@ -5,6 +5,9 @@ import dagger.Provides
 import io.voucherify.android.sample.store.data.local.AccountLocalPreferencesStorable
 import io.voucherify.android.sample.store.data.local.UserLocalPreferencesStorable
 import io.voucherify.android.sample.store.data.repository.LoginRepository
+import io.voucherify.android.sample.store.data.repository.customers.CustomersRepository
+import io.voucherify.android.sample.store.data.service.customers.CustomersService
+import io.voucherify.android.sample.store.data.service.customers.VoucherifyCustomersService
 import io.voucherify.android.sample.store.data.service.login.LoginService
 import io.voucherify.android.sample.store.data.service.login.VoucherifyLoginService
 import io.voucherify.android.sample.store.data.service.logout.LogoutService
@@ -44,4 +47,9 @@ object ServiceModule {
             userLocalPreferences = userLocalPreferences,
             accountLocalPreferences = accountLocalPreferences
         )
+
+    @Provides
+    @Singleton
+    fun provideCustomersService(customersRepository: CustomersRepository): CustomersService =
+        VoucherifyCustomersService(customersRepository = customersRepository)
 }
