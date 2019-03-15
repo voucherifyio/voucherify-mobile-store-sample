@@ -1,7 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <style name="Voucherify.TextAppearance" />
+    <style name="Voucherify.TextAppearance"/>
+
+    <!-- Texts -->
+    <style name="Voucherify.TextAppearance.Title">
+        <item name="android:textAllCaps">true</item>
+        <item name="android:textSize">@dimen/text_size_medium</item>
+        <item name="android:textColor">@color/voucherify_text_primary</item>
+    </style>
+
+    <style name="Voucherify.TextAppearance.Caption">
+        <item name="android:textSize">@dimen/text_size_small</item>
+        <item name="android:textColor">@color/voucherify_text_secondary</item>
+    </style>
 
     <!-- Buttons -->
     <style name="Voucherify.TextAppearance.Button">
