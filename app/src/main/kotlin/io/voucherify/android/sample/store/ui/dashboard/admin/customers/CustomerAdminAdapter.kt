@@ -6,7 +6,7 @@ import androidx.recyclerview.widget.RecyclerView
 import io.voucherify.android.sample.store.R
 import io.voucherify.android.sample.store.data.remote.api.response.CustomerResponse
 
-class CustomerAdminAdapter() : RecyclerView.Adapter<CustomerAdminItemViewHolder>() {
+class CustomerAdminAdapter(private val itemClick: (item: CustomerResponse) -> Unit) : RecyclerView.Adapter<CustomerAdminItemViewHolder>() {
 
     private var items: List<CustomerResponse> = emptyList()
 
@@ -20,8 +20,9 @@ class CustomerAdminAdapter() : RecyclerView.Adapter<CustomerAdminItemViewHolder>
 
     override fun onBindViewHolder(holder: CustomerAdminItemViewHolder, position: Int) {
         holder.item = items[position]
+
         holder.view.setOnClickListener {
-            //TODO Handle item click
+           itemClick(items[position])
         }
     }
 
