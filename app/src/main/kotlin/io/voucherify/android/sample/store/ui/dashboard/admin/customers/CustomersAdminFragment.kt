@@ -10,6 +10,7 @@ import io.voucherify.android.sample.store.R
 import io.voucherify.android.sample.store.data.remote.api.DataResult
 import io.voucherify.android.sample.store.data.remote.api.response.CustomerResponse
 import io.voucherify.android.sample.store.ui.base.BaseFragment
+import io.voucherify.android.sample.store.ui.flow.Navigator
 import io.voucherify.android.sample.store.utils.views.SimpleDividerItemDecoration
 import kotlinx.android.synthetic.main.fragment_customers_admin.*
 import javax.inject.Inject
@@ -25,7 +26,14 @@ class CustomersAdminFragment : BaseFragment() {
     @Inject
     lateinit var viewModel: CustomersAdminViewModel
 
-    private val customersAdapter = CustomerAdminAdapter()
+    @Inject
+    lateinit var navigator: Navigator
+
+    private val customersAdapter = CustomerAdminAdapter(itemClick = { item ->
+        activity?.let {
+            navigator.openCustomerDetails(it, customerResponse = item)
+        }
+    })
 
     private val dataObserver = Observer<DataResult<List<CustomerResponse>>> { result ->
         when (result.status) {

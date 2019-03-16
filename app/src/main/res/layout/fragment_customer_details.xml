@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+                                       android:orientation="vertical"
+                                       android:layout_width="match_parent"
+                                       android:background="@color/voucherify_background"
+                                       android:padding="@dimen/spacing_medium"
+                                       android:layout_height="match_parent">
+
+    <LinearLayout android:layout_width="match_parent"
+                  android:layout_height="match_parent"
+                  android:orientation="vertical">
+
+        <ImageView android:layout_width="@dimen/avatar_default_width"
+                   android:layout_height="@dimen/avatar_default_height"
+                   android:layout_gravity="center_horizontal"
+                   android:src="@drawable/ic_avatar_circle_24px"/>
+
+        <RelativeLayout android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+            <TextView android:layout_width="wrap_content"
+                      android:id="@+id/customer_details_name_header"
+                      android:layout_height="wrap_content"
+                      android:text="@string/customer_details_name_label"/>
+
+            <TextView android:layout_width="wrap_content"
+                      android:id="@+id/customer_details_name"
+                      android:layout_toRightOf="@id/customer_details_name_header"
+                      android:layout_height="wrap_content"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+            <TextView android:layout_width="wrap_content"
+                      android:id="@+id/customer_details_email_header"
+                      android:layout_height="wrap_content"
+                      android:text="@string/customer_details_email_label"/>
+
+            <TextView android:layout_width="wrap_content"
+                      android:id="@+id/customer_details_email"
+                      android:layout_toRightOf="@id/customer_details_email_header"
+                      android:layout_height="wrap_content"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+            <TextView android:layout_width="wrap_content"
+                      android:id="@+id/customer_details_order_total_amount_header"
+                      android:layout_height="wrap_content"
+                      android:text="@string/customer_details_order_total_amount_label"/>
+
+            <TextView android:layout_width="wrap_content"
+                      android:id="@+id/customer_details_order_total_amount"
+                      android:layout_toRightOf="@id/customer_details_order_total_amount_header"
+                      android:layout_height="wrap_content"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+            <TextView android:layout_width="wrap_content"
+                      android:id="@+id/customer_details_order_total_count_header"
+                      android:layout_height="wrap_content"
+                      android:text="@string/customer_details_order_total_count_label"/>
+
+            <TextView android:layout_width="wrap_content"
+                      android:id="@+id/customer_details_order_total_count"
+                      android:layout_toRightOf="@id/customer_details_order_total_count_header"
+                      android:layout_height="wrap_content"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+            <TextView android:layout_width="wrap_content"
+                      android:id="@+id/customer_details_total_redeemed_header"
+                      android:layout_height="wrap_content"
+                      android:text="@string/customer_details_total_redeemed_label"/>
+
+            <TextView android:layout_width="wrap_content"
+                      android:id="@+id/customer_details_total_redeemed"
+                      android:layout_toRightOf="@id/customer_details_total_redeemed_header"
+                      android:layout_height="wrap_content"/>
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</androidx.core.widget.NestedScrollView>
