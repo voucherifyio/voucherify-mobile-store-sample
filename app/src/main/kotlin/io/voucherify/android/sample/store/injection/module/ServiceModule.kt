@@ -6,8 +6,11 @@ import io.voucherify.android.sample.store.data.local.AccountLocalPreferencesStor
 import io.voucherify.android.sample.store.data.local.UserLocalPreferencesStorable
 import io.voucherify.android.sample.store.data.repository.LoginRepository
 import io.voucherify.android.sample.store.data.repository.customers.CustomersRepository
+import io.voucherify.android.sample.store.data.repository.products.ProductsRepository
 import io.voucherify.android.sample.store.data.service.customers.CustomersService
+import io.voucherify.android.sample.store.data.service.customers.ProductsService
 import io.voucherify.android.sample.store.data.service.customers.VoucherifyCustomersService
+import io.voucherify.android.sample.store.data.service.customers.VoucherifyProductsService
 import io.voucherify.android.sample.store.data.service.login.LoginService
 import io.voucherify.android.sample.store.data.service.login.VoucherifyLoginService
 import io.voucherify.android.sample.store.data.service.logout.LogoutService
@@ -52,4 +55,9 @@ object ServiceModule {
     @Singleton
     fun provideCustomersService(customersRepository: CustomersRepository): CustomersService =
         VoucherifyCustomersService(customersRepository = customersRepository)
+
+    @Provides
+    @Singleton
+    fun provideProductsService(productsRepository: ProductsRepository): ProductsService =
+        VoucherifyProductsService(productsRepository = productsRepository)
 }

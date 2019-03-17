@@ -7,7 +7,7 @@ import com.squareup.moshi.JsonClass
 open class PageListResponse {
 
     @Json(name = "has_more")
-    var hasMore: Boolean = false
+    var hasMore: Boolean? = false
 
     var total: Int = 0
 }
