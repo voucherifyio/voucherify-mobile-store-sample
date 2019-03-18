@@ -1,5 +1,7 @@
 package io.voucherify.android.sample.store.injection.module
 
+import com.squareup.moshi.Moshi
+import com.squareup.moshi.adapters.Rfc3339DateJsonAdapter
 import dagger.Module
 import dagger.Provides
 import dagger.Reusable
@@ -14,6 +16,7 @@ import retrofit2.Retrofit
 import retrofit2.adapter.rxjava2.RxJava2CallAdapterFactory
 import retrofit2.converter.moshi.MoshiConverterFactory
 import timber.log.Timber
+import java.util.*
 import java.util.concurrent.TimeUnit
 import javax.inject.Singleton
 
@@ -41,7 +44,14 @@ object NetworkModule {
 
     @Provides
     @Reusable
-    fun provideMoshiConverter(): Converter.Factory = MoshiConverterFactory.create()
+    fun provideMoshiConverter(): Converter.Factory {
+
+        val moshi = Moshi.Builder()
+            .add(Date::class.java, Rfc3339DateJsonAdapter())
+            .build()
+
+        return MoshiConverterFactory.create(moshi)
+    }
 
     @Provides
     @Reusable
