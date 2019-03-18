@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:paddingLeft="@dimen/spacing_medium"
+        android:paddingRight="@dimen/spacing_medium"
+        android:background="@color/voucherify_background_grey_light"
+        android:paddingTop="@dimen/spacing_medium"
+        android:paddingBottom="@dimen/spacing_medium"
+        android:layout_height="wrap_content">
+
+    <LinearLayout android:layout_width="wrap_content"
+                  android:orientation="vertical"
+                  android:gravity="center_vertical"
+                  android:layout_marginStart="@dimen/margin_small"
+                  android:layout_height="wrap_content">
+
+        <TextView
+                android:id="@+id/item_product_admin_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                tools:text="TEST"
+                android:textAppearance="@style/Voucherify.TextAppearance.Title"/>
+
+        <TextView
+                android:id="@+id/item_product_admin_id"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/item_customer_admin_avatar"
+                android:layout_alignParentBottom="true"
+                android:layout_centerVertical="true"
+                tools:text="email"
+                android:textAppearance="@style/Voucherify.TextAppearance.Caption"/>
+
+    </LinearLayout>
+
+</RelativeLayout>
