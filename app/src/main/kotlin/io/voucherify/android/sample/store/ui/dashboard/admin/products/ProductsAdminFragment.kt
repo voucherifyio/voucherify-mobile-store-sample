@@ -31,6 +31,7 @@ class ProductsAdminFragment : BaseFragment() {
 
     private val customersAdapter = ProductsAdminAdapter(itemClick = { item ->
         activity?.let {
+            navigator.openProductAdminDetails(it, productResponse = item)
         }
     })
 
