@@ -21,11 +21,12 @@
 
     <dimen name="text_size_primary_button">16sp</dimen>
 
-    <dimen name="text_size_small">12dp</dimen>
-    <dimen name="text_size_normal">14dp</dimen>
-    <dimen name="text_size_medium">16dp</dimen>
-    <dimen name="text_size_big">24dp</dimen>
-    <dimen name="text_size_large">40dp</dimen>
+    <dimen name="text_size_toolbar_title">24sp</dimen>
+    <dimen name="text_size_small">12sp</dimen>
+    <dimen name="text_size_normal">14sp</dimen>
+    <dimen name="text_size_medium">16sp</dimen>
+    <dimen name="text_size_big">24sp</dimen>
+    <dimen name="text_size_large">40sp</dimen>
 
     <dimen name="elevation_low">6dp</dimen>
     <dimen name="elevation_medium">12dp</dimen>
