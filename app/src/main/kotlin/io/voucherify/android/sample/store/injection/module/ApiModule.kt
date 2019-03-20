@@ -6,6 +6,7 @@ import dagger.Reusable
 import io.voucherify.android.sample.store.data.remote.api.VoucherifyAuthApi
 import io.voucherify.android.sample.store.data.remote.api.VoucherifyCustomersApi
 import io.voucherify.android.sample.store.data.remote.api.VoucherifyProductsApi
+import io.voucherify.android.sample.store.data.remote.api.VoucherifyVouchersApi
 import retrofit2.Retrofit
 
 @Module(
@@ -28,4 +29,9 @@ object ApiModule {
     @Reusable
     fun provideVoucherifyProductsApi(retrofit: Retrofit): VoucherifyProductsApi =
         retrofit.create(VoucherifyProductsApi::class.java)
+
+    @Provides
+    @Reusable
+    fun provideVoucherifyVouchersApi(retrofit: Retrofit): VoucherifyVouchersApi =
+        retrofit.create(VoucherifyVouchersApi::class.java)
 }
