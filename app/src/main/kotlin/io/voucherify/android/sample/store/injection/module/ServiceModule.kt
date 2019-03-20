@@ -7,6 +7,7 @@ import io.voucherify.android.sample.store.data.local.UserLocalPreferencesStorabl
 import io.voucherify.android.sample.store.data.repository.LoginRepository
 import io.voucherify.android.sample.store.data.repository.customers.CustomersRepository
 import io.voucherify.android.sample.store.data.repository.products.ProductsRepository
+import io.voucherify.android.sample.store.data.repository.vouchers.VouchersRepository
 import io.voucherify.android.sample.store.data.service.customers.CustomersService
 import io.voucherify.android.sample.store.data.service.customers.ProductsService
 import io.voucherify.android.sample.store.data.service.customers.VoucherifyCustomersService
@@ -17,6 +18,8 @@ import io.voucherify.android.sample.store.data.service.logout.LogoutService
 import io.voucherify.android.sample.store.data.service.logout.VoucherifyLogoutService
 import io.voucherify.android.sample.store.data.service.user.UserService
 import io.voucherify.android.sample.store.data.service.user.VoucherifyUserService
+import io.voucherify.android.sample.store.data.service.vouchers.VoucherifyVouchersService
+import io.voucherify.android.sample.store.data.service.vouchers.VouchersService
 import javax.inject.Singleton
 
 @Module
@@ -60,4 +63,9 @@ object ServiceModule {
     @Singleton
     fun provideProductsService(productsRepository: ProductsRepository): ProductsService =
         VoucherifyProductsService(productsRepository = productsRepository)
+
+    @Provides
+    @Singleton
+    fun provideVouchersService(vouchersRepository: VouchersRepository): VouchersService =
+        VoucherifyVouchersService(vouchersRepository = vouchersRepository)
 }
