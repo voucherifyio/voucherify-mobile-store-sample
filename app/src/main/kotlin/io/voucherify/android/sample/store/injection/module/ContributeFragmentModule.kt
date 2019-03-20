@@ -6,6 +6,7 @@ import io.voucherify.android.sample.store.injection.module.customers.admin.Custo
 import io.voucherify.android.sample.store.injection.module.products.admin.ProductAdminDetailsFragmentModule
 import io.voucherify.android.sample.store.injection.module.products.admin.ProductsAdminFragmentModule
 import io.voucherify.android.sample.store.injection.module.settings.admin.SettingsAdminFragmentModule
+import io.voucherify.android.sample.store.injection.module.vouchers.admin.VouchersAdminFragmentModule
 
 @Module(
     includes = [
@@ -13,7 +14,8 @@ import io.voucherify.android.sample.store.injection.module.settings.admin.Settin
         CustomersAdminFragmentModule::class,
         CustomerDetailsFragmentModule::class,
         ProductsAdminFragmentModule::class,
-        ProductAdminDetailsFragmentModule::class
+        ProductAdminDetailsFragmentModule::class,
+        VouchersAdminFragmentModule::class
     ]
 )
 abstract class ContributeFragmentModule
