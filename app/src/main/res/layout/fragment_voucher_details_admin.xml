@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+                                       android:orientation="vertical"
+                                       android:layout_width="match_parent"
+                                       android:background="@color/voucherify_background"
+                                       android:padding="@dimen/spacing_medium"
+                                       android:layout_height="match_parent">
+
+    <LinearLayout android:layout_width="match_parent"
+                  android:layout_height="match_parent"
+                  android:orientation="vertical">
+
+        <RelativeLayout android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+            <TextView android:id="@+id/voucher_details_admin_id_header"
+                      android:layout_width="wrap_content"
+                      android:layout_height="wrap_content"
+                      android:text="@string/voucher_admin_details_id"/>
+
+            <TextView android:id="@+id/voucher_details_admin_id"
+                      android:layout_width="wrap_content"
+                      android:layout_toRightOf="@id/voucher_details_admin_id_header"
+                      android:layout_height="wrap_content"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+            <TextView android:id="@+id/voucher_details_admin_code_header"
+                      android:layout_width="wrap_content"
+                      android:layout_height="wrap_content"
+                      android:text="@string/voucher_admin_details_code"/>
+
+            <TextView android:id="@+id/voucher_details_admin_code"
+                      android:layout_width="wrap_content"
+                      android:layout_toRightOf="@id/voucher_details_admin_code_header"
+                      android:layout_height="wrap_content"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+            <TextView android:id="@+id/voucher_details_admin_category_header"
+                      android:layout_width="wrap_content"
+                      android:layout_height="wrap_content"
+                      android:text="@string/voucher_admin_details_category"/>
+
+            <TextView android:id="@+id/voucher_details_admin_category"
+                      android:layout_width="wrap_content"
+                      android:layout_toRightOf="@id/voucher_details_admin_category_header"
+                      android:layout_height="wrap_content"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+            <TextView android:id="@+id/voucher_details_admin_type_header"
+                      android:layout_width="wrap_content"
+                      android:layout_height="wrap_content"
+                      android:text="@string/voucher_admin_details_type"/>
+
+            <TextView android:id="@+id/voucher_details_admin_type"
+                      android:layout_width="wrap_content"
+                      android:layout_toRightOf="@id/voucher_details_admin_type_header"
+                      android:layout_height="wrap_content"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+            <TextView android:id="@+id/voucher_details_admin_is_active_header"
+                      android:layout_width="wrap_content"
+                      android:layout_height="wrap_content"
+                      android:text="@string/voucher_admin_details_active"/>
+
+            <TextView android:id="@+id/voucher_details_admin_is_active"
+                      android:layout_width="wrap_content"
+                      android:layout_toRightOf="@id/voucher_details_admin_is_active_header"
+                      android:layout_height="wrap_content"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+            <TextView android:id="@+id/voucher_details_admin_discount_type_header"
+                      android:layout_width="wrap_content"
+                      android:layout_height="wrap_content"
+                      android:text="@string/voucher_admin_details_discount_type"/>
+
+            <TextView android:id="@+id/voucher_details_admin_discount_type"
+                      android:layout_width="wrap_content"
+                      android:layout_toRightOf="@id/voucher_details_admin_discount_type_header"
+                      android:layout_height="wrap_content"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+            <TextView android:id="@+id/voucher_details_admin_discount_value_header"
+                      android:layout_width="wrap_content"
+                      android:layout_height="wrap_content"
+                      android:text="@string/voucher_admin_details_discount_value"/>
+
+            <TextView android:id="@+id/voucher_details_admin_discount_value"
+                      android:layout_width="wrap_content"
+                      android:layout_toRightOf="@id/voucher_details_admin_discount_value_header"
+                      android:layout_height="wrap_content"/>
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</androidx.core.widget.NestedScrollView>

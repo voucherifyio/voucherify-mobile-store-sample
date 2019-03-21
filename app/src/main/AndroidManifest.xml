@@ -24,6 +24,7 @@
         <activity android:name=".ui.dashboard.admin.DashboardAdminActivity"/>
         <activity android:name=".ui.dashboard.admin.customers.details.CustomerDetailsActivity"/>
         <activity android:name=".ui.dashboard.admin.products.details.ProductAdminDetailsActivity"/>
+        <activity android:name=".ui.dashboard.admin.vouchers.details.VoucherAdminDetailsActivity"/>
 
     </application>
 </manifest>

@@ -4,9 +4,11 @@ import android.content.Context
 import android.content.Intent
 import io.voucherify.android.sample.store.data.remote.api.response.CustomerResponse
 import io.voucherify.android.sample.store.data.remote.api.response.ProductResponse
+import io.voucherify.android.sample.store.data.remote.api.response.VoucherResponse
 import io.voucherify.android.sample.store.ui.dashboard.admin.DashboardAdminActivity
 import io.voucherify.android.sample.store.ui.dashboard.admin.customers.details.CustomerDetailsActivity
 import io.voucherify.android.sample.store.ui.dashboard.admin.products.details.ProductAdminDetailsActivity
+import io.voucherify.android.sample.store.ui.dashboard.admin.vouchers.details.VoucherAdminDetailsActivity
 import io.voucherify.android.sample.store.ui.login.LoginActivity
 import io.voucherify.android.sample.store.ui.splash.SplashActivity
 
@@ -41,6 +43,10 @@ class AppNavigator : Navigator {
 
     override fun openProductAdminDetails(context: Context, productResponse: ProductResponse) {
         context.startActivity(ProductAdminDetailsActivity.createIntent(context, productResponse))
+    }
+
+    override fun openVoucherAdminDetails(context: Context, voucherResponse: VoucherResponse) {
+        context.startActivity(VoucherAdminDetailsActivity.createIntent(context, voucherResponse))
     }
 
     private fun createLoginActivityIntent(context: Context) = LoginActivity.createIntent(context)

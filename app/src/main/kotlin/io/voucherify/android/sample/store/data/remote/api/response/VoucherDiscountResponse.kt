@@ -14,9 +14,26 @@ data class VoucherDiscountResponse(
     @Json(name = "percent_off") val percentOff: Double?,
     @Json(name = "unit_off") val unitOff: Double?,
     @Json(name = "unit_type") val unitType: String?
-): PaperParcelable {
+
+) : PaperParcelable {
+
     companion object {
         @JvmField
         val CREATOR = PaperParcelVoucherDiscountResponse.CREATOR
     }
+
+    val discount: Double
+        get() {
+            when (type) {
+                VoucherDiscountType.AMOUNT -> {
+                    return amountOff?.toDouble() ?: 0.0
+                }
+                VoucherDiscountType.PERCENT -> {
+                    return percentOff ?: 0.0
+                }
+                VoucherDiscountType.UNIT -> {
+                    return unitOff ?: 0.0
+                }
+            }
+        }
 }

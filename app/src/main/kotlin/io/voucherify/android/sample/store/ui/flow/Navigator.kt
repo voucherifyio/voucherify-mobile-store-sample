@@ -3,6 +3,7 @@ package io.voucherify.android.sample.store.ui.flow
 import android.content.Context
 import io.voucherify.android.sample.store.data.remote.api.response.CustomerResponse
 import io.voucherify.android.sample.store.data.remote.api.response.ProductResponse
+import io.voucherify.android.sample.store.data.remote.api.response.VoucherResponse
 
 interface Navigator {
 
@@ -15,4 +16,6 @@ interface Navigator {
     fun openCustomerDetails(context: Context, customerResponse: CustomerResponse)
 
     fun openProductAdminDetails(context: Context, productResponse: ProductResponse)
+
+    fun openVoucherAdminDetails(context: Context, voucherResponse: VoucherResponse)
 }
