@@ -31,6 +31,7 @@ class VouchersAdminFragment : BaseFragment() {
 
     private val vouchersAdapter = VouchersAdminAdapter(itemClick = { item ->
         activity?.let {
+            navigator.openVoucherAdminDetails(it, voucherResponse = item)
         }
     })
 
