@@ -13,6 +13,8 @@ interface Navigator {
 
     fun openDashboardAdminActivity(context: Context)
 
+    fun openDashboardCustomerActivity(context: Context)
+
     fun openCustomerDetails(context: Context, customerResponse: CustomerResponse)
 
     fun openProductAdminDetails(context: Context, productResponse: ProductResponse)

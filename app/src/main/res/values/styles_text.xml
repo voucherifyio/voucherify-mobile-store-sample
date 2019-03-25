@@ -34,4 +34,13 @@
         <item name="android:textColor">@color/text_selector_button_accent</item>
     </style>
 
+    <!-- Settings -->
+    <style name="Voucherify.Base.Settings.TextAppearance" />
+
+    <style name="Voucherify.Base.Settings.TextAppearance.Header">
+        <item name="android:textSize">@dimen/text_size_medium</item>
+        <item name="android:textColor">@color/voucherify_text_primary</item>
+        <item name="android:textStyle">normal</item>
+    </style>
+
 </resources>

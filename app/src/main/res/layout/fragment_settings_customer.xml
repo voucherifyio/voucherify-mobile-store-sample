@@ -11,7 +11,7 @@
 
         <LinearLayout android:layout_width="match_parent"
                       android:layout_height="wrap_content"
-                      android:id="@+id/settings_admin_change_user_item_container"
+                      android:id="@+id/settings_customer_change_to_admin_item_container"
                       android:layout_marginTop="@dimen/margin_medium"
                       style="@style/Voucherify.List.Item"
                       android:orientation="horizontal">
@@ -24,31 +24,12 @@
             <TextView style="@style/Voucherify.Base.Settings.TextAppearance.Header"
                       android:layout_width="wrap_content"
                       android:layout_height="wrap_content"
-                      android:text="@string/settings_switch_user_label"/>
-
-        </LinearLayout>
-
-        <LinearLayout
-                android:id="@+id/settings_admin_logout_item_container"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_above="@+id/settings_admin_app_version"
-                android:layout_marginTop="@dimen/margin_medium"
-                android:orientation="vertical">
-
-            <Button
-                    android:id="@+id/settings_admin_logout_button"
-                    style="@style/Voucherify.Base.Button.Accent"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center_horizontal"
-                    android:minWidth="200dp"
-                    android:text="@string/settings_admin_logout_label"/>
+                      android:text="@string/settings_customer_switch_admin_label"/>
 
         </LinearLayout>
 
         <TextView
-                android:id="@+id/settings_admin_app_version"
+                android:id="@+id/settings_customer_app_version"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center_horizontal"

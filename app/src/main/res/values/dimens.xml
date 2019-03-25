@@ -15,6 +15,7 @@
     <dimen name="margin_xxlarge">64dp</dimen>
 
     <dimen name="text_size_header">32sp</dimen>
+    <dimen name="text_size_picker_header">24sp</dimen>
     <dimen name="text_size_subHeader">24sp</dimen>
 
     <dimen name="text_size_section">8sp</dimen>
@@ -39,5 +40,7 @@
 
     <dimen name="avatar_default_height">72dp</dimen>
     <dimen name="avatar_default_width">72dp</dimen>
+
+    <dimen name="bottom_sheet_radius">15dp</dimen>
 
 </resources>

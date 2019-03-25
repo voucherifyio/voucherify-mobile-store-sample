@@ -3,6 +3,7 @@ package io.voucherify.android.sample.store.injection.module
 import dagger.Module
 import io.voucherify.android.sample.store.injection.module.customers.admin.CustomerDetailsActivityModule
 import io.voucherify.android.sample.store.injection.module.dashboard.DashboardAdminActivityModule
+import io.voucherify.android.sample.store.injection.module.dashboard.customer.DashboardCustomerActivityModule
 import io.voucherify.android.sample.store.injection.module.login.LoginActivityModule
 import io.voucherify.android.sample.store.injection.module.products.admin.ProductAdminDetailsActivityModule
 import io.voucherify.android.sample.store.injection.module.splash.SplashActivityModule
@@ -13,6 +14,7 @@ import io.voucherify.android.sample.store.injection.module.vouchers.admin.Vouche
         SplashActivityModule::class,
         LoginActivityModule::class,
         DashboardAdminActivityModule::class,
+        DashboardCustomerActivityModule::class,
         CustomerDetailsActivityModule::class,
         ProductAdminDetailsActivityModule::class,
         VoucherAdminDetailsActivityModule::class

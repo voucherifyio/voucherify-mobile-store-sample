@@ -1,33 +1,24 @@
-package io.voucherify.android.sample.store.ui.dashboard.admin.settings
+package io.voucherify.android.sample.store.ui.dashboard.admin.settings.pickers
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
-import io.reactivex.Observable
 import io.reactivex.android.schedulers.AndroidSchedulers
 import io.reactivex.disposables.CompositeDisposable
 import io.reactivex.schedulers.Schedulers
-import io.reactivex.subjects.ReplaySubject
-import io.voucherify.android.sample.store.data.local.model.LocalUser
+import io.voucherify.android.sample.store.data.local.model.LocalCustomer
+import io.voucherify.android.sample.store.data.remote.api.DataResult
 import io.voucherify.android.sample.store.data.remote.api.response.CustomerResponse
 import io.voucherify.android.sample.store.data.service.customers.CustomersService
-import io.voucherify.android.sample.store.data.service.user.UserService
+import io.voucherify.android.sample.store.data.service.user.perspective.CustomerPerspectiveService
 import io.voucherify.android.sample.store.ui.base.BaseViewModel
 
-class SettingsAdminViewModel(
-    private val userService: UserService,
-    private val customersService: CustomersService
+class UserSwitchViewModel(private val customersService: CustomersService,
+                          private val customerPerspectiveService: CustomerPerspectiveService
 ) : BaseViewModel() {
 
-    sealed class ViewCommand {
-        data class UserChangePicker(val customers: List<CustomerResponse>) : ViewCommand()
-    }
-
     private val compositeDisposable: CompositeDisposable = CompositeDisposable()
+    private val customersLiveData: MutableLiveData<DataResult<List<CustomerResponse>>> = MutableLiveData()
     private val isLoadingLiveData = MutableLiveData<Boolean>()
-
-    private val currentUserLiveData = MutableLiveData<LocalUser>()
-    private val viewCommandsPublisher = ReplaySubject.create<ViewCommand>()
-
 
     override fun onCleared() {
         super.onCleared()
@@ -35,13 +26,15 @@ class SettingsAdminViewModel(
         compositeDisposable.clear()
     }
 
-    fun logout() {
-        userService.removeCurrentUser()
+    fun switchTo(customer: CustomerResponse) {
 
-        currentUserLiveData.value = userService.getCurrentUser()
+        var localCustomer = LocalCustomer.from(customer)
+        localCustomer.isActive = true
+
+        customerPerspectiveService.switchTo(customer = localCustomer)
     }
 
-    fun switchUser() {
+    fun fetchCustomers() {
 
         compositeDisposable.add(
             customersService
@@ -53,21 +46,19 @@ class SettingsAdminViewModel(
                 }
                 .subscribe({ data ->
                     isLoadingLiveData.postValue(false)
-                    viewCommandsPublisher.onNext(
-                        ViewCommand.UserChangePicker(data.customers)
-                    )
+                    customersLiveData.postValue(DataResult.succes(data.customers))
                 }, { error ->
                     isLoadingLiveData.postValue(false)
+                    customersLiveData.postValue(DataResult.error(error))
                 })
         )
     }
 
-    fun outputViewCommand(): Observable<ViewCommand> {
-        return viewCommandsPublisher
+    fun outputCustomersDataResponse(): LiveData<DataResult<List<CustomerResponse>>> {
+        return customersLiveData
     }
 
-    fun outputLocalUserChanged(): LiveData<LocalUser> {
-        return currentUserLiveData
+    fun outputIsDataLoading(): LiveData<Boolean> {
+        return isLoadingLiveData
     }
-
 }
