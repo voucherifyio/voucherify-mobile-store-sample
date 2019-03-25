@@ -6,6 +6,7 @@ import dagger.Provides
 import dagger.Reusable
 import io.voucherify.android.sample.store.data.local.AccountLocalPreferencesStorable
 import io.voucherify.android.sample.store.data.local.UserLocalPreferencesStorable
+import io.voucherify.android.sample.store.data.local.persistence.customers.CustomersLocalPersistence
 
 @Module
 object DataModule {
@@ -19,5 +20,10 @@ object DataModule {
     @Reusable
     fun provideAccountLocalPreferences(sharedPreferences: SharedPreferences): AccountLocalPreferencesStorable =
         AccountLocalPreferencesStorable(sharedPreferences = sharedPreferences)
+
+    @Provides
+    @Reusable
+    fun provideCustomersLocalPersistence(sharedPreferences: SharedPreferences): CustomersLocalPersistence =
+        CustomersLocalPersistence(sharedPreferences = sharedPreferences)
 
 }

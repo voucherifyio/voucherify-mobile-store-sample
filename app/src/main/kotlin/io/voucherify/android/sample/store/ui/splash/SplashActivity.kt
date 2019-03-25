@@ -7,6 +7,7 @@ import android.os.Handler
 import androidx.lifecycle.Observer
 import dagger.android.support.DaggerAppCompatActivity
 import io.voucherify.android.sample.store.R
+import io.voucherify.android.sample.store.data.local.model.LocalCustomer
 import io.voucherify.android.sample.store.ui.flow.Navigator
 import javax.inject.Inject
 
@@ -36,10 +37,21 @@ class SplashActivity : DaggerAppCompatActivity() {
     }
 
     private fun bindVMOutputs() {
-        viewModel.outputUserLogged().observe(this, Observer<Boolean> { isUserLogged ->
+        viewModel.outputUserLogged().observe(this, Observer { isUserLogged ->
 
             if (isUserLogged) {
-                appNavigator.openDashboardAdminActivity(this)
+
+                viewModel
+                    .outputCustomerPerspective()
+                    .observe(this, Observer {
+
+                        if (it == null) {
+                            appNavigator.openDashboardAdminActivity(this)
+                        } else {
+                            appNavigator.openDashboardCustomerActivity(this)
+                        }
+                    })
+
             } else {
                 appNavigator.openLoginActivity(this)
             }

@@ -17,4 +17,12 @@ open class BaseActivity : DaggerAppCompatActivity() {
         transaction.add(containerId, fragment, tag)
         transaction.commit()
     }
+
+    protected fun replaceFragment(@IdRes containerId: Int, fragment: Fragment, tag: String? = null) {
+        supportFragmentManager
+            .beginTransaction()
+            .setCustomAnimations(R.anim.design_bottom_sheet_slide_in, R.anim.design_bottom_sheet_slide_out)
+            .replace(containerId, fragment, tag)
+            .commit()
+    }
 }

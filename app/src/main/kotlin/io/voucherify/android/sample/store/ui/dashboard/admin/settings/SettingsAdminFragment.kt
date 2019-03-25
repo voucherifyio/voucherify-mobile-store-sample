@@ -7,6 +7,7 @@ import io.voucherify.android.sample.store.BuildConfig
 import io.voucherify.android.sample.store.R
 import io.voucherify.android.sample.store.data.local.model.LocalUser
 import io.voucherify.android.sample.store.ui.base.BaseFragment
+import io.voucherify.android.sample.store.ui.dashboard.admin.settings.pickers.UserSwitchBottomSheetDialogFragment
 import io.voucherify.android.sample.store.ui.flow.Navigator
 import kotlinx.android.synthetic.main.fragment_settings_admin.*
 import javax.inject.Inject
@@ -43,7 +44,7 @@ class SettingsAdminFragment : BaseFragment() {
     private fun render() {
 
         val versionInfo = String.format(
-            resources.getString(R.string.settings_admin_version_template),
+            resources.getString(R.string.settings_version_template),
             BuildConfig.VERSION_NAME,
             BuildConfig.VERSION_CODE
         )
@@ -57,8 +58,29 @@ class SettingsAdminFragment : BaseFragment() {
             viewModel.logout()
         }
 
+        settings_admin_change_user_item_container.setOnClickListener {
+            viewModel.switchUser()
+        }
+
         viewModel
             .outputLocalUserChanged()
             .observe(this, localUserObserver)
+
+        viewModel
+            .outputViewCommand()
+            .subscribe {
+                when (it) {
+                    is SettingsAdminViewModel.ViewCommand.UserChangePicker -> {
+                        val bottomSheetFragment = UserSwitchBottomSheetDialogFragment()
+
+                        activity?.let {
+                            bottomSheetFragment.show(
+                                activity!!.supportFragmentManager,
+                                UserSwitchBottomSheetDialogFragment.TAG
+                            )
+                        }
+                    }
+                }
+            }
     }
 }

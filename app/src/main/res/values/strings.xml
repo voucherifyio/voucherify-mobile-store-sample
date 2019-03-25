@@ -9,6 +9,7 @@
     <!-- Titles -->
     <string name="title_vouchers">Vouchers</string>
     <string name="title_customers">Customers</string>
+    <string name="title_orders">Orders</string>
     <string name="title_products">Products</string>
     <string name="title_settings">Settings</string>
 
@@ -18,9 +19,24 @@
     <string name="dashboard_admin_bottom_navigation_products">Products</string>
     <string name="dashboard_admin_bottom_navigation_settings">Settings</string>
 
+    <!-- Dashboard customer navigation -->
+    <string name="dashboard_customer_bottom_navigation_products">Products</string>
+    <string name="dashboard_customer_bottom_navigation_orders">Orders</string>
+    <string name="dashboard_customer_bottom_navigation_settings">Settings</string>
+
+    <!-- Settings -->
+    <string name="settings_version_template">Version %1$s(%2$d)</string>
+
     <!-- Admin settings -->
-    <string name="settings_admin_version_template">Version %1$s(%2$d)</string>
     <string name="settings_admin_logout_label">Logout</string>
+
+    <string name="settings_switch_user_label">Switch user</string>
+
+    <!-- Admin settings: Switch user -->
+    <string name="settings_switch_user_picker_header">Switch perspective to</string>
+
+    <!-- Customer settings -->
+    <string name="settings_customer_switch_admin_label">Switch to admin</string>
 
     <!-- Customer details -->
     <string name="customer_details_name_label">Name:</string>

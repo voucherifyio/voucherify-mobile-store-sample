@@ -21,6 +21,40 @@
         <item name="android:textAppearance">@style/Voucherify.TextAppearance.Button.Accent</item>
     </style>
 
+    <!-- Settings -->
+
+    <style name="Voucherify.Base.Settings" />
+
+    <!-- Lists -->
+
+    <style name="Voucherify.List">
+        <item name="android:clipToPadding">false</item>
+        <item name="android:paddingBottom">@dimen/spacing_medium</item>
+        <item name="android:paddingTop">@dimen/spacing_medium</item>
+    </style>
+
+    <style name="Voucherify.List.Item">
+        <item name="android:paddingBottom">@dimen/margin_medium</item>
+        <item name="android:paddingTop">@dimen/margin_medium</item>
+        <item name="android:paddingLeft">@dimen/margin_medium</item>
+        <item name="android:paddingRight">@dimen/margin_medium</item>
+    </style>
+
+    <style name="Voucherify.BottomSheet" parent="@style/Widget.Design.BottomSheet.Modal">
+        <item name="android:background">@drawable/background_bottom_sheet_dialog_fragment</item>
+    </style>
+
+    <style name="Voucherify.BaseBottomSheetDialog" parent="@style/Theme.Design.Light.BottomSheetDialog">
+        <item name="android:windowIsFloating">false</item>
+        <item name="bottomSheetStyle">@style/Voucherify.BottomSheet</item>
+    </style>
+
+
+    <style name="Voucherify.BottomSheetDialogTheme" parent="Voucherify.BaseBottomSheetDialog">
+        <item name="android:statusBarColor">@android:color/transparent</item>
+        <item name="android:navigationBarColor">@color/voucherify_white</item>
+    </style>
+
     <!-- Base application theme. -->
     <style name="AppTheme" parent="Theme.MaterialComponents.Light.NoActionBar">
         <!-- Customize your theme here. -->
