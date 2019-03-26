@@ -1,4 +1,4 @@
-package io.voucherify.android.sample.store.ui.dashboard.admin.products
+package io.voucherify.android.sample.store.ui.customer.products
 
 import android.os.Bundle
 import android.view.View
@@ -12,26 +12,26 @@ import io.voucherify.android.sample.store.data.remote.api.response.ProductRespon
 import io.voucherify.android.sample.store.ui.base.BaseFragment
 import io.voucherify.android.sample.store.ui.flow.Navigator
 import io.voucherify.android.sample.store.utils.views.SimpleDividerItemDecoration
-import kotlinx.android.synthetic.main.fragment_products_admin.*
+import kotlinx.android.synthetic.main.fragment_products_customer.*
 import javax.inject.Inject
 
-class ProductsAdminFragment : BaseFragment() {
+class CustomerProductsFragment : BaseFragment() {
 
     companion object {
-        const val TAG = "ProductsAdminFragment"
+        const val TAG = "CustomerProductsFragment"
 
-        fun newInstance() = ProductsAdminFragment()
+        fun newInstance() = CustomerProductsFragment()
     }
 
     @Inject
-    lateinit var viewModel: ProductsAdminViewModel
+    lateinit var productsViewModel: CustomerProductsViewModel
 
     @Inject
     lateinit var navigator: Navigator
 
-    private val customersAdapter = ProductsAdminAdapter(itemClick = { item ->
+    private val customersAdapter = CustomerProductsAdapter(itemClick = { item ->
         activity?.let {
-            navigator.openAdminProductDetails(it, productResponse = item)
+            navigator.openCustomerProductDetails(context = it, productResponse = item)
         }
     })
 
@@ -53,7 +53,7 @@ class ProductsAdminFragment : BaseFragment() {
     private val loadingObserver = Observer<Boolean> { isLoading ->
     }
 
-    override fun fragmentLayoutId(): Int = R.layout.fragment_products_admin
+    override fun fragmentLayoutId(): Int = R.layout.fragment_products_customer
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
@@ -61,11 +61,11 @@ class ProductsAdminFragment : BaseFragment() {
         setViews()
         setBindings()
 
-        viewModel.fetchProducts()
+        productsViewModel.fetchProducts()
     }
 
     private fun setViews() {
-        products_admin_list.layoutManager = LinearLayoutManager(activity).apply {
+        products_customer_list.layoutManager = LinearLayoutManager(activity).apply {
             orientation = LinearLayoutManager.VERTICAL
         }
 
@@ -75,16 +75,16 @@ class ProductsAdminFragment : BaseFragment() {
             )
         }
 
-        products_admin_list.adapter = customersAdapter
+        products_customer_list.adapter = customersAdapter
     }
 
     private fun setBindings() {
 
-        viewModel
+        productsViewModel
             .outputIsDataLoading()
             .observe(this, loadingObserver)
 
-        viewModel
+        productsViewModel
             .outputProductsDataResponse()
             .observe(this, dataObserver)
     }
