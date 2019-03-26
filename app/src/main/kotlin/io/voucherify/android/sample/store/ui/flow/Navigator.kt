@@ -17,7 +17,9 @@ interface Navigator {
 
     fun openCustomerDetails(context: Context, customerResponse: CustomerResponse)
 
-    fun openProductAdminDetails(context: Context, productResponse: ProductResponse)
+    fun openAdminProductDetails(context: Context, productResponse: ProductResponse)
+
+    fun openCustomerProductDetails(context: Context, productResponse: ProductResponse)
 
     fun openVoucherAdminDetails(context: Context, voucherResponse: VoucherResponse)
 }
