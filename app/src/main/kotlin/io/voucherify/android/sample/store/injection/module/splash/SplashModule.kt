@@ -7,6 +7,7 @@ import dagger.Module
 import dagger.Provides
 import io.voucherify.android.sample.store.data.service.onboarding.OnboardingService
 import io.voucherify.android.sample.store.data.service.user.UserService
+import io.voucherify.android.sample.store.data.service.user.perspective.CustomerPerspectiveService
 import io.voucherify.android.sample.store.injection.scope.ActivityScope
 import io.voucherify.android.sample.store.ui.splash.SplashActivity
 import io.voucherify.android.sample.store.ui.splash.SplashViewModel
@@ -16,12 +17,14 @@ class SplashModule {
 
     private class SplashViewModelFactory(
         private val userService: UserService,
-        private val onboardingService: OnboardingService
+        private val onboardingService: OnboardingService,
+        private val userPerspectiveService: CustomerPerspectiveService
     ) : ViewModelProvider.NewInstanceFactory() {
         override fun <T : ViewModel?> create(modelClass: Class<T>): T {
             return SplashViewModel(
                 userService = userService,
-                onboardingService = onboardingService
+                onboardingService = onboardingService,
+                userPerspectiveService = userPerspectiveService
             ) as T
         }
     }
@@ -31,10 +34,15 @@ class SplashModule {
     fun provideSplashViewModel(
         activity: SplashActivity,
         userService: UserService,
-        onboardingService: OnboardingService
+        onboardingService: OnboardingService,
+        userPerspectiveService: CustomerPerspectiveService
     ): SplashViewModel = ViewModelProviders.of(
         activity,
-        SplashViewModelFactory(userService = userService, onboardingService = onboardingService)
+        SplashViewModelFactory(
+            userService = userService,
+            onboardingService = onboardingService,
+            userPerspectiveService = userPerspectiveService
+        )
     ).get(SplashViewModel::class.java)
 
 }

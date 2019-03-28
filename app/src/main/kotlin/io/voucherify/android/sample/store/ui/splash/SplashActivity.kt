@@ -39,9 +39,10 @@ class SplashActivity : DaggerAppCompatActivity() {
         viewModel.outputViewAction().observe(this, Observer<SplashViewModel.ViewAction> { viewAction ->
 
             when(viewAction) {
-                SplashViewModel.ViewAction.openOnboarding -> appNavigator.openOnboardingActivity(this)
-                SplashViewModel.ViewAction.openLogin -> appNavigator.openLoginActivity(this)
-                SplashViewModel.ViewAction.openDashboard -> appNavigator.openDashboardAdminActivity(this)
+                SplashViewModel.ViewAction.OPEN_ONBOARDING -> appNavigator.openOnboardingActivity(this)
+                SplashViewModel.ViewAction.OPEN_LOGIN -> appNavigator.openLoginActivity(this)
+                SplashViewModel.ViewAction.OPEN_ADMIN_DASHBOARD -> appNavigator.openDashboardAdminActivity(this)
+                SplashViewModel.ViewAction.OPEN_CUSTOMER_DASHBOARD -> appNavigator.openDashboardCustomerActivity(this)
             }
         })
     }
