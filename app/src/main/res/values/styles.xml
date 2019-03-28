@@ -21,6 +21,12 @@
         <item name="android:textAppearance">@style/Voucherify.TextAppearance.Button.Accent</item>
     </style>
 
+    <style name="Voucherify.Base.Button.Borderless" parent="Widget.AppCompat.Button.Borderless">
+        <item name="android:minHeight">@dimen/default_touch_target</item>
+        <item name="android:paddingStart">@dimen/spacing_medium</item>
+        <item name="android:paddingEnd">@dimen/spacing_medium</item>
+    </style>
+
     <!-- Settings -->
 
     <style name="Voucherify.Base.Settings" />

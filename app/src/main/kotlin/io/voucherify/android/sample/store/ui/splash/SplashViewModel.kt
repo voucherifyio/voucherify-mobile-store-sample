@@ -2,28 +2,30 @@ package io.voucherify.android.sample.store.ui.splash
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
-import io.voucherify.android.sample.store.data.local.model.LocalCustomer
+import io.voucherify.android.sample.store.data.service.onboarding.OnboardingService
 import io.voucherify.android.sample.store.data.service.user.UserService
-import io.voucherify.android.sample.store.data.service.user.perspective.CustomerPerspectiveService
 import io.voucherify.android.sample.store.ui.base.BaseViewModel
 
 class SplashViewModel(private val userService: UserService,
-                      private val customerPerspectiveService: CustomerPerspectiveService) : BaseViewModel() {
+                      private val onboardingService: OnboardingService) : BaseViewModel() {
 
-    private var isUserLogged: MutableLiveData<Boolean> = MutableLiveData()
+    enum class ViewAction {
+        openOnboarding,
+        openLogin,
+        openDashboard
+    }
+
+    private var viewAction: MutableLiveData<ViewAction> = MutableLiveData()
 
     fun loginUserIfPossible() {
-        isUserLogged.value = userService.isUserLogged()
+        when {
+            onboardingService.hasActiveOnboarding() -> viewAction.value = ViewAction.openOnboarding
+            userService.isUserLogged() -> viewAction.value = ViewAction.openDashboard
+            else -> viewAction.value = ViewAction.openLogin
+        }
     }
 
-    fun outputUserLogged(): LiveData<Boolean> {
-        return isUserLogged
-    }
-
-    fun outputCustomerPerspective(): LiveData<LocalCustomer?> {
-        val customerPerspective = MutableLiveData<LocalCustomer?>()
-        customerPerspective.value = customerPerspectiveService.activeCustomer()
-
-        return customerPerspective
+    fun outputViewAction(): LiveData<ViewAction> {
+        return viewAction
     }
 }

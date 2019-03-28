@@ -8,6 +8,7 @@ import io.voucherify.android.sample.store.data.local.persistence.customers.Custo
 import io.voucherify.android.sample.store.data.repository.LoginRepository
 import io.voucherify.android.sample.store.data.repository.customers.CustomersRepository
 import io.voucherify.android.sample.store.data.repository.products.ProductsRepository
+import io.voucherify.android.sample.store.data.repository.settings.LocalSettingsRepository
 import io.voucherify.android.sample.store.data.repository.vouchers.VouchersRepository
 import io.voucherify.android.sample.store.data.service.customers.CustomersService
 import io.voucherify.android.sample.store.data.service.customers.ProductsService
@@ -17,6 +18,8 @@ import io.voucherify.android.sample.store.data.service.login.LoginService
 import io.voucherify.android.sample.store.data.service.login.VoucherifyLoginService
 import io.voucherify.android.sample.store.data.service.logout.LogoutService
 import io.voucherify.android.sample.store.data.service.logout.VoucherifyLogoutService
+import io.voucherify.android.sample.store.data.service.onboarding.OnboardingService
+import io.voucherify.android.sample.store.data.service.onboarding.VoucherifyOnboardingService
 import io.voucherify.android.sample.store.data.service.user.UserService
 import io.voucherify.android.sample.store.data.service.user.VoucherifyUserService
 import io.voucherify.android.sample.store.data.service.user.perspective.CustomerPerspectiveService
@@ -27,6 +30,11 @@ import javax.inject.Singleton
 
 @Module
 object ServiceModule {
+
+    @Provides
+    @Singleton
+    fun provideOnboardingService(localSettingsRepository: LocalSettingsRepository): OnboardingService =
+        VoucherifyOnboardingService(localSettingsRepository = localSettingsRepository)
 
     @Provides
     @Singleton

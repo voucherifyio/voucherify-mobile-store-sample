@@ -54,4 +54,8 @@
     <string name="voucher_admin_details_discount_type">Discount type:</string>
     <string name="voucher_admin_details_discount_value">Discount value:</string>
 
+    <!-- Onboarding -->
+    <string name="onboarding_skip_label">Skip</string>
+    <string name="onboarding_finish_label">Finish</string>
+
 </resources>
