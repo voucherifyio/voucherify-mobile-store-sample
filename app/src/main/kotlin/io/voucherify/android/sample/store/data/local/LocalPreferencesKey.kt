@@ -9,4 +9,8 @@ object LocalPreferencesKey {
     object Account {
         val account = "account"
     }
+
+    object Settings {
+        val appSettings = "appSettings"
+    }
 }

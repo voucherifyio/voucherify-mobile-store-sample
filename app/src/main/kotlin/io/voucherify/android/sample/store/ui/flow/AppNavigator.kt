@@ -12,6 +12,7 @@ import io.voucherify.android.sample.store.ui.dashboard.admin.customers.details.C
 import io.voucherify.android.sample.store.ui.dashboard.admin.products.details.ProductAdminDetailsActivity
 import io.voucherify.android.sample.store.ui.dashboard.admin.vouchers.details.VoucherAdminDetailsActivity
 import io.voucherify.android.sample.store.ui.login.LoginActivity
+import io.voucherify.android.sample.store.ui.onboarding.OnboardingActivity
 import io.voucherify.android.sample.store.ui.splash.SplashActivity
 
 class AppNavigator : Navigator {
@@ -45,6 +46,10 @@ class AppNavigator : Navigator {
 
     override fun openAdminProductDetails(context: Context, productResponse: ProductResponse) {
         context.startActivity(ProductAdminDetailsActivity.createIntent(context, productResponse))
+    }
+
+    override fun openOnboardingActivity(context: Context) {
+        context.startActivity(OnboardingActivity.createIntent(context).addFlags(FLAGS_HOME_CLEAR_STACK))
     }
 
     override fun openCustomerProductDetails(context: Context, productResponse: ProductResponse) {

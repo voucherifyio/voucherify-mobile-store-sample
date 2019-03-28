@@ -15,6 +15,8 @@
     <color name="voucherify_blue">#354EA0</color>
     <color name="voucherify_blue_50">#80354EA0</color>
 
+    <color name="voucherify_black_80">#33000000</color>
+
     <color name="voucherify_text_primary">@color/voucherify_grey_dark</color>
     <color name="voucherify_text_secondary">@color/voucherify_grey</color>
     <color name="voucherify_text_light">@color/voucherify_white</color>
@@ -25,5 +27,8 @@
     <color name="voucherify_background_grey_light">@color/voucherify_grey_light</color>
 
     <color name="voucherify_divider_default">@color/voucherify_grey</color>
+
+    <color name="page_indicator_selected">@color/voucherify_blue</color>
+    <color name="page_indicator_unselected">@color/voucherify_grey</color>
 
 </resources>

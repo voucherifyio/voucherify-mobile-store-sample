@@ -9,6 +9,8 @@ interface Navigator {
 
     fun openSplashActivity(context: Context)
 
+    fun openOnboardingActivity(context: Context)
+
     fun openLoginActivity(context: Context)
 
     fun openDashboardAdminActivity(context: Context)
