@@ -43,4 +43,6 @@
 
     <dimen name="bottom_sheet_radius">15dp</dimen>
 
+    <dimen name="button_min_width">48dp</dimen>
+
 </resources>
