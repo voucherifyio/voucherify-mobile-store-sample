@@ -7,6 +7,7 @@ import io.voucherify.android.sample.store.data.remote.api.response.ProductRespon
 import io.voucherify.android.sample.store.data.remote.api.response.VoucherResponse
 import io.voucherify.android.sample.store.ui.customer.DashboardCustomerActivity
 import io.voucherify.android.sample.store.ui.customer.products.details.CustomerProductDetailsActivity
+import io.voucherify.android.sample.store.ui.customer.shoppingcart.ShoppingCartActivity
 import io.voucherify.android.sample.store.ui.dashboard.admin.DashboardAdminActivity
 import io.voucherify.android.sample.store.ui.dashboard.admin.customers.details.CustomerDetailsActivity
 import io.voucherify.android.sample.store.ui.dashboard.admin.products.details.ProductAdminDetailsActivity
@@ -62,6 +63,10 @@ class AppNavigator : Navigator {
 
     override fun openDashboardCustomerActivity(context: Context) {
         context.startActivity(DashboardCustomerActivity.createIntent(context).addFlags(FLAGS_HOME_CLEAR_STACK))
+    }
+
+    override fun openShoppingCardActivity(context: Context) {
+        context.startActivity(ShoppingCartActivity.createIntent(context))
     }
 
     private fun createLoginActivityIntent(context: Context) = LoginActivity.createIntent(context)

@@ -71,7 +71,7 @@
 
         <Button
                 android:id="@+id/onboarding_finish_button"
-                style="@style/Voucherify.Base.Button.Borderless"
+                style="@style/Voucherify.Base.Button.Borderless.Medium"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="end|center"
@@ -81,7 +81,7 @@
 
         <ImageButton
                 android:id="@+id/onboarding_next_button"
-                style="@style/Voucherify.Base.Button.Borderless"
+                style="@style/Voucherify.Base.Button.Borderless.Medium"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="end|center"

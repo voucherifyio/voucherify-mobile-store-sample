@@ -23,13 +23,24 @@
 
     <style name="Voucherify.Base.Button.Borderless" parent="Widget.AppCompat.Button.Borderless">
         <item name="android:minHeight">@dimen/default_touch_target</item>
-        <item name="android:paddingStart">@dimen/spacing_medium</item>
-        <item name="android:paddingEnd">@dimen/spacing_medium</item>
+    </style>
+
+    <style name="Voucherify.Base.Button.Borderless.Medium">
+        <item name="android:minHeight">@dimen/default_touch_target</item>
+        <item name="android:paddingStart">@dimen/spacing_small</item>
+        <item name="android:paddingEnd">@dimen/spacing_small</item>
+    </style>
+
+    <style name="Voucherify.Base.Button.Borderless.Small">
+        <item name="android:minHeight">@dimen/default_touch_target</item>
+        <item name="android:paddingStart">@dimen/spacing_small</item>
+        <item name="android:paddingEnd">@dimen/spacing_small</item>
+        <item name="android:minWidth">@dimen/button_min_width</item>
     </style>
 
     <!-- Settings -->
 
-    <style name="Voucherify.Base.Settings" />
+    <style name="Voucherify.Base.Settings"/>
 
     <!-- Lists -->
 

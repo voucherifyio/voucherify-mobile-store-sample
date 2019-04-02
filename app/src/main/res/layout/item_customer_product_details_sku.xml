@@ -40,8 +40,15 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerVertical="true"
-            android:layout_alignParentRight="true"
+            android:layout_toLeftOf="@+id/item_product_details_sku_customer_buy_button"
             tools:text="20$"
             android:textAppearance="@style/Voucherify.TextAppearance.Title"/>
+
+    <ImageButton style="@style/Voucherify.Base.Button.Borderless.Small"
+                 android:id="@+id/item_product_details_sku_customer_buy_button"
+                 android:layout_width="wrap_content"
+                 android:src="@drawable/ic_add_shopping_cart_24px"
+                 android:layout_alignParentRight="true"
+                 android:layout_height="wrap_content"/>
 
 </RelativeLayout>

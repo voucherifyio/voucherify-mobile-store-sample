@@ -5,8 +5,10 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import io.voucherify.android.sample.store.R
 import io.voucherify.android.sample.store.data.remote.api.response.ProductSKUResponse
+import kotlinx.android.synthetic.main.item_customer_product_details_sku.view.*
 
-class CustomerProductDetailsSKUAdapter : RecyclerView.Adapter<CustomerProductDetailsSKUItemViewHolder>() {
+class CustomerProductDetailsSKUAdapter(private val itemBuyClick: (Pair<ProductSKUResponse, Int>) -> Unit) :
+    RecyclerView.Adapter<CustomerProductDetailsSKUItemViewHolder>() {
 
     private var items: List<ProductSKUResponse> = emptyList()
 
@@ -20,6 +22,9 @@ class CustomerProductDetailsSKUAdapter : RecyclerView.Adapter<CustomerProductDet
 
     override fun onBindViewHolder(holderProductDetailsSKU: CustomerProductDetailsSKUItemViewHolder, position: Int) {
         holderProductDetailsSKU.item = items[position]
+        holderProductDetailsSKU.view.item_product_details_sku_customer_buy_button.setOnClickListener {
+            itemBuyClick(Pair(first = items[position], second = position))
+        }
     }
 
     fun setData(data: List<ProductSKUResponse>) {

@@ -8,7 +8,13 @@ import io.voucherify.android.sample.store.R
 
 open class BaseActivity : DaggerAppCompatActivity() {
 
-    open protected fun initActionBar(activity: AppCompatActivity) {
+    override fun onSupportNavigateUp(): Boolean {
+        onBackPressed()
+
+        return true
+    }
+
+    protected open fun initActionBar(activity: AppCompatActivity) {
         setSupportActionBar(activity.findViewById(R.id.toolbar))
     }
 

@@ -8,7 +8,6 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import io.voucherify.android.sample.store.R
 import io.voucherify.android.sample.store.data.remote.api.response.ProductResponse
 import io.voucherify.android.sample.store.ui.base.BaseFragment
-import io.voucherify.android.sample.store.ui.dashboard.admin.products.details.ProductsAdminDetailsSKUAdapter
 import io.voucherify.android.sample.store.utils.views.SimpleDividerItemDecoration
 import kotlinx.android.synthetic.main.fragment_product_details_admin.*
 import javax.inject.Inject
@@ -36,7 +35,9 @@ class CustomerProductDetailsFragment : BaseFragment() {
         skuAdapter.notifyDataSetChanged()
     }
 
-    private val skuAdapter = ProductsAdminDetailsSKUAdapter()
+    private val skuAdapter = CustomerProductDetailsSKUAdapter(itemBuyClick = {
+        productDetailsViewModel.buy(productSkuIndex = it.second)
+    })
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

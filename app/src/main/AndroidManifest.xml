@@ -24,6 +24,7 @@
         <activity android:name=".ui.login.LoginActivity"/>
         <activity android:name=".ui.dashboard.admin.DashboardAdminActivity"/>
         <activity android:name=".ui.customer.DashboardCustomerActivity"/>
+        <activity android:name=".ui.customer.shoppingcart.ShoppingCartActivity"/>
         <activity android:name=".ui.customer.products.details.CustomerProductDetailsActivity"/>
         <activity android:name=".ui.dashboard.admin.customers.details.CustomerDetailsActivity"/>
         <activity android:name=".ui.dashboard.admin.products.details.ProductAdminDetailsActivity"/>

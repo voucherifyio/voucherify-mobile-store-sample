@@ -12,6 +12,10 @@
     <string name="title_orders">Orders</string>
     <string name="title_products">Products</string>
     <string name="title_settings">Settings</string>
+    <string name="title_shopping_cart">Shopping cart</string>
+
+    <!-- Menus -->
+    <string name="menu_item_shopping_cart">Shopping cart</string>
 
     <!-- Dashboard admin navigation -->
     <string name="dashboard_admin_bottom_navigation_vouchers">Vouchers</string>
