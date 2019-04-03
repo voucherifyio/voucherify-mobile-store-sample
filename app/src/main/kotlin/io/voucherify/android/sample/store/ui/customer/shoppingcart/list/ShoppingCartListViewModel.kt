@@ -15,6 +15,16 @@ class ShoppingCartListViewModel(private val shoppingCartService: ShoppingCartSer
         }
     }
 
+    fun remove(position: Int) {
+        shoppingCartListItemsLiveData.value?.get(position)?.let {
+            shoppingCartService.remove(Pair(first = it.productResponse, second = it.productSKUIndex))
+        }
+
+        val items = shoppingCartListItemsLiveData.value?.toMutableList()
+        items?.removeAt(position)
+        shoppingCartListItemsLiveData.value = items
+    }
+
     fun outputShoppingCartItems(): LiveData<List<ShoppingCartListAdapter.ShoppingCartItemData>> {
         return shoppingCartListItemsLiveData
     }

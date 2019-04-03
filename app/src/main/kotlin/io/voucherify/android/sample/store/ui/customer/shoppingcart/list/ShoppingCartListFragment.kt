@@ -26,9 +26,16 @@ class ShoppingCartListFragment: BaseFragment() {
     @Inject
     lateinit var navigator: Navigator
 
-    private val shoppingCartAdapter = ShoppingCartListAdapter(itemClick = { item ->
-        activity?.let {
-            navigator.openCustomerProductDetails(context = it, productResponse = item.productResponse)
+    private val shoppingCartAdapter = ShoppingCartListAdapter(object: ShoppingCartListAdapter.OnItemListener {
+
+        override fun onItemClick(item: ShoppingCartListAdapter.ShoppingCartItemData) {
+            activity?.let {
+                navigator.openCustomerProductDetails(context = it, productResponse = item.productResponse)
+            }
+        }
+
+        override fun onItemDelete(position: Int) {
+            shoppingCartListViewModel.remove(position = position)
         }
     })
 
