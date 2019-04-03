@@ -15,6 +15,7 @@
                   android:gravity="center_vertical"
                   android:layout_toLeftOf="@+id/item_shopping_cart_price"
                   android:layout_alignParentLeft="true"
+                  android:layout_centerVertical="true"
                   android:layout_marginStart="@dimen/margin_small"
                   android:layout_height="wrap_content">
 
@@ -31,7 +32,15 @@
     <TextView android:id="@+id/item_shopping_cart_price"
               android:layout_width="wrap_content"
               android:layout_height="wrap_content"
-              android:layout_alignParentRight="true"
+              android:layout_toLeftOf="@+id/item_shopping_cart_remove_button"
+              android:layout_centerVertical="true"
               tools:text="12$"/>
+
+    <ImageButton style="@style/Voucherify.Base.Button.Borderless.Small"
+                 android:id="@+id/item_shopping_cart_remove_button"
+                 android:layout_width="wrap_content"
+                 android:src="@drawable/ic_delete_outline_24px"
+                 android:layout_alignParentRight="true"
+                 android:layout_height="wrap_content"/>
 
 </RelativeLayout>
