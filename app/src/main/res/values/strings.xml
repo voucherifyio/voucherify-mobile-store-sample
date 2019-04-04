@@ -13,6 +13,7 @@
     <string name="title_products">Products</string>
     <string name="title_settings">Settings</string>
     <string name="title_shopping_cart">Shopping cart</string>
+    <string name="title_order_address">Order address</string>
 
     <!-- Menus -->
     <string name="menu_item_shopping_cart">Shopping cart</string>
@@ -61,5 +62,20 @@
     <!-- Onboarding -->
     <string name="onboarding_skip_label">Skip</string>
     <string name="onboarding_finish_label">Finish</string>
+
+    <!-- Shopping cart -->
+    <string name="shopping_cart_list_checkout_label">Checkout</string>
+
+    <!-- Order address -->
+    <string name="order_address_header">Address details</string>
+    <string name="order_contact_header">Contact</string>
+    <string name="order_address_name_hint">Name</string>
+    <string name="order_address_surname_hint">Surname</string>
+    <string name="order_address_city_hint">City</string>
+    <string name="order_address_street_hint">Street and number</string>
+    <string name="order_address_zip_code_hint">ZIP Code</string>
+    <string name="order_address_phone_hint">Phone number</string>
+    <string name="order_address_email_hint">Email</string>
+    <string name="order_address_payment_details_label">Payment details</string>
 
 </resources>

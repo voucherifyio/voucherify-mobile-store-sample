@@ -26,4 +26,7 @@ interface Navigator {
     fun openVoucherAdminDetails(context: Context, voucherResponse: VoucherResponse)
 
     fun openShoppingCardActivity(context: Context)
+
+    fun openOrderActivity(context: Context)
+
 }

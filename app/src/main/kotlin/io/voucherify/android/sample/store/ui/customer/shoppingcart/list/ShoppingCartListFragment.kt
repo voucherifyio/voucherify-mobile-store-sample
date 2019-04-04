@@ -71,6 +71,12 @@ class ShoppingCartListFragment: BaseFragment() {
 
     private fun setBindings() {
 
+        shopping_cart_checkout_button.setOnClickListener {
+            activity?.let {
+                navigator.openOrderActivity(context = it)
+            }
+        }
+
         shoppingCartListViewModel
             .outputShoppingCartItems()
             .observe(this, dataObserver)

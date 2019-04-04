@@ -3,6 +3,7 @@ package io.voucherify.android.sample.store.injection.module
 import dagger.Module
 import io.voucherify.android.sample.store.injection.module.customers.admin.CustomerDetailsFragmentModule
 import io.voucherify.android.sample.store.injection.module.customers.admin.CustomersAdminFragmentModule
+import io.voucherify.android.sample.store.injection.module.order.OrderFragmentModule
 import io.voucherify.android.sample.store.injection.module.products.admin.ProductAdminDetailsFragmentModule
 import io.voucherify.android.sample.store.injection.module.products.admin.ProductsAdminFragmentModule
 import io.voucherify.android.sample.store.injection.module.products.customer.CustomerProductsFragmentModule
@@ -27,7 +28,8 @@ import io.voucherify.android.sample.store.injection.module.vouchers.admin.Vouche
         SettingsCustomerFragmentModule::class,
         CustomerProductsFragmentModule::class,
         CustomerProductDetailsFragmentModule::class,
-        ShoppingCartListFragmentModule::class
+        ShoppingCartListFragmentModule::class,
+        OrderFragmentModule::class
     ]
 )
 abstract class ContributeFragmentModule
