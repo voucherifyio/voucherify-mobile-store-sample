@@ -6,6 +6,7 @@ import io.voucherify.android.sample.store.injection.module.dashboard.DashboardAd
 import io.voucherify.android.sample.store.injection.module.dashboard.customer.DashboardCustomerActivityModule
 import io.voucherify.android.sample.store.injection.module.login.LoginActivityModule
 import io.voucherify.android.sample.store.injection.module.onboarding.OnboardingActivityModule
+import io.voucherify.android.sample.store.injection.module.order.OrderActivityModule
 import io.voucherify.android.sample.store.injection.module.products.admin.ProductAdminDetailsActivityModule
 import io.voucherify.android.sample.store.injection.module.products.customer.details.CustomerProductDetailsActivityModule
 import io.voucherify.android.sample.store.injection.module.shoppingcart.ShoppingCartActivityModule
@@ -24,7 +25,8 @@ import io.voucherify.android.sample.store.injection.module.vouchers.admin.Vouche
         OnboardingActivityModule::class,
         VoucherAdminDetailsActivityModule::class,
         CustomerProductDetailsActivityModule::class,
-        ShoppingCartActivityModule::class
+        ShoppingCartActivityModule::class,
+        OrderActivityModule::class
     ]
 )
 abstract class ContributeActivityModule
