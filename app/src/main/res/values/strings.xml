@@ -14,6 +14,7 @@
     <string name="title_settings">Settings</string>
     <string name="title_shopping_cart">Shopping cart</string>
     <string name="title_order_address">Order address</string>
+    <string name="title_payment_details">Payment details</string>
 
     <!-- Menus -->
     <string name="menu_item_shopping_cart">Shopping cart</string>
@@ -77,5 +78,16 @@
     <string name="order_address_phone_hint">Phone number</string>
     <string name="order_address_email_hint">Email</string>
     <string name="order_address_payment_details_label">Payment details</string>
+
+    <!-- Payment details -->
+    <string name="payment_details_summary_label">Summary</string>
+
+    <!-- Credit card -->
+    <string name="credit_card_cvv_front_hint">0000</string>
+    <string name="credit_card_number_front_hint">XXXX XXXX XXXX XXXX</string>
+    <string name="credit_card_holder_front_hint">CARD HOLDER</string>
+    <string name="credit_card_holder_sample_front_label">Joe Don</string>
+    <string name="credit_card_expire_date_front_hint">CARD EXPIRY</string>
+    <string name="credit_card_expire_date_mm_yy_format_front_hint">MM/YY</string>
 
 </resources>

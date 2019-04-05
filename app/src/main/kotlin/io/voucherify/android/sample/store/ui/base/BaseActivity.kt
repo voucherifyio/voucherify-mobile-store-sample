@@ -31,4 +31,13 @@ open class BaseActivity : DaggerAppCompatActivity() {
             .replace(containerId, fragment, tag)
             .commit()
     }
+
+    protected fun replaceFragmentWithBackStack(@IdRes containerId: Int, fragment: Fragment, tag: String? = null) {
+        supportFragmentManager
+            .beginTransaction()
+            .setCustomAnimations(R.anim.design_bottom_sheet_slide_in, R.anim.design_bottom_sheet_slide_out)
+            .replace(containerId, fragment, tag)
+            .addToBackStack(null)
+            .commit()
+    }
 }

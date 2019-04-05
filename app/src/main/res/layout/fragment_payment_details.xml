@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="@dimen/spacing_medium"
+                android:background="@color/voucherify_background">
+
+    <RelativeLayout android:layout_width="wrap_content"
+                    android:layout_height="180dp"
+                    android:layout_marginTop="@dimen/margin_xlarge"
+                    android:layout_marginLeft="@dimen/margin_medium"
+                    android:layout_marginRight="@dimen/margin_medium"
+                    android:layout_centerHorizontal="true"
+                    android:background="@color/voucherify_text_accent">
+
+        <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="60dp"
+                android:layout_marginLeft="250dp"
+                android:orientation="vertical">
+
+            <TextView
+                    android:id="@+id/front_card_cvv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:hint="@string/credit_card_cvv_front_hint"
+                    android:maxWidth="60dp"
+                    android:minWidth="60dp"
+                    android:paddingBottom="@dimen/spacing_small"
+                    android:paddingTop="@dimen/spacing_small"
+                    android:shadowColor="@color/text_shadow"
+                    android:shadowDx="1"
+                    android:shadowDy="1"
+                    android:shadowRadius="2"
+                    android:textColor="@android:color/white"
+                    android:textColorHint="@color/voucherify_text_semi_white"
+                    android:visibility="gone"/>
+
+        </LinearLayout>
+
+        <TextView
+                android:id="@+id/front_card_number"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="50dp"
+                android:hint="@string/credit_card_number_front_hint"
+                android:shadowColor="@color/text_shadow"
+                android:shadowDx="1"
+                android:shadowDy="1"
+                android:shadowRadius="2"
+                android:textColor="@android:color/white"
+                android:textColorHint="@color/voucherify_text_semi_white"
+                android:textSize="@dimen/text_size_normal"/>
+
+        <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="120dp"
+                android:orientation="horizontal">
+
+            <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="18dp"
+                    android:orientation="vertical">
+
+                <TextView
+                        android:id="@+id/card_name_label"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/credit_card_holder_front_hint"
+                        android:textColor="@android:color/darker_gray"
+                        android:textColorHint="@color/voucherify_text_semi_white"
+                        android:textSize="9sp"/>
+
+                <TextView
+                        android:id="@+id/front_card_holder_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:hint="@string/credit_card_holder_sample_front_label"
+                        android:maxWidth="150dp"
+                        android:minWidth="150dp"
+                        android:paddingBottom="@dimen/spacing_small"
+                        android:paddingTop="@dimen/spacing_small"
+                        android:shadowColor="@color/text_shadow"
+                        android:shadowDx="1"
+                        android:shadowDy="1"
+                        android:shadowRadius="2"
+                        android:textColor="@android:color/white"
+                        android:textColorHint="@color/voucherify_text_semi_white"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="18dp"
+                    android:orientation="vertical">
+
+                <TextView
+                        android:id="@+id/card_expiry_label"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/credit_card_expire_date_front_hint"
+                        android:textColor="@android:color/darker_gray"
+                        android:textColorHint="@color/voucherify_text_semi_white"
+                        android:textSize="9sp"/>
+
+                <TextView
+                        android:id="@+id/front_card_expiry"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:hint="@string/credit_card_expire_date_mm_yy_format_front_hint"
+                        android:maxWidth="150dp"
+                        android:minWidth="150dp"
+                        android:paddingBottom="@dimen/spacing_small"
+                        android:paddingTop="@dimen/spacing_small"
+                        android:shadowColor="@color/text_shadow"
+                        android:shadowDx="1"
+                        android:shadowDy="1"
+                        android:shadowRadius="2"
+                        android:textColor="@android:color/white"
+                        android:textColorHint="@color/voucherify_text_semi_white"/>
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <LinearLayout android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:orientation="horizontal"
+                  android:layout_alignParentBottom="true">
+
+        <TextView style="@style/Voucherify.Base.Button.Borderless.Medium"
+                  android:id="@+id/payment_details_order_summary_button"
+                  android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:background="@drawable/selectable_view_accent"
+                  android:textColor="@color/text_selector_button_light"
+                  android:text="@string/payment_details_summary_label"/>
+    </LinearLayout>
+
+</RelativeLayout>

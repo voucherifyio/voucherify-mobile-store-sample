@@ -6,9 +6,10 @@ import android.os.Bundle
 import io.voucherify.android.sample.store.R
 import io.voucherify.android.sample.store.ui.base.BaseActivity
 import io.voucherify.android.sample.store.ui.customer.order.address.OrderAddressFragment
+import io.voucherify.android.sample.store.ui.customer.order.payment.OrderPaymentDetailsFragment
 import io.voucherify.android.sample.store.utils.views.ToolbarUtils
 
-class OrderActivity : BaseActivity() {
+class OrderActivity : BaseActivity(), OrderViewDelegate {
 
     companion object Factory {
         @JvmStatic
@@ -20,12 +21,6 @@ class OrderActivity : BaseActivity() {
 
         setContentView(R.layout.activity_order)
 
-        ToolbarUtils.initActionBarWithTitle(
-            activity = this,
-            titleRes = R.string.title_order_address,
-            backArrow = true
-        )
-
         if (savedInstanceState == null) {
             replaceFragment(
                 containerId = R.id.order_fragment_container,
@@ -33,5 +28,26 @@ class OrderActivity : BaseActivity() {
                 tag = OrderAddressFragment.TAG
             )
         }
+    }
+
+    override fun onPaymentDetailsClick() {
+        replaceFragmentWithBackStack(
+            containerId = R.id.order_fragment_container,
+            fragment = OrderPaymentDetailsFragment.newInstance(),
+            tag = OrderPaymentDetailsFragment.TAG
+        )
+    }
+
+    override fun onSummaryClick() {
+
+    }
+
+    override fun onTitleChange(title: String) {
+
+        ToolbarUtils.initActionBarWithTitle(
+            activity = this,
+            title = title,
+            backArrow = true
+        )
     }
 }

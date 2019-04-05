@@ -1,4 +1,4 @@
-package io.voucherify.android.sample.store.ui.customer.order.address
+package io.voucherify.android.sample.store.ui.customer.order.payment
 
 import android.app.Activity
 import android.os.Bundle
@@ -7,15 +7,15 @@ import io.voucherify.android.sample.store.R
 import io.voucherify.android.sample.store.ui.base.BaseFragment
 import io.voucherify.android.sample.store.ui.customer.order.OrderViewDelegate
 import io.voucherify.android.sample.store.ui.flow.Navigator
-import kotlinx.android.synthetic.main.fragment_order_address.*
+import kotlinx.android.synthetic.main.fragment_payment_details.*
 import javax.inject.Inject
 
-class OrderAddressFragment : BaseFragment() {
+class OrderPaymentDetailsFragment : BaseFragment() {
 
     companion object {
-        const val TAG = "OrderAddressFragment"
+        const val TAG = "OrderPaymentDetailsFragment"
 
-        fun newInstance() = OrderAddressFragment()
+        fun newInstance() = OrderPaymentDetailsFragment()
     }
 
     @Inject
@@ -23,7 +23,7 @@ class OrderAddressFragment : BaseFragment() {
 
     private var parentViewDelegate: OrderViewDelegate? = null
 
-    override fun fragmentLayoutId(): Int = R.layout.fragment_order_address
+    override fun fragmentLayoutId(): Int = R.layout.fragment_payment_details
 
     override fun onAttach(activity: Activity) {
         super.onAttach(activity)
@@ -40,12 +40,12 @@ class OrderAddressFragment : BaseFragment() {
     override fun onResume() {
         super.onResume()
 
-        parentViewDelegate?.onTitleChange(getString(R.string.title_order_address))
+        parentViewDelegate?.onTitleChange(getString(R.string.title_payment_details))
     }
 
     private fun setViews() {
-        payment_details_order_address_button.setOnClickListener {
-            parentViewDelegate?.onPaymentDetailsClick()
+        payment_details_order_summary_button.setOnClickListener {
+            parentViewDelegate?.onSummaryClick()
         }
     }
 }
