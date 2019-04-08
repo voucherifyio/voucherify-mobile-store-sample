@@ -10,6 +10,11 @@
         <item name="android:textColor">@color/voucherify_text_primary</item>
     </style>
 
+    <style name="Voucherify.TextAppearance.Body">
+        <item name="android:textSize">@dimen/text_size_normal</item>
+        <item name="android:textColor">@color/voucherify_text_secondary</item>
+    </style>
+
     <style name="Voucherify.TextAppearance.Caption">
         <item name="android:textSize">@dimen/text_size_small</item>
         <item name="android:textColor">@color/voucherify_text_secondary</item>
@@ -32,6 +37,10 @@
 
     <style name="Voucherify.TextAppearance.Button.Accent">
         <item name="android:textColor">@color/text_selector_button_accent</item>
+    </style>
+
+    <style name="Voucherify.TextAppearance.Button.Green">
+        <item name="android:textColor">@color/text_selector_button_light</item>
     </style>
 
     <!-- Settings -->
