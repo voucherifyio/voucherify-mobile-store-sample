@@ -8,4 +8,6 @@ interface OrderViewDelegate {
 
     fun onSummaryClick()
 
+    fun onBuyClick()
+
 }

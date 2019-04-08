@@ -16,7 +16,7 @@
                   android:text="@string/order_address_header"/>
 
         <View android:layout_width="match_parent"
-              android:layout_height="wrap_content"
+              android:layout_height="1dp"
               android:layout_marginTop="@dimen/margin_small"
               android:layout_marginBottom="@dimen/margin_small"
               android:background="@color/voucherify_divider_default"/>
@@ -89,7 +89,7 @@
                   android:text="@string/order_contact_header"/>
 
         <View android:layout_width="match_parent"
-              android:layout_height="wrap_content"
+              android:layout_height="1dp"
               android:layout_marginTop="@dimen/margin_small"
               android:layout_marginBottom="@dimen/margin_small"
               android:background="@color/voucherify_divider_default"/>

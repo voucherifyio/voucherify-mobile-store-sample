@@ -7,6 +7,7 @@ import io.voucherify.android.sample.store.R
 import io.voucherify.android.sample.store.ui.base.BaseActivity
 import io.voucherify.android.sample.store.ui.customer.order.address.OrderAddressFragment
 import io.voucherify.android.sample.store.ui.customer.order.payment.OrderPaymentDetailsFragment
+import io.voucherify.android.sample.store.ui.customer.order.summary.OrderSummaryFragment
 import io.voucherify.android.sample.store.utils.views.ToolbarUtils
 
 class OrderActivity : BaseActivity(), OrderViewDelegate {
@@ -38,8 +39,15 @@ class OrderActivity : BaseActivity(), OrderViewDelegate {
         )
     }
 
-    override fun onSummaryClick() {
+    override fun onBuyClick() {
+    }
 
+    override fun onSummaryClick() {
+        replaceFragmentWithBackStack(
+            containerId = R.id.order_fragment_container,
+            fragment = OrderSummaryFragment.newInstance(),
+            tag = OrderSummaryFragment.TAG
+        )
     }
 
     override fun onTitleChange(title: String) {

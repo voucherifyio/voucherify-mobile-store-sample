@@ -15,6 +15,9 @@
     <color name="voucherify_blue">#354EA0</color>
     <color name="voucherify_blue_50">#80354EA0</color>
 
+    <color name="voucherify_green">#6BB14A</color>
+    <color name="voucherify_green_50">#806BB14A</color>
+
     <color name="voucherify_black_80">#33000000</color>
 
     <color name="text_shadow">#7F000000</color>
