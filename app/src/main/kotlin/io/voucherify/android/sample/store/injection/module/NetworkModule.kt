@@ -1,5 +1,6 @@
 package io.voucherify.android.sample.store.injection.module
 
+import android.content.Context
 import com.squareup.moshi.Moshi
 import com.squareup.moshi.adapters.Rfc3339DateJsonAdapter
 import dagger.Module
@@ -8,7 +9,10 @@ import dagger.Reusable
 import io.reactivex.schedulers.Schedulers
 import io.voucherify.android.sample.store.BuildConfig
 import io.voucherify.android.sample.store.data.local.AccountLocalPreferencesStorable
+import io.voucherify.android.sample.store.data.remote.api.interceptors.AuthorizationErrorInterceptor
 import io.voucherify.android.sample.store.data.remote.api.interceptors.AuthorizationHeaderInterceptor
+import io.voucherify.android.sample.store.data.service.user.UserService
+import io.voucherify.android.sample.store.ui.flow.Navigator
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
 import retrofit2.Converter
@@ -57,6 +61,9 @@ object NetworkModule {
     @Reusable
     fun provideClient(
         logger: HttpLoggingInterceptor,
+        context: Context,
+        userService: UserService,
+        navigator: Navigator,
         accountLocalPreferences: AccountLocalPreferencesStorable
     ): OkHttpClient {
 
@@ -72,6 +79,10 @@ object NetworkModule {
 
         return okHttpClientBuilder
             .addInterceptor(AuthorizationHeaderInterceptor(accountLocalPreferences))
+            .addInterceptor(AuthorizationErrorInterceptor(
+                context = context,
+                userService = userService,
+                navigator = navigator))
             .addInterceptor(logger)
             .build()
 
