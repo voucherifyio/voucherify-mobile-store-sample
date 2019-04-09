@@ -14,6 +14,12 @@ open class BaseActivity : DaggerAppCompatActivity() {
         return true
     }
 
+    protected fun clearBackStack() {
+        while (supportFragmentManager.backStackEntryCount > 0) {
+            supportFragmentManager.popBackStackImmediate()
+        }
+    }
+
     protected open fun initActionBar(activity: AppCompatActivity) {
         setSupportActionBar(activity.findViewById(R.id.toolbar))
     }

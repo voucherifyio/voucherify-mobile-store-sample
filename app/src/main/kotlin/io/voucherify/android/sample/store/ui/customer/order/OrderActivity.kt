@@ -6,6 +6,7 @@ import android.os.Bundle
 import io.voucherify.android.sample.store.R
 import io.voucherify.android.sample.store.ui.base.BaseActivity
 import io.voucherify.android.sample.store.ui.customer.order.address.OrderAddressFragment
+import io.voucherify.android.sample.store.ui.customer.order.details.OrderDetailsFragment
 import io.voucherify.android.sample.store.ui.customer.order.payment.OrderPaymentDetailsFragment
 import io.voucherify.android.sample.store.ui.customer.order.summary.OrderSummaryFragment
 import io.voucherify.android.sample.store.utils.views.ToolbarUtils
@@ -39,23 +40,33 @@ class OrderActivity : BaseActivity(), OrderViewDelegate {
         )
     }
 
-    override fun onBuyClick() {
+    override fun onDetailsClick() {
+        replaceFragmentWithBackStack(
+            containerId = R.id.order_fragment_container,
+            fragment = OrderDetailsFragment.newInstance(),
+            tag = OrderDetailsFragment.TAG
+        )
     }
 
-    override fun onSummaryClick() {
-        replaceFragmentWithBackStack(
+    override fun onBuyClick() {
+        clearBackStack()
+
+        replaceFragment(
             containerId = R.id.order_fragment_container,
             fragment = OrderSummaryFragment.newInstance(),
             tag = OrderSummaryFragment.TAG
         )
     }
 
-    override fun onTitleChange(title: String) {
+    override fun onHistoryClick() {
+    }
+
+    override fun onTitleChange(title: String, hasBackArrow: Boolean) {
 
         ToolbarUtils.initActionBarWithTitle(
             activity = this,
             title = title,
-            backArrow = true
+            backArrow = hasBackArrow
         )
     }
 }

@@ -40,7 +40,7 @@ class OrderAddressFragment : BaseFragment() {
     override fun onResume() {
         super.onResume()
 
-        parentViewDelegate?.onTitleChange(getString(R.string.title_order_address))
+        parentViewDelegate?.onTitleChange(getString(R.string.title_order_address), hasBackArrow = true)
     }
 
     private fun setViews() {

@@ -40,12 +40,12 @@ class OrderSummaryFragment : BaseFragment() {
     override fun onResume() {
         super.onResume()
 
-        parentViewDelegate?.onTitleChange(getString(R.string.title_order_summary))
+        parentViewDelegate?.onTitleChange(getString(R.string.title_order_summary), hasBackArrow = false)
     }
 
     private fun setViews() {
-        order_summary_buy_button.setOnClickListener {
-            parentViewDelegate?.onBuyClick()
+        order_summary_history_button.setOnClickListener {
+            parentViewDelegate?.onHistoryClick()
         }
     }
 
