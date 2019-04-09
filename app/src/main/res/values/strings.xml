@@ -15,6 +15,7 @@
     <string name="title_shopping_cart">Shopping cart</string>
     <string name="title_order_address">Order address</string>
     <string name="title_payment_details">Payment details</string>
+    <string name="title_order_details">Order details</string>
     <string name="title_order_summary">Summary</string>
 
     <!-- Menus -->
@@ -80,14 +81,17 @@
     <string name="order_address_email_hint">Email</string>
     <string name="order_address_payment_details_label">Payment details</string>
 
+    <!-- Order details -->
+    <string name="order_details_address_details_label">Address delivery</string>
+    <string name="order_details_payment_method_label">Payment method</string>
+    <string name="order_details_cost_label">Order cost</string>
+    <string name="order_details_voucher_label">Voucher</string>
+    <string name="order_details_voucher_hint">Voucher code</string>
+    <string name="order_details_voucher_apply_label">Apply</string>
+    <string name="order_details_buy_label">Buy</string>
+
     <!-- Order summary -->
-    <string name="order_summary_address_details_label">Address delivery</string>
-    <string name="order_summary_payment_method_label">Payment method</string>
-    <string name="order_summary_cost_label">Order cost</string>
-    <string name="order_summary_voucher_label">Voucher</string>
-    <string name="order_summary_voucher_hint">Voucher code</string>
-    <string name="order_summary_voucher_apply_label">Apply</string>
-    <string name="order_summary_buy_label">Buy</string>
+    <string name="order_summary_show_history_label">History</string>
 
     <!-- Payment details -->
     <string name="payment_details_summary_label">Summary</string>

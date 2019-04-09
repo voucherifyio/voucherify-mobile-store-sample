@@ -2,79 +2,19 @@
 <androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
                                        android:layout_width="match_parent"
                                        android:layout_height="match_parent"
-                                       android:padding="@dimen/spacing_medium"
                                        android:fillViewport="true"
                                        android:background="@color/voucherify_background">
 
     <RelativeLayout android:layout_width="match_parent"
-                    android:layout_height="match_parent">
+                    android:layout_height="match_parent"
+                    android:padding="@dimen/spacing_medium">
 
-        <LinearLayout android:orientation="vertical"
-                      android:layout_width="match_parent"
-                      android:layout_height="match_parent">
-
-            <TextView style="@style/Voucherify.TextAppearance.Title"
-                      android:layout_width="match_parent"
-                      android:layout_height="wrap_content"
-                      android:text="@string/order_summary_address_details_label"/>
-
-            <TextView style="@style/Voucherify.TextAppearance.Body"
-                      android:id="@+id/order_summary_address_details"
-                      android:layout_width="match_parent"
-                      android:layout_height="wrap_content"
-                      android:text="TODO"/>
-
-            <TextView style="@style/Voucherify.TextAppearance.Title"
-                      android:layout_width="match_parent"
-                      android:layout_height="wrap_content"
-                      android:layout_marginTop="@dimen/margin_medium"
-                      android:text="@string/order_summary_payment_method_label"/>
-
-            <TextView style="@style/Voucherify.TextAppearance.Body"
-                      android:id="@+id/order_summary_payment_method"
-                      android:layout_width="match_parent"
-                      android:layout_height="wrap_content"
-                      android:text="TODO"/>
-
-            <View android:layout_width="match_parent"
-                  android:layout_height="1dp"
-                  android:layout_marginTop="@dimen/margin_small"
-                  android:layout_marginBottom="@dimen/margin_small"
-                  android:background="@color/voucherify_divider_default"/>
-
-            <TextView style="@style/Voucherify.TextAppearance.Title"
-                      android:layout_width="match_parent"
-                      android:layout_height="wrap_content"
-                      android:layout_marginTop="@dimen/margin_medium"
-                      android:text="@string/order_summary_cost_label"/>
-
-            <TextView style="@style/Voucherify.TextAppearance.Body"
-                      android:id="@+id/order_summary_cost_value"
-                      android:layout_width="match_parent"
-                      android:layout_height="wrap_content"
-                      android:text="TODO"/>
-
-            <TextView style="@style/Voucherify.TextAppearance.Title"
-                      android:layout_width="match_parent"
-                      android:layout_height="wrap_content"
-                      android:layout_marginTop="@dimen/margin_medium"
-                      android:text="@string/order_summary_voucher_label"/>
-
-            <EditText android:layout_width="match_parent"
-                      android:layout_height="wrap_content"
-                      android:gravity="center_horizontal"
-                      android:lines="1"
-                      android:maxLength="100"
-                      android:hint="@string/order_summary_voucher_hint"/>
-
-            <Button style="@style/Voucherify.Base.Button.Green"
-                    android:id="@+id/order_summary_voucher_validate_button"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:minHeight="@dimen/default_touch_target"
-                    android:text="@string/order_summary_voucher_apply_label"/>
-
-        </LinearLayout>
+        <TextView style="@style/Voucherify.TextAppearance.Body"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:layout_centerInParent="true"
+                  android:gravity="center"
+                  android:text="We received you order under transaction number XXXXX. We will ship it to you in less than a week.\nIn case of other questions, you can reach us by calling on +48 XXX XXX XXX"/>
 
         <LinearLayout android:layout_width="match_parent"
                       android:layout_height="wrap_content"
@@ -83,12 +23,12 @@
                       android:layout_alignParentBottom="true">
 
             <TextView style="@style/Voucherify.Base.Button.Borderless.Medium"
-                      android:id="@+id/order_summary_buy_button"
+                      android:id="@+id/order_summary_history_button"
                       android:layout_width="match_parent"
                       android:layout_height="wrap_content"
                       android:background="@drawable/selectable_view_accent"
                       android:textColor="@color/text_selector_button_light"
-                      android:text="@string/order_summary_buy_label"/>
+                      android:text="@string/order_summary_show_history_label"/>
         </LinearLayout>
 
     </RelativeLayout>
