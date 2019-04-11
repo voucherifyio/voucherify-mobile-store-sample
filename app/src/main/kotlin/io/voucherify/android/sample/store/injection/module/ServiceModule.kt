@@ -20,6 +20,8 @@ import io.voucherify.android.sample.store.data.service.logout.LogoutService
 import io.voucherify.android.sample.store.data.service.logout.VoucherifyLogoutService
 import io.voucherify.android.sample.store.data.service.onboarding.OnboardingService
 import io.voucherify.android.sample.store.data.service.onboarding.VoucherifyOnboardingService
+import io.voucherify.android.sample.store.data.service.orders.OrdersService
+import io.voucherify.android.sample.store.data.service.orders.VoucherifyLocalOrderService
 import io.voucherify.android.sample.store.data.service.shoppingcart.ShoppingCartService
 import io.voucherify.android.sample.store.data.service.shoppingcart.VoucherifyShoppingCart
 import io.voucherify.android.sample.store.data.service.user.UserService
@@ -91,4 +93,17 @@ object ServiceModule {
     @Singleton
     fun provideShoppingCartService(): ShoppingCartService =
         VoucherifyShoppingCart()
+
+    @Provides
+    @Singleton
+    fun provideOrdersService(
+        customerPerspectiveService: CustomerPerspectiveService,
+        customersLocalPersistence: CustomersLocalPersistence,
+        shoppingCartService: ShoppingCartService
+    ): OrdersService =
+        VoucherifyLocalOrderService(
+            customerPerspectiveService = customerPerspectiveService,
+            customersLocalPersistence = customersLocalPersistence,
+            shoppingCartService = shoppingCartService
+        )
 }

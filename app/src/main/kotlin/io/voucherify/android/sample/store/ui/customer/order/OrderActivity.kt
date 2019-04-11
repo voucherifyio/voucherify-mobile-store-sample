@@ -9,7 +9,9 @@ import io.voucherify.android.sample.store.ui.customer.order.address.OrderAddress
 import io.voucherify.android.sample.store.ui.customer.order.details.OrderDetailsFragment
 import io.voucherify.android.sample.store.ui.customer.order.payment.OrderPaymentDetailsFragment
 import io.voucherify.android.sample.store.ui.customer.order.summary.OrderSummaryFragment
+import io.voucherify.android.sample.store.ui.flow.Navigator
 import io.voucherify.android.sample.store.utils.views.ToolbarUtils
+import javax.inject.Inject
 
 class OrderActivity : BaseActivity(), OrderViewDelegate {
 
@@ -17,6 +19,9 @@ class OrderActivity : BaseActivity(), OrderViewDelegate {
         @JvmStatic
         fun createIntent(context: Context) = Intent(context, OrderActivity::class.java)
     }
+
+    @Inject
+    lateinit var navigator: Navigator
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -59,6 +64,7 @@ class OrderActivity : BaseActivity(), OrderViewDelegate {
     }
 
     override fun onHistoryClick() {
+        navigator.openDashboardCustomerActivity(this)
     }
 
     override fun onTitleChange(title: String, hasBackArrow: Boolean) {

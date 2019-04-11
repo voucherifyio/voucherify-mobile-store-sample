@@ -11,7 +11,8 @@ data class LocalCustomer(
     val name: String?,
     val description: String?,
     val email: String?,
-    var isActive: Boolean
+    var isActive: Boolean,
+    var orders: List<LocalOrder>
 ) {
 
     companion object {
@@ -23,7 +24,8 @@ data class LocalCustomer(
                 name = customer.name,
                 description = customer.description,
                 email = customer.email,
-                isActive = false
+                isActive = false,
+                orders = emptyList()
             )
         }
     }
@@ -34,6 +36,7 @@ data class LocalCustomer(
         null,
         null,
         null,
-        false
+        false,
+        emptyList()
     )
 }

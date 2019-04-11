@@ -7,6 +7,7 @@ import android.view.Menu
 import android.view.MenuItem
 import io.voucherify.android.sample.store.R
 import io.voucherify.android.sample.store.ui.base.BaseActivity
+import io.voucherify.android.sample.store.ui.customer.history.CustomerOrdersHistoryFragment
 import io.voucherify.android.sample.store.ui.customer.products.CustomerProductsFragment
 import io.voucherify.android.sample.store.ui.customer.settings.SettingsCustomerFragment
 import io.voucherify.android.sample.store.ui.flow.Navigator
@@ -43,6 +44,12 @@ class DashboardCustomerActivity : BaseActivity() {
                 }
                 R.id.dashboard_customer_navigation_orders -> {
                     ToolbarUtils.initActionBarWithTitle(activity = this, titleRes = R.string.title_orders)
+
+                    replaceFragment(
+                        containerId = R.id.dashboard_customer_fragment_container,
+                        fragment = CustomerOrdersHistoryFragment.newInstance(),
+                        tag = CustomerOrdersHistoryFragment.TAG
+                    )
                 }
                 R.id.dashboard_customer_navigation_settings -> {
                     ToolbarUtils.initActionBarWithTitle(activity = this, titleRes = R.string.title_settings)
@@ -50,7 +57,8 @@ class DashboardCustomerActivity : BaseActivity() {
                     replaceFragment(
                         containerId = R.id.dashboard_customer_fragment_container,
                         fragment = SettingsCustomerFragment.newInstance(),
-                        tag = SettingsCustomerFragment.TAG)
+                        tag = SettingsCustomerFragment.TAG
+                    )
                 }
                 else -> {
                 }

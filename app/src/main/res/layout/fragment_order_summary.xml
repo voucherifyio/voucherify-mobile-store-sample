@@ -28,7 +28,7 @@
                       android:layout_height="wrap_content"
                       android:background="@drawable/selectable_view_accent"
                       android:textColor="@color/text_selector_button_light"
-                      android:text="@string/order_summary_show_history_label"/>
+                      android:text="@string/order_summary_show_finish_label"/>
         </LinearLayout>
 
     </RelativeLayout>

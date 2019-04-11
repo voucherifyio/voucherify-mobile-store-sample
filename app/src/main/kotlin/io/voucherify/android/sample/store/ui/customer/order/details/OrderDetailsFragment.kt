@@ -19,6 +19,9 @@ class OrderDetailsFragment : BaseFragment() {
     }
 
     @Inject
+    lateinit var viewModel: OrderDetailsViewModel
+
+    @Inject
     lateinit var navigator: Navigator
 
     private var parentViewDelegate: OrderViewDelegate? = null
@@ -45,6 +48,9 @@ class OrderDetailsFragment : BaseFragment() {
 
     private fun setViews() {
         order_details_buy_button.setOnClickListener {
+
+            viewModel.buy()
+
             parentViewDelegate?.onBuyClick()
         }
     }
