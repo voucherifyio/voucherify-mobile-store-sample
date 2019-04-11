@@ -91,7 +91,7 @@
     <string name="order_details_buy_label">Buy</string>
 
     <!-- Order summary -->
-    <string name="order_summary_show_history_label">History</string>
+    <string name="order_summary_show_finish_label">Finish</string>
 
     <!-- Payment details -->
     <string name="payment_details_summary_label">Summary</string>
