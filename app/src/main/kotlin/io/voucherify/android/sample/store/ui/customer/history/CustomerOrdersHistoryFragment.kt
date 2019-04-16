@@ -29,6 +29,7 @@ class CustomerOrdersHistoryFragment : BaseFragment() {
 
     private val ordersAdapter = CustomerOrdersHistoryAdapter(itemClick = { item ->
         activity?.let {
+            navigator.openCustomerOrderHistoryDetialsActivity(context = it, localOrder = item)
         }
     })
 

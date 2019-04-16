@@ -2,10 +2,12 @@ package io.voucherify.android.sample.store.ui.flow
 
 import android.content.Context
 import android.content.Intent
+import io.voucherify.android.sample.store.data.local.model.LocalOrder
 import io.voucherify.android.sample.store.data.remote.api.response.CustomerResponse
 import io.voucherify.android.sample.store.data.remote.api.response.ProductResponse
 import io.voucherify.android.sample.store.data.remote.api.response.VoucherResponse
 import io.voucherify.android.sample.store.ui.customer.DashboardCustomerActivity
+import io.voucherify.android.sample.store.ui.customer.history.details.CustomerOrderHistoryDetailsActivity
 import io.voucherify.android.sample.store.ui.customer.order.OrderActivity
 import io.voucherify.android.sample.store.ui.customer.products.details.CustomerProductDetailsActivity
 import io.voucherify.android.sample.store.ui.customer.shoppingcart.ShoppingCartActivity
@@ -72,6 +74,10 @@ class AppNavigator : Navigator {
 
     override fun openShoppingCardActivity(context: Context) {
         context.startActivity(ShoppingCartActivity.createIntent(context))
+    }
+
+    override fun openCustomerOrderHistoryDetialsActivity(context: Context, localOrder: LocalOrder) {
+        context.startActivity(CustomerOrderHistoryDetailsActivity.createIntent(context, order = localOrder))
     }
 
     private fun createLoginActivityIntent(context: Context) = LoginActivity.createIntent(context)
