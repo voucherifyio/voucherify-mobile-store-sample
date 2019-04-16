@@ -1,6 +1,7 @@
 package io.voucherify.android.sample.store.ui.flow
 
 import android.content.Context
+import io.voucherify.android.sample.store.data.local.model.LocalOrder
 import io.voucherify.android.sample.store.data.remote.api.response.CustomerResponse
 import io.voucherify.android.sample.store.data.remote.api.response.ProductResponse
 import io.voucherify.android.sample.store.data.remote.api.response.VoucherResponse
@@ -28,5 +29,7 @@ interface Navigator {
     fun openShoppingCardActivity(context: Context)
 
     fun openOrderActivity(context: Context)
+
+    fun openCustomerOrderHistoryDetialsActivity(context: Context, localOrder: LocalOrder)
 
 }

@@ -30,6 +30,7 @@
         <activity android:name=".ui.dashboard.admin.products.details.ProductAdminDetailsActivity"/>
         <activity android:name=".ui.dashboard.admin.vouchers.details.VoucherAdminDetailsActivity"/>
         <activity android:name=".ui.customer.order.OrderActivity"/>
+        <activity android:name=".ui.customer.history.details.CustomerOrderHistoryDetailsActivity"/>
 
     </application>
 </manifest>
