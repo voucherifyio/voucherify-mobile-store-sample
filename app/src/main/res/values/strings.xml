@@ -7,6 +7,7 @@
     <string name="common_hint_password">Password</string>
 
     <!-- Titles -->
+    <string name="title_login">Log in</string>
     <string name="title_vouchers">Vouchers</string>
     <string name="title_customers">Customers</string>
     <string name="title_orders">Orders</string>
@@ -17,6 +18,11 @@
     <string name="title_payment_details">Payment details</string>
     <string name="title_order_details">Order details</string>
     <string name="title_order_summary">Summary</string>
+
+    <!-- Login -->
+    <string name="login_button">Login</string>
+    <string name="login_forgot_password_button">Forgot password?</string>
+    <string name="login_forgot_password_link">https://app.voucherify.io/#/resetPassword</string>
 
     <!-- Menus -->
     <string name="menu_item_shopping_cart">Shopping cart</string>

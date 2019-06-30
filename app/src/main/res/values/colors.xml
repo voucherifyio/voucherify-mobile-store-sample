@@ -1,17 +1,28 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">@color/voucherify_green_dark</color>
-    <color name="colorPrimaryDark">@color/voucherify_grey_dark</color>
-    <color name="colorAccent">@color/voucherify_blue</color>
+    <color name="colorPrimary">@color/voucherify_color_primary</color>
+    <color name="colorPrimaryDark">@color/voucherify_color_primary_dark</color>
+    <color name="colorAccent">@color/voucherify_color_accent</color>
 
-    <color name="accent_highlight">@color/voucherify_blue_50</color>
+    <color name="accent_highlight">@color/voucherify_color_accent_50</color>
+
+    <color name="voucherify_color_primary">#3BB8C3</color>
+    <color name="voucherify_color_primary_dark">#009BA9</color>
+    <color name="voucherify_color_accent">#354EA0</color>
+
+    <color name="voucherify_color_accent_50">#80354EA0</color>
+
+    <color name="voucherify_white">#F1F4F5</color>
+    <color name="voucherify_grey">#6E6E6E</color>
+    <color name="voucherify_grey_dark">#4B4B4B</color>
+    <color name="voucherify_grey_light">#AAAAAA</color>
+    <color name="voucherify_black">#272727</color>
+    <color name="voucherify_red">#FF0000</color>
+
+    <color name="voucherify_toolbar_background_default">@color/voucherify_color_primary</color>
 
     <!-- -->
     <color name="voucherify_green_dark">#213F40</color>
-    <color name="voucherify_white">#FFFFFF</color>
-    <color name="voucherify_grey_light">#F2F2F2</color>
-    <color name="voucherify_grey">#A8A9AB</color>
-    <color name="voucherify_grey_dark">#1D1E21</color>
     <color name="voucherify_blue">#354EA0</color>
     <color name="voucherify_blue_50">#80354EA0</color>
 
@@ -22,12 +33,15 @@
 
     <color name="text_shadow">#7F000000</color>
 
+    <color name="voucherify_text_input">@color/voucherify_black</color>
+
     <color name="voucherify_text_semi_white">#E6FFFFFF</color>
-    <color name="voucherify_text_primary">@color/voucherify_grey_dark</color>
-    <color name="voucherify_text_secondary">@color/voucherify_grey</color>
+    <color name="voucherify_text_primary">@color/voucherify_grey</color>
+    <color name="voucherify_text_secondary">@color/voucherify_grey_light</color>
     <color name="voucherify_text_light">@color/voucherify_white</color>
     <color name="voucherify_text_accent">@color/colorAccent</color>
     <color name="voucherify_text_accent_highlight">@color/voucherify_blue_50</color>
+    <color name="voucherify_text_hint">@color/voucherify_grey</color>
     <color name="voucherify_background">@color/voucherify_white</color>
     <color name="voucherify_background_dark">@color/voucherify_grey_dark</color>
     <color name="voucherify_background_grey_light">@color/voucherify_grey_light</color>
