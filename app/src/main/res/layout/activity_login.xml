@@ -1,38 +1,71 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-              android:layout_width="match_parent"
-              android:orientation="vertical"
-              android:layout_gravity="center"
-              android:layout_height="wrap_content">
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/voucherify_background">
 
-    <com.google.android.material.textfield.TextInputLayout
+    <include
+            layout="@layout/toolbar"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="?attr/actionBarSize"
+            android:layout_marginBottom="@dimen/margin_large"/>
 
-        <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/et_login_email"
+    <LinearLayout
+            android:orientation="vertical"
+            android:layout_below="@id/toolbar"
+            android:layout_width="match_parent"
+            android:padding="@dimen/spacing_medium"
+            android:layout_height="match_parent">
+
+        <com.google.android.material.textfield.TextInputLayout
+                android:theme="@style/Voucherify.TextAppearance.TextInputLayout"
+                android:hint="@string/common_hint_email"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+            <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/et_login_email"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+                android:theme="@style/Voucherify.TextAppearance.TextInputLayout"
+                android:hint="@string/common_hint_password"
+                android:layout_marginTop="@dimen/margin_medium"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+            <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/et_login_password"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textPassword"/>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.button.MaterialButton
+                style="@style/Voucherify.Base.Button.Accent"
+                android:id="@+id/btn_login_sign_in"
+                android:layout_marginTop="@dimen/margin_medium"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="@string/common_hint_email"/>
+                android:text="@string/login_button"/>
 
-    </com.google.android.material.textfield.TextInputLayout>
-
-    <com.google.android.material.textfield.TextInputLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-
-        <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/et_login_password"
+        <com.google.android.material.button.MaterialButton
+                style="@style/Widget.MaterialComponents.Button.TextButton"
+                android:background="@null"
+                android:id="@+id/btn_login_forgot_password"
+                android:layout_marginTop="@dimen/margin_medium"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:inputType="textPassword"
-                android:hint="@string/common_hint_password"/>
+                android:textColor="@color/voucherify_text_primary"
+                android:textAllCaps="false"
+                android:textSize="@dimen/text_size_primary_button"
+                android:text="@string/login_forgot_password_button"/>
 
-    </com.google.android.material.textfield.TextInputLayout>
+    </LinearLayout>
 
-    <Button android:layout_width="match_parent"
-            android:id="@+id/btn_login_sign_in"
-            android:layout_height="wrap_content"
-            android:text="Login"/>
-
-</LinearLayout>
+</RelativeLayout>

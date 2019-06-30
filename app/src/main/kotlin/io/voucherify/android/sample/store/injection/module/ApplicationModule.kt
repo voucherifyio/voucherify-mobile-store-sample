@@ -2,6 +2,7 @@ package io.voucherify.android.sample.store.injection.module
 
 import android.content.Context
 import android.content.SharedPreferences
+import android.content.res.Resources
 import dagger.Module
 import dagger.Provides
 import io.voucherify.android.sample.store.VoucherifyApplication
@@ -16,6 +17,12 @@ class ApplicationModule {
     @Provides
     fun provideContext(application: VoucherifyApplication): Context {
         return application
+    }
+
+    @Singleton
+    @Provides
+    fun provideResources(application: VoucherifyApplication): Resources {
+        return application.resources
     }
 
     @Provides

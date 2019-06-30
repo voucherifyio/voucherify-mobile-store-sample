@@ -5,15 +5,17 @@ import android.content.Intent
 import android.os.Bundle
 import android.widget.Toast
 import androidx.lifecycle.Observer
-import dagger.android.support.DaggerAppCompatActivity
+import io.reactivex.disposables.CompositeDisposable
 import io.voucherify.android.sample.store.R
 import io.voucherify.android.sample.store.data.local.model.LocalUser
 import io.voucherify.android.sample.store.data.remote.api.DataResult
+import io.voucherify.android.sample.store.ui.base.BaseActivity
 import io.voucherify.android.sample.store.ui.flow.Navigator
+import io.voucherify.android.sample.store.utils.views.ToolbarUtils
 import kotlinx.android.synthetic.main.activity_login.*
 import javax.inject.Inject
 
-class LoginActivity : DaggerAppCompatActivity() {
+class LoginActivity : BaseActivity() {
 
     companion object Factory {
         @JvmStatic
@@ -25,6 +27,8 @@ class LoginActivity : DaggerAppCompatActivity() {
 
     @Inject
     lateinit var appNavigator: Navigator
+
+    private var compositeDisposable: CompositeDisposable = CompositeDisposable()
 
     private val dataObserver = Observer<DataResult<LocalUser>> { result ->
         when (result.status) {
@@ -47,7 +51,15 @@ class LoginActivity : DaggerAppCompatActivity() {
 
         setContentView(R.layout.activity_login)
 
+        ToolbarUtils.initActionBarWithTitle(activity = this, titleRes = R.string.title_login)
+
         setBindings()
+    }
+
+    override fun onDestroy() {
+        super.onDestroy()
+
+        compositeDisposable.clear()
     }
 
     private fun setBindings() {
@@ -58,6 +70,21 @@ class LoginActivity : DaggerAppCompatActivity() {
                 password = et_login_password.text?.toString() ?: ""
             )
         }
+
+        btn_login_forgot_password.setOnClickListener {
+            viewModel.forgotPassword()
+        }
+
+        compositeDisposable.add(
+            viewModel
+                .outputViewCommand()
+                .subscribe {
+                    when (it) {
+                        is LoginViewModel.ViewCommand.ForgotPassword -> {
+                            startActivity(it.intent)
+                        }
+                    }
+                })
 
         viewModel
             .outputIsDataLoading()
