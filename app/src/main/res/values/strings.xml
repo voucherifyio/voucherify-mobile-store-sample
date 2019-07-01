@@ -69,6 +69,14 @@
     <string name="voucher_admin_details_discount_value">Discount value:</string>
 
     <!-- Onboarding -->
+    <string name="onboarding_header_page_1">Welcome!</string>
+    <string name="onboarding_header_page_2">Getting onboard</string>
+    <string name="onboarding_header_page_3">Tips &amp; Tricks</string>
+
+    <string name="onboarding_body_page_1">Learn all about Voucherify. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque egestas sagittis nisl, lobortis porta dolor maximus ac.</string>
+    <string name="onboarding_body_page_2">Learn all about Voucherify. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque egestas sagittis nisl, lobortis porta dolor maximus ac.</string>
+    <string name="onboarding_body_page_3">Learn all about Voucherify. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque egestas sagittis nisl, lobortis porta dolor maximus ac.</string>
+
     <string name="onboarding_skip_label">Skip</string>
     <string name="onboarding_finish_label">Finish</string>
 

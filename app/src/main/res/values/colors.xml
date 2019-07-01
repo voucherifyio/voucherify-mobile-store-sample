@@ -48,7 +48,7 @@
 
     <color name="voucherify_divider_default">@color/voucherify_grey</color>
 
-    <color name="page_indicator_selected">@color/voucherify_blue</color>
-    <color name="page_indicator_unselected">@color/voucherify_grey</color>
+    <color name="page_indicator_selected">@color/voucherify_white</color>
+    <color name="page_indicator_unselected">@color/voucherify_grey_light</color>
 
 </resources>
