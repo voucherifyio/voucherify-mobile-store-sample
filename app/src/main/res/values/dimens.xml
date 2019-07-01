@@ -15,7 +15,6 @@
     <dimen name="margin_xlarge">48dp</dimen>
     <dimen name="margin_xxlarge">64dp</dimen>
 
-    <dimen name="text_size_header">32sp</dimen>
     <dimen name="text_size_picker_header">24sp</dimen>
     <dimen name="text_size_subHeader">24sp</dimen>
 
@@ -30,6 +29,8 @@
     <dimen name="text_size_medium">16sp</dimen>
     <dimen name="text_size_big">24sp</dimen>
     <dimen name="text_size_large">40sp</dimen>
+
+    <dimen name="text_size_header">28sp</dimen>
 
     <dimen name="elevation_low">6dp</dimen>
     <dimen name="elevation_medium">12dp</dimen>

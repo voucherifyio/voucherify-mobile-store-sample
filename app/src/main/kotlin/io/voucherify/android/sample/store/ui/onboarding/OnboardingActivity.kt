@@ -3,6 +3,7 @@ package io.voucherify.android.sample.store.ui.onboarding
 import android.animation.ArgbEvaluator
 import android.content.Context
 import android.content.Intent
+import android.content.res.Resources
 import android.graphics.Color
 import android.os.Build
 import android.os.Bundle
@@ -61,12 +62,14 @@ class OnboardingActivity : BaseActivity() {
 
         setBindings()
 
-        sectionsPagerAdapter = SectionsPagerAdapter(supportFragmentManager)
+        sectionsPagerAdapter = SectionsPagerAdapter(
+            fm = supportFragmentManager,
+            resources = resources)
 
         if (Build.VERSION.SDK_INT <= Build.VERSION_CODES.LOLLIPOP)
             ContextCompat.getDrawable(this, R.drawable.ic_chevron_right_24px)?.let {
                 onboarding_next_button.setImageDrawable(
-                    DrawableUtils.tintMyDrawable(it, Color.WHITE)
+                    DrawableUtils.tintMyDrawable(it, Color.TRANSPARENT)
                 )
             }
 
@@ -81,9 +84,9 @@ class OnboardingActivity : BaseActivity() {
         onboarding_pager.currentItem = page
         updateIndicators(page)
 
-        val color1 = ContextCompat.getColor(this, R.color.voucherify_blue)
-        val color2 = ContextCompat.getColor(this, R.color.voucherify_green_dark)
-        val color3 = ContextCompat.getColor(this, R.color.voucherify_grey_dark)
+        val color1 = ContextCompat.getColor(this, R.color.colorAccent)
+        val color2 = ContextCompat.getColor(this, R.color.colorPrimary)
+        val color3 = ContextCompat.getColor(this, R.color.voucherify_black)
 
         val colorList = intArrayOf(color1, color2, color3)
 
@@ -153,10 +156,22 @@ class OnboardingActivity : BaseActivity() {
 
     class PlaceholderFragment : Fragment() {
 
-        internal var bgs = intArrayOf(
-            io.voucherify.android.sample.store.R.drawable.ic_avatar_circle_24px,
-            io.voucherify.android.sample.store.R.drawable.ic_avatar_circle_24px,
-            io.voucherify.android.sample.store.R.drawable.ic_avatar_circle_24px
+        private var images = intArrayOf(
+            R.drawable.onboard_1,
+            R.drawable.onboard_2,
+            R.drawable.onboard_3
+        )
+
+        private var headers = intArrayOf(
+            R.string.onboarding_header_page_1,
+            R.string.onboarding_header_page_2,
+            R.string.onboarding_header_page_3
+        )
+
+        private var subheaders = intArrayOf(
+            R.string.onboarding_body_page_1,
+            R.string.onboarding_body_page_2,
+            R.string.onboarding_body_page_3
         )
 
         override fun onCreateView(
@@ -166,8 +181,11 @@ class OnboardingActivity : BaseActivity() {
             val rootView =
                 inflater.inflate(R.layout.fragment_onboarding_page, container, false)
 
-            rootView.onboarding_section_headline.text = arguments?.getInt(ARG_SECTION_NUMBER).toString()
-            rootView.onboarding_section_image.setBackgroundResource(bgs[arguments!!.getInt(ARG_SECTION_NUMBER) - 1])
+            val position = arguments?.getInt(ARG_SECTION_NUMBER) ?: 1
+
+            rootView.onboarding_section_headline.text = getString(headers[position - 1])
+            rootView.onboarding_section_body.text = getString(subheaders[position - 1])
+            rootView.onboarding_section_image.setBackgroundResource(images[position - 1])
 
             return rootView
         }
@@ -186,7 +204,8 @@ class OnboardingActivity : BaseActivity() {
         }
     }
 
-    class SectionsPagerAdapter(fm: FragmentManager) : FragmentPagerAdapter(fm) {
+    class SectionsPagerAdapter(fm: FragmentManager,
+                               private val resources: Resources) : FragmentPagerAdapter(fm) {
 
         override fun getItem(position: Int): Fragment {
             return PlaceholderFragment.newInstance(position + 1)
@@ -198,9 +217,9 @@ class OnboardingActivity : BaseActivity() {
 
         override fun getPageTitle(position: Int): CharSequence? {
             when (position) {
-                0 -> return "SECTION 1"
-                1 -> return "SECTION 2"
-                2 -> return "SECTION 3"
+                0 -> return resources.getString(R.string.onboarding_header_page_1)
+                1 -> return resources.getString(R.string.onboarding_header_page_2)
+                2 -> return resources.getString(R.string.onboarding_header_page_3)
             }
 
             return null
