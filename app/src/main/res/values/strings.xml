@@ -105,6 +105,8 @@
     <string name="order_details_buy_label">Buy</string>
 
     <!-- Order summary -->
+    <string name="order_summary_header">Thank you!</string>
+    <string name="order_summary_body">We received you order under transaction number XXXXX. We will ship it to you in less than a week.\nIn case of other questions, you can reach us by calling on +48 XXX XXX XXX</string>
     <string name="order_summary_show_finish_label">Finish</string>
 
     <!-- Payment details -->
