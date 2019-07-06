@@ -36,7 +36,8 @@
     <color name="voucherify_text_input">@color/voucherify_black</color>
 
     <color name="voucherify_text_semi_white">#E6FFFFFF</color>
-    <color name="voucherify_text_primary">@color/voucherify_grey</color>
+    <color name="voucherify_text_primary">@color/voucherify_black</color>
+    <color name="voucherify_text_primary_grey">@color/voucherify_grey</color>
     <color name="voucherify_text_secondary">@color/voucherify_grey_light</color>
     <color name="voucherify_text_light">@color/voucherify_white</color>
     <color name="voucherify_text_accent">@color/colorAccent</color>

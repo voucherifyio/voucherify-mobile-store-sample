@@ -20,6 +20,7 @@ class SettingsAdminViewModel(
 
     sealed class ViewCommand {
         data class UserChangePicker(val customers: List<CustomerResponse>) : ViewCommand()
+        class Logout: ViewCommand()
     }
 
     private val compositeDisposable: CompositeDisposable = CompositeDisposable()
@@ -29,6 +30,10 @@ class SettingsAdminViewModel(
     private val viewCommandsPublisher = ReplaySubject.create<ViewCommand>()
 
 
+    init {
+        currentUserLiveData.value = userService.getCurrentUser()
+    }
+
     override fun onCleared() {
         super.onCleared()
 
@@ -37,8 +42,11 @@ class SettingsAdminViewModel(
 
     fun logout() {
         userService.removeCurrentUser()
+//        currentUserLiveData.value = userService.getCurrentUser()
 
-        currentUserLiveData.value = userService.getCurrentUser()
+        viewCommandsPublisher.onNext(
+            ViewCommand.Logout()
+        )
     }
 
     fun switchUser() {
@@ -66,7 +74,7 @@ class SettingsAdminViewModel(
         return viewCommandsPublisher
     }
 
-    fun outputLocalUserChanged(): LiveData<LocalUser> {
+    fun outputLocalUser(): LiveData<LocalUser> {
         return currentUserLiveData
     }
 

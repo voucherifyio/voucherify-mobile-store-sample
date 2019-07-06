@@ -1,0 +1,20 @@
+<androidx.appcompat.widget.Toolbar xmlns:android="http://schemas.android.com/apk/res/android"
+                                   xmlns:app="http://schemas.android.com/apk/res-auto"
+                                   android:id="@+id/toolbar"
+                                   android:layout_width="match_parent"
+                                   android:layout_height="?attr/actionBarSize"
+                                   android:background="@color/voucherify_toolbar_background_default"
+                                   android:theme="@style/Voucherify.Toolbar.Theme"
+                                   app:popupTheme="@style/ThemeOverlay.AppCompat.Light">
+
+    <ProgressBar
+            android:id="@+id/toolbar_sync_progress"
+            style="@android:style/Widget.Material.ProgressBar.Small"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:layout_margin="@dimen/spacing_large"
+            android:indeterminate="true"
+            android:visibility="gone"/>
+
+</androidx.appcompat.widget.Toolbar>

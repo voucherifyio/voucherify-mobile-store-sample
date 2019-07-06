@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:orientation="horizontal"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content">
+
+    <ImageView
+            android:layout_width="@dimen/avatar_profile_width"
+            android:layout_height="@dimen/avatar_profile_height"
+            android:src="@drawable/ic_account"/>
+
+    <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="@dimen/margin_large"
+            android:orientation="vertical">
+
+        <TextView
+                android:id="@+id/user_profile_name_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/voucherify_text_primary"
+                tools:text="NAME"/>
+
+        <TextView
+                android:id="@+id/user_profile_email_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/voucherify_text_secondary"
+                tools:text="EMAIL"/>
+
+    </LinearLayout>
+
+</LinearLayout>
