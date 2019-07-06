@@ -5,7 +5,7 @@
         android:layout_width="match_parent"
         android:paddingLeft="@dimen/spacing_medium"
         android:paddingRight="@dimen/spacing_medium"
-        android:background="@color/voucherify_background_grey_light"
+        android:background="@color/voucherify_background"
         android:paddingTop="@dimen/spacing_medium"
         android:paddingBottom="@dimen/spacing_medium"
         android:layout_height="wrap_content">
@@ -30,15 +30,16 @@
                 android:layout_height="wrap_content"
                 android:layout_centerVertical="true"
                 tools:text="TEST"
+                android:textAllCaps="false"
                 android:textAppearance="@style/Voucherify.TextAppearance.Title"/>
 
         <TextView
-                android:id="@+id/item_user_switch_email"
+                android:id="@+id/item_user_switch_role"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentBottom="true"
                 android:layout_centerVertical="true"
-                tools:text="email"
+                tools:text="User"
                 android:textAppearance="@style/Voucherify.TextAppearance.Caption"/>
 
     </LinearLayout>

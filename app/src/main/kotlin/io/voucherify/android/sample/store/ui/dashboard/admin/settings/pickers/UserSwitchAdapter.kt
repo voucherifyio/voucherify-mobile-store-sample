@@ -13,7 +13,7 @@ class UserSwitchAdapter(private val itemClick: (item: CustomerResponse) -> Unit)
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): UserSwitchItemViewHolder =
         UserSwitchItemViewHolder(
             LayoutInflater.from(parent.context)
-                .inflate(R.layout.item_user_swtich, parent, false)
+                .inflate(R.layout.item_user_switch, parent, false)
         )
 
     override fun getItemCount(): Int = items.count()

@@ -27,7 +27,7 @@
 
             <include
                     android:id="@+id/toolbar"
-                    layout="@layout/toolbar_transparent_light_with_spinner"/>
+                    layout="@layout/toolbar_with_spinner"/>
 
         </com.google.android.material.appbar.AppBarLayout>
 

@@ -81,7 +81,7 @@
 
     <style name="Voucherify.BottomSheetDialogTheme" parent="Voucherify.BaseBottomSheetDialog">
         <item name="android:statusBarColor">@android:color/transparent</item>
-        <item name="android:navigationBarColor">@color/voucherify_white</item>
+        <item name="android:navigationBarColor">@color/colorAccent</item>
     </style>
 
     <!-- Base application theme. -->

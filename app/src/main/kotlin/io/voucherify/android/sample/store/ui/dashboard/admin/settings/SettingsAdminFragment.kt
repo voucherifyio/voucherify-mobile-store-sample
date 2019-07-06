@@ -10,6 +10,7 @@ import io.voucherify.android.sample.store.ui.base.BaseFragment
 import io.voucherify.android.sample.store.ui.dashboard.admin.settings.pickers.UserSwitchBottomSheetDialogFragment
 import io.voucherify.android.sample.store.ui.flow.Navigator
 import kotlinx.android.synthetic.main.fragment_settings_admin.*
+import kotlinx.android.synthetic.main.view_settings_user_profile.*
 import javax.inject.Inject
 
 class SettingsAdminFragment : BaseFragment() {
@@ -27,9 +28,8 @@ class SettingsAdminFragment : BaseFragment() {
     lateinit var navigator: Navigator
 
     private val localUserObserver = Observer<LocalUser> {
-        activity?.let {
-            navigator.openSplashActivity(it)
-        }
+        user_profile_name_text.text = "${it.firstName} ${it.lastName}"
+        user_profile_email_text.text = "${it.email}"
     }
 
     override fun fragmentLayoutId(): Int = R.layout.fragment_settings_admin
@@ -54,7 +54,7 @@ class SettingsAdminFragment : BaseFragment() {
 
     private fun setBindings() {
 
-        settings_admin_logout_button.setOnClickListener {
+        settings_admin_change_user_logout_container.setOnClickListener {
             viewModel.logout()
         }
 
@@ -63,7 +63,7 @@ class SettingsAdminFragment : BaseFragment() {
         }
 
         viewModel
-            .outputLocalUserChanged()
+            .outputLocalUser()
             .observe(this, localUserObserver)
 
         viewModel
@@ -71,13 +71,20 @@ class SettingsAdminFragment : BaseFragment() {
             .subscribe {
                 when (it) {
                     is SettingsAdminViewModel.ViewCommand.UserChangePicker -> {
-                        val bottomSheetFragment = UserSwitchBottomSheetDialogFragment()
+
+                        val bottomSheetFragment = UserSwitchBottomSheetDialogFragment.newInstance(
+                            customers = it.customers)
 
                         activity?.let {
                             bottomSheetFragment.show(
                                 activity!!.supportFragmentManager,
                                 UserSwitchBottomSheetDialogFragment.TAG
                             )
+                        }
+                    }
+                    is SettingsAdminViewModel.ViewCommand.Logout -> {
+                        activity?.let {
+                            navigator.openSplashActivity(it)
                         }
                     }
                 }

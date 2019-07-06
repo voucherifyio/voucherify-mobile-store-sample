@@ -41,6 +41,9 @@
     <dimen name="avatar_default_item_height">45dp</dimen>
     <dimen name="avatar_default_item_width">45dp</dimen>
 
+    <dimen name="avatar_profile_width">55dp</dimen>
+    <dimen name="avatar_profile_height">55dp</dimen>
+
     <dimen name="avatar_default_height">72dp</dimen>
     <dimen name="avatar_default_width">72dp</dimen>
 
