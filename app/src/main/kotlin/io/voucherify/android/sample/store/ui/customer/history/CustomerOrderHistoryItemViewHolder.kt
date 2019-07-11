@@ -11,6 +11,9 @@ class CustomerOrderHistoryItemViewHolder(val view: View) : RecyclerView.ViewHold
         set(value) {
             field = value
 
-            view.item_order_history_customer_name.text = value?.id ?: ""
+            view.item_order_history_id_text.text = value?.id ?: ""
+            view.item_order_history_products_text.text = value?.items?.joinToString {
+                it.productName
+            } ?: ""
         }
 }
