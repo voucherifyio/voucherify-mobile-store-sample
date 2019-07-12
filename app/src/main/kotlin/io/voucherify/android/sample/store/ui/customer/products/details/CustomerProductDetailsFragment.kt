@@ -5,11 +5,12 @@ import android.view.View
 import androidx.appcompat.content.res.AppCompatResources
 import androidx.lifecycle.Observer
 import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
 import io.voucherify.android.sample.store.R
 import io.voucherify.android.sample.store.data.remote.api.response.ProductResponse
 import io.voucherify.android.sample.store.ui.base.BaseFragment
 import io.voucherify.android.sample.store.utils.views.SimpleDividerItemDecoration
-import kotlinx.android.synthetic.main.fragment_product_details_admin.*
+import kotlinx.android.synthetic.main.fragment_product_details_customer.*
 import javax.inject.Inject
 
 class CustomerProductDetailsFragment : BaseFragment() {
@@ -28,16 +29,14 @@ class CustomerProductDetailsFragment : BaseFragment() {
     lateinit var productDetailsViewModel: CustomerProductDetailsViewModel
 
     private val dataObserver = Observer<ProductResponse> { result ->
-        product_admin_details_id.text = result.name ?: "-"
-        product_admin_details_created_at.text = result.createdAt.toString()
+//        product_admin_details_id.text = result.name ?: "-"
+//        product_admin_details_created_at.text = result.createdAt.toString()
 
         skuAdapter.setData(result.skus.data)
         skuAdapter.notifyDataSetChanged()
     }
 
-    private val skuAdapter = CustomerProductDetailsSKUAdapter(itemBuyClick = {
-        productDetailsViewModel.buy(productSkuIndex = it.second)
-    })
+    private lateinit var skuAdapter: CustomerProductDetailsSKUAdapter
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -46,10 +45,16 @@ class CustomerProductDetailsFragment : BaseFragment() {
             productDetailsViewModel.setData(
                 productDetails = it
             )
+
+            skuAdapter = CustomerProductDetailsSKUAdapter(
+                productResponse = it,
+                itemBuyClick = {
+                    productDetailsViewModel.buy(productSkuIndex = it.second)
+                })
         }
     }
 
-    override fun fragmentLayoutId(): Int = R.layout.fragment_product_details_admin
+    override fun fragmentLayoutId(): Int = R.layout.fragment_product_details_customer
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
@@ -59,8 +64,8 @@ class CustomerProductDetailsFragment : BaseFragment() {
     }
 
     private fun setViews() {
-        product_admin_details_sku_list.layoutManager = LinearLayoutManager(activity).apply {
-            orientation = LinearLayoutManager.VERTICAL
+        product_customer_details_sku_list.layoutManager = LinearLayoutManager(activity).apply {
+            orientation = RecyclerView.VERTICAL
         }
 
         context?.let {
@@ -69,7 +74,7 @@ class CustomerProductDetailsFragment : BaseFragment() {
             )
         }
 
-        product_admin_details_sku_list.adapter = skuAdapter
+        product_customer_details_sku_list.adapter = skuAdapter
     }
 
     private fun setBindings() {
