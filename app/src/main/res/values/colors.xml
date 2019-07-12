@@ -20,6 +20,7 @@
     <color name="voucherify_red">#FF0000</color>
 
     <color name="voucherify_toolbar_background_default">@color/voucherify_color_primary</color>
+    <color name="voucherify_toolbar_background_light">@color/voucherify_white</color>
 
     <!-- -->
     <color name="voucherify_green_dark">#213F40</color>

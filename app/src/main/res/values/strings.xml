@@ -84,7 +84,10 @@
     <string name="onboarding_finish_label">Finish</string>
 
     <!-- Shopping cart -->
+    <string name="shopping_cart_item_quantity_template">QTY: %1$d</string>
+    <string name="shopping_cart_total_price_template">%1$.2f</string>
     <string name="shopping_cart_list_checkout_label">Checkout</string>
+    <string name="shopping_cart_footer_list_total_label">Total</string>
 
     <!-- Order address -->
     <string name="order_address_header">Address details</string>
