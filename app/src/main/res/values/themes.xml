@@ -7,4 +7,12 @@
         <item name="android:textColorSecondary">@color/voucherify_grey</item>
     </style>
 
+    <style name="Voucherify.Toolbar.Theme.Dark" parent="ThemeOverlay.MaterialComponents.Dark.ActionBar">
+        <item name="android:titleTextColor">@color/voucherify_black</item>
+        <item name="android:textColorPrimary">@color/voucherify_black</item>
+        <item name="android:textColorSecondary">@color/voucherify_grey_light</item>
+        <item name="android:colorControlNormal">@color/voucherify_black</item>
+        <item name="colorButtonNormal">@color/voucherify_black</item>
+    </style>
+
 </resources>

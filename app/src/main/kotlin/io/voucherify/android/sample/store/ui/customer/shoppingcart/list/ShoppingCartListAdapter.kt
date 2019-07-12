@@ -3,6 +3,7 @@ package io.voucherify.android.sample.store.ui.customer.shoppingcart.list
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
+import io.voucherify.android.sample.store.R
 import io.voucherify.android.sample.store.data.remote.api.response.ProductResponse
 import kotlinx.android.synthetic.main.item_shopping_cart.view.*
 
@@ -17,17 +18,17 @@ class ShoppingCartListAdapter(private val listener: OnItemListener) :
 
     data class ShoppingCartItemData(
         val productResponse: ProductResponse,
-        val productSKUIndex: Int
+        val productSKUIndex: Int,
+        val quantity: Int
     )
 
     private var items: List<ShoppingCartItemData> = emptyList()
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ShoppingCartListItemViewHolder =
-        ShoppingCartListItemViewHolder(
-            LayoutInflater.from(parent.context)
-                .inflate(io.voucherify.android.sample.store.R.layout.item_shopping_cart, parent, false)
-        )
-
+             ShoppingCartListItemViewHolder(
+                LayoutInflater.from(parent.context)
+                    .inflate(R.layout.item_shopping_cart, parent, false)
+            )
     override fun getItemCount(): Int = items.count()
 
     override fun onBindViewHolder(holderShoppingCartList: ShoppingCartListItemViewHolder, position: Int) {
@@ -42,7 +43,7 @@ class ShoppingCartListAdapter(private val listener: OnItemListener) :
         }
     }
 
-    fun setData(data: List<ShoppingCartItemData>) {
+    fun setData(data: List<ShoppingCartListAdapter.ShoppingCartItemData>) {
         items = data
     }
 }

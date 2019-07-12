@@ -5,19 +5,20 @@
         android:layout_width="match_parent"
         android:paddingLeft="@dimen/spacing_medium"
         android:paddingRight="@dimen/spacing_medium"
-        android:background="@color/voucherify_background_grey_light"
+        android:background="@color/voucherify_background"
         android:paddingTop="@dimen/spacing_medium"
         android:paddingBottom="@dimen/spacing_medium"
         android:layout_height="wrap_content">
 
-    <LinearLayout android:layout_width="wrap_content"
-                  android:orientation="vertical"
-                  android:gravity="center_vertical"
-                  android:layout_toLeftOf="@+id/item_shopping_cart_price"
-                  android:layout_alignParentLeft="true"
-                  android:layout_centerVertical="true"
-                  android:layout_marginStart="@dimen/margin_small"
-                  android:layout_height="wrap_content">
+    <LinearLayout
+            android:layout_width="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center_vertical"
+            android:layout_toLeftOf="@+id/item_shopping_cart_remove_button"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="@dimen/margin_small"
+            android:layout_height="wrap_content">
 
         <TextView
                 android:id="@+id/item_shopping_cart_name"
@@ -27,20 +28,31 @@
                 tools:text="TEST"
                 android:textAppearance="@style/Voucherify.TextAppearance.Title"/>
 
+        <TextView
+                android:id="@+id/item_shopping_cart_details"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                tools:text="TEST"
+                android:textAppearance="@style/Voucherify.TextAppearance.Body"/>
+
+        <TextView
+                android:id="@+id/item_shopping_cart_quantity"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                tools:text="TEST"
+                android:textAppearance="@style/Voucherify.TextAppearance.Body"/>
+
     </LinearLayout>
 
-    <TextView android:id="@+id/item_shopping_cart_price"
-              android:layout_width="wrap_content"
-              android:layout_height="wrap_content"
-              android:layout_toLeftOf="@+id/item_shopping_cart_remove_button"
-              android:layout_centerVertical="true"
-              tools:text="12$"/>
-
-    <ImageButton style="@style/Voucherify.Base.Button.Borderless.Small"
-                 android:id="@+id/item_shopping_cart_remove_button"
-                 android:layout_width="wrap_content"
-                 android:src="@drawable/ic_delete_outline_24px"
-                 android:layout_alignParentRight="true"
-                 android:layout_height="wrap_content"/>
+    <ImageButton
+            style="@style/Voucherify.Base.Button.Borderless.Small"
+            android:id="@+id/item_shopping_cart_remove_button"
+            android:layout_width="wrap_content"
+            android:src="@drawable/ic_delete"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_height="wrap_content"/>
 
 </RelativeLayout>

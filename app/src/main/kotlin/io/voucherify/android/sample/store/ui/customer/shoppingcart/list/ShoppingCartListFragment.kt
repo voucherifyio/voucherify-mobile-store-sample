@@ -5,11 +5,13 @@ import android.view.View
 import androidx.appcompat.content.res.AppCompatResources
 import androidx.lifecycle.Observer
 import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
 import io.voucherify.android.sample.store.R
 import io.voucherify.android.sample.store.ui.base.BaseFragment
 import io.voucherify.android.sample.store.ui.flow.Navigator
 import io.voucherify.android.sample.store.utils.views.SimpleDividerItemDecoration
 import kotlinx.android.synthetic.main.fragment_shopping_cart_list.*
+import kotlinx.android.synthetic.main.item_footer_shopping_cart.*
 import javax.inject.Inject
 
 class ShoppingCartListFragment: BaseFragment() {
@@ -39,6 +41,10 @@ class ShoppingCartListFragment: BaseFragment() {
         }
     })
 
+    private val totalPriceChangeObserver = Observer<Double> { price ->
+        footer_list_shopping_cart_total_price.text = getString(R.string.shopping_cart_total_price_template, price)
+    }
+
     private val dataObserver = Observer<List<ShoppingCartListAdapter.ShoppingCartItemData>> { data ->
         shoppingCartAdapter.setData(data)
         shoppingCartAdapter.notifyDataSetChanged()
@@ -57,7 +63,7 @@ class ShoppingCartListFragment: BaseFragment() {
 
     private fun setViews() {
         shopping_cart_list.layoutManager = LinearLayoutManager(activity).apply {
-            orientation = LinearLayoutManager.VERTICAL
+            orientation = RecyclerView.VERTICAL
         }
 
         context?.let {
@@ -76,6 +82,10 @@ class ShoppingCartListFragment: BaseFragment() {
                 navigator.openOrderActivity(context = it)
             }
         }
+
+        shoppingCartListViewModel
+            .outputTotalPrice()
+            .observe(this, totalPriceChangeObserver)
 
         shoppingCartListViewModel
             .outputShoppingCartItems()

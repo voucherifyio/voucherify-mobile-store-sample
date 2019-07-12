@@ -37,6 +37,7 @@
     <dimen name="elevation_high">24dp</dimen>
 
     <dimen name="default_touch_target">40dp</dimen>
+    <dimen name="button_touch_target">56dp</dimen>
 
     <dimen name="avatar_default_item_height">45dp</dimen>
     <dimen name="avatar_default_item_width">45dp</dimen>

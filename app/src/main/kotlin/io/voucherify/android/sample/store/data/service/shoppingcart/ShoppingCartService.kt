@@ -4,7 +4,7 @@ import io.voucherify.android.sample.store.data.remote.api.response.ProductRespon
 
 interface ShoppingCartService {
 
-    fun items(): List<Pair<ProductResponse, Int>>
+    fun items(): List<Triple<ProductResponse, Int, Int>>
 
     fun add(item: Pair<ProductResponse, Int>)
 
