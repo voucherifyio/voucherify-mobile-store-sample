@@ -12,6 +12,12 @@ class CustomerAdminItemViewHolder(val view: View) : RecyclerView.ViewHolder(view
             field = value
 
             view.item_customer_admin_name.text = value?.name ?: value?.id
-            view.item_customer_admin_email.text = value?.email ?: ""
+
+            if(value?.email.isNullOrEmpty()) {
+                view.item_customer_admin_email.visibility = View.GONE
+            } else {
+                view.item_customer_admin_email.visibility = View.VISIBLE
+                view.item_customer_admin_email.text = value?.email ?: ""
+            }
         }
 }

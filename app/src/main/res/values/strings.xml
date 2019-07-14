@@ -26,6 +26,7 @@
 
     <!-- Menus -->
     <string name="menu_item_shopping_cart">Shopping cart</string>
+    <string name="menu_item_customers_search">Search</string>
 
     <!-- Dashboard admin navigation -->
     <string name="dashboard_admin_bottom_navigation_vouchers">Vouchers</string>
