@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:background="@color/voucherify_background">
+
+    <TextView
+            android:id="@+id/item_header_title"
+            style="@style/Voucherify.TextAppearance.SubTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/spacing_medium"
+            android:textStyle="bold"
+            android:maxLength="1"
+            android:textColor="@color/voucherify_text_secondary"
+            tools:text="TEST"/>
+
+</LinearLayout>
