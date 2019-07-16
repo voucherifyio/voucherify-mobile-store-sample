@@ -28,7 +28,10 @@ class CustomerDetailsActivity: BaseActivity() {
 
         val customer = intent.getParcelableExtra<CustomerResponse>(CUSTOMER_DETAILS_KEY)
 
-        ToolbarUtils.initActionBarWithTitle(activity = this, title = customer.name ?: "")
+        ToolbarUtils.initActionBarWithTitle(
+            activity = this,
+            title = getString(R.string.title_customers),
+            backArrow = true)
 
         if(savedInstanceState == null) {
             addFragment(

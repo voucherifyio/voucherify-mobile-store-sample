@@ -6,6 +6,8 @@ import androidx.lifecycle.Observer
 import io.voucherify.android.sample.store.R
 import io.voucherify.android.sample.store.data.remote.api.response.CustomerResponse
 import io.voucherify.android.sample.store.ui.base.BaseFragment
+import kotlinx.android.synthetic.main.customer_profile_header.*
+import kotlinx.android.synthetic.main.customer_profile_stats_bar.*
 import kotlinx.android.synthetic.main.fragment_customer_details.*
 import javax.inject.Inject
 
@@ -25,11 +27,16 @@ class CustomerDetailsFragment : BaseFragment() {
     lateinit var viewModel: CustomerDetailsViewModel
 
     private val dataObserver = Observer<CustomerResponse> { result ->
-        customer_details_name.text = result.name ?: "-"
-        customer_details_email.text = result.email ?: "-"
-        customer_details_order_total_amount.text = "${result.summary.orders.totalAmount}"
-        customer_details_order_total_count.text = "${result.summary.orders.totalCount}"
-        customer_details_total_redeemed.text = "${result.summary.redemptions.totalRedeemed}"
+        customer_profile_header_name.text = result.name ?: "-"
+        customer_profile_header_email.text = result.email ?: "-"
+
+        customer_profile_bar_orders_amount.text = "${result.summary.orders.totalAmount}"
+        customer_profile_bar_orders_count.text = "${result.summary.orders.totalCount}"
+        customer_profile_bar_total_redeemed.text = "${result.summary.redemptions.totalRedeemed}"
+
+        customer_profile_description.text = result.description ?: "-"
+        customer_profile_city.text = result.address.city ?: "-"
+        customer_profile_email.text = result.email ?: "-"
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {

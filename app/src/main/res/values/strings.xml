@@ -57,8 +57,13 @@
     <string name="settings_customer_switch_admin_label">Switch to admin</string>
 
     <!-- Customer details -->
-    <string name="customer_details_name_label">Name:</string>
-    <string name="customer_details_email_label">Email:</string>
+    <string name="customer_profile_bar_total_amount_label">Order total amount</string>
+    <string name="customer_profile_bar_total_count_label">Order total count</string>
+    <string name="customer_profile_bar_total_redeemed_label">Total redeemed</string>
+
+    <string name="customer_profile_description_label">Description</string>
+    <string name="customer_profile_city_label">City</string>
+    <string name="customer_profile_email_label">Email</string>
     <string name="customer_details_order_total_amount_label">Order total amount:</string>
     <string name="customer_details_order_total_count_label">Order total count:</string>
     <string name="customer_details_total_redeemed_label">Total redeemed:</string>
