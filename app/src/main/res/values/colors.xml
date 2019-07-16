@@ -45,6 +45,7 @@
     <color name="voucherify_text_accent_highlight">@color/voucherify_blue_50</color>
     <color name="voucherify_text_hint">@color/voucherify_grey</color>
     <color name="voucherify_background">@color/voucherify_white</color>
+    <color name="voucherify_background_primary">@color/voucherify_color_primary</color>
     <color name="voucherify_background_dark">@color/voucherify_grey_dark</color>
     <color name="voucherify_background_grey_light">@color/voucherify_grey_light</color>
 

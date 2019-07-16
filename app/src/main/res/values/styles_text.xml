@@ -4,6 +4,12 @@
     <style name="Voucherify.TextAppearance"/>
 
     <!-- Texts -->
+
+    <style name="Voucherify.TextAppearance.Normal">
+        <item name="android:textColor">?android:attr/textColorPrimary</item>
+        <item name="android:textSize">@dimen/text_size_normal</item>
+    </style>
+
     <style name="Voucherify.TextAppearance.Title">
         <item name="android:textAllCaps">true</item>
         <item name="android:textSize">@dimen/text_size_medium</item>
