@@ -28,10 +28,10 @@ class VoucherAdminDetailsFragment : BaseFragment() {
         voucher_details_admin_id.text = result.id
         voucher_details_admin_code.text = result.code
         voucher_details_admin_category.text = result.category
-        voucher_details_admin_type.text = result.type
+        voucher_details_admin_type.text = result.type.name
         voucher_details_admin_is_active.text = result.active.toString()
-        voucher_details_admin_discount_type.text = result.discount.type.name
-        voucher_details_admin_discount_value.text = "${result.discount.discount}"
+        voucher_details_admin_discount_type.text = result.discount?.type?.name ?: ""
+        voucher_details_admin_discount_value.text = "${result.discount?.discount}"
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {

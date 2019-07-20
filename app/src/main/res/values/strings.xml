@@ -2,6 +2,7 @@
     <string name="app_name">Voucherify</string>
 
     <!-- Common -->
+    <string name="common_empty"></string>
     <string name="common_error">Error</string>
     <string name="common_hint_email">Email</string>
     <string name="common_hint_password">Password</string>
@@ -67,6 +68,14 @@
     <string name="customer_details_order_total_amount_label">Order total amount:</string>
     <string name="customer_details_order_total_count_label">Order total count:</string>
     <string name="customer_details_total_redeemed_label">Total redeemed:</string>
+
+    <!-- Vouchers -->
+    <string name="vouchers_admin_all_tab_title">All</string>
+    <string name="vouchers_admin_active_tab_title">Active</string>
+    <string name="voucher_active_label">Active</string>
+    <string name="voucher_inactive_label">Inactive</string>
+    <string name="voucher_discount_type_label">Voucher</string>
+    <string name="voucher_gift_type_label">Giftcard</string>
 
     <!-- Voucher details admin -->
     <string name="voucher_admin_details_id">ID:</string>

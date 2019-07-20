@@ -4,7 +4,7 @@
     android:id="@+id/toolbar"
     android:layout_width="match_parent"
     android:layout_height="?attr/actionBarSize"
-    android:background="@color/voucherify_background"
+    android:background="@color/voucherify_toolbar_background_default"
     android:elevation="0dp"
     android:theme="@style/Voucherify.Toolbar.Theme"
     app:layout_scrollFlags="scroll|enterAlways|snap"

@@ -13,6 +13,7 @@
     <color name="voucherify_color_accent_50">#80354EA0</color>
 
     <color name="voucherify_white">#F1F4F5</color>
+    <color name="voucherify_white_80">#80F1F4F5</color>
     <color name="voucherify_grey">#6E6E6E</color>
     <color name="voucherify_grey_dark">#4B4B4B</color>
     <color name="voucherify_grey_light">#AAAAAA</color>

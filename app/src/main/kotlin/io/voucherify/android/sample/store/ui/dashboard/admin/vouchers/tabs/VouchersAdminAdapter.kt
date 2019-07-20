@@ -1,15 +1,18 @@
-package io.voucherify.android.sample.store.ui.dashboard.admin.vouchers
+package io.voucherify.android.sample.store.ui.dashboard.admin.vouchers.tabs
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import io.voucherify.android.sample.store.R
 import io.voucherify.android.sample.store.data.remote.api.response.VoucherResponse
+import io.voucherify.android.sample.store.ui.dashboard.admin.vouchers.tabs.VouchersAdminListFragment.VoucherFilter.ACTIVE
+import io.voucherify.android.sample.store.ui.dashboard.admin.vouchers.tabs.VouchersAdminListFragment.VoucherFilter.ALL
 
 class VouchersAdminAdapter(private val itemClick: (item: VoucherResponse) -> Unit) :
     RecyclerView.Adapter<VoucherAdminItemViewHolder>() {
 
     private var items: List<VoucherResponse> = emptyList()
+    private var filter = ALL
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): VoucherAdminItemViewHolder =
         VoucherAdminItemViewHolder(
@@ -27,7 +30,16 @@ class VouchersAdminAdapter(private val itemClick: (item: VoucherResponse) -> Uni
         }
     }
 
+    fun setFilteringBy(filter: VouchersAdminListFragment.VoucherFilter) {
+        this.filter = filter
+    }
+
     fun setData(data: List<VoucherResponse>) {
-        items = data
+        items = data.filter {
+            when (filter) {
+                ALL -> true
+                ACTIVE -> it.active
+            }
+        }
     }
 }
