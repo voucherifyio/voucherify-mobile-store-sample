@@ -25,11 +25,12 @@
                 android:id="@+id/appBarLayout"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                app:elevation="0dp">
+                android:elevation="@dimen/elevation_low"
+                app:elevation="@dimen/elevation_low">
 
             <include
                     android:id="@+id/toolbar"
-                    layout="@layout/toolbar_with_spinner"/>
+                    layout="@layout/toolbar_collapsing"/>
 
         </com.google.android.material.appbar.AppBarLayout>
 

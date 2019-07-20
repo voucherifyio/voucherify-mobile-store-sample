@@ -12,12 +12,13 @@ data class VoucherResponse(
     val id: String,
     val code: String,
     val category: String,
-    val type: String,
+    val type: VoucherType,
     val active: Boolean,
-    val discount: VoucherDiscountResponse,
+    val discount: VoucherDiscountResponse?,
+    val gift: GiftResponse?,
     @Json(name = "is_referral_code") val isReferralCode: Boolean,
     @Json(name = "created_at") val createdAt: Date,
-    @Json(name = "updated_at") val updatedAt: Date,
+    @Json(name = "updated_at") val updatedAt: Date?,
     @Json(name = "object") val objectName: String
 ) : PaperParcelable {
     companion object {

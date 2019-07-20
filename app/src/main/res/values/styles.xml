@@ -78,10 +78,18 @@
         <item name="bottomSheetStyle">@style/Voucherify.BottomSheet</item>
     </style>
 
-
     <style name="Voucherify.BottomSheetDialogTheme" parent="Voucherify.BaseBottomSheetDialog">
         <item name="android:statusBarColor">@android:color/transparent</item>
         <item name="android:navigationBarColor">@color/colorAccent</item>
+    </style>
+
+    <!-- Tab layout -->
+    <style name="Voucherify.TabLayout" parent="Widget.Design.TabLayout">
+        <item name="tabBackground">@drawable/tab_item_default_background_selector</item>
+        <item name="tabGravity">fill</item>
+        <item name="tabIndicatorHeight">3dp</item>
+        <item name="tabIndicatorColor">@color/voucherify_white</item>
+        <item name="tabMode">fixed</item>
     </style>
 
     <!-- Base application theme. -->

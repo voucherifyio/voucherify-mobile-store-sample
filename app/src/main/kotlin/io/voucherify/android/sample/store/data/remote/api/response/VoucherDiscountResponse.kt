@@ -24,15 +24,15 @@ data class VoucherDiscountResponse(
 
     val discount: Double
         get() {
-            when (type) {
+            return when (type) {
                 VoucherDiscountType.AMOUNT -> {
-                    return amountOff?.toDouble() ?: 0.0
+                    amountOff?.toDouble() ?: 0.0
                 }
                 VoucherDiscountType.PERCENT -> {
-                    return percentOff ?: 0.0
+                    percentOff ?: 0.0
                 }
                 VoucherDiscountType.UNIT -> {
-                    return unitOff ?: 0.0
+                    unitOff ?: 0.0
                 }
             }
         }
