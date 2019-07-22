@@ -12,6 +12,5 @@ class ProductAdminItemViewHolder(val view: View) : RecyclerView.ViewHolder(view)
             field = value
 
             view.item_product_admin_name.text = value?.name ?: ""
-            view.item_product_admin_id.text = value?.id ?: ""
         }
 }

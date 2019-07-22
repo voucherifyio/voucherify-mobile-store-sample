@@ -3,15 +3,14 @@ package io.voucherify.android.sample.store.ui.dashboard.admin.products
 import android.os.Bundle
 import android.view.View
 import android.widget.Toast
-import androidx.appcompat.content.res.AppCompatResources
 import androidx.lifecycle.Observer
-import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.GridLayoutManager
+import androidx.recyclerview.widget.RecyclerView
 import io.voucherify.android.sample.store.R
 import io.voucherify.android.sample.store.data.remote.api.DataResult
 import io.voucherify.android.sample.store.data.remote.api.response.ProductResponse
 import io.voucherify.android.sample.store.ui.base.BaseFragment
 import io.voucherify.android.sample.store.ui.flow.Navigator
-import io.voucherify.android.sample.store.utils.views.SimpleDividerItemDecoration
 import kotlinx.android.synthetic.main.fragment_products_admin.*
 import javax.inject.Inject
 
@@ -65,15 +64,12 @@ class ProductsAdminFragment : BaseFragment() {
     }
 
     private fun setViews() {
-        products_admin_list.layoutManager = LinearLayoutManager(activity).apply {
-            orientation = LinearLayoutManager.VERTICAL
-        }
-
-        context?.let {
-            SimpleDividerItemDecoration(
-                AppCompatResources.getDrawable(it, R.drawable.divider_transparent)
-            )
-        }
+        products_admin_list.layoutManager = GridLayoutManager(
+            activity,
+            2,
+            RecyclerView.VERTICAL,
+            false
+        )
 
         products_admin_list.adapter = customersAdapter
     }
