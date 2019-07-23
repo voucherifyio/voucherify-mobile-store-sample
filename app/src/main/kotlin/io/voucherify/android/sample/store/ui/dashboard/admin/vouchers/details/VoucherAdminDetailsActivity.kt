@@ -2,7 +2,9 @@ package io.voucherify.android.sample.store.ui.dashboard.admin.vouchers.details
 
 import android.content.Context
 import android.content.Intent
+import android.os.Build
 import android.os.Bundle
+import androidx.core.content.ContextCompat
 import io.voucherify.android.sample.store.R
 import io.voucherify.android.sample.store.data.remote.api.response.VoucherResponse
 import io.voucherify.android.sample.store.ui.base.BaseActivity
@@ -12,7 +14,7 @@ class VoucherAdminDetailsActivity: BaseActivity() {
 
     companion object Factory {
 
-        val VOUCHER_DETAILS_KEY = "voucher_admin_details_key"
+        const val VOUCHER_DETAILS_KEY = "voucher_admin_details_key"
 
         @JvmStatic
         fun createIntent(context: Context, voucher: VoucherResponse) =
@@ -24,11 +26,18 @@ class VoucherAdminDetailsActivity: BaseActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+            window.statusBarColor = ContextCompat.getColor(this, R.color.colorAccent)
+        }
+
         setContentView(R.layout.activity_voucher_admin_details)
 
         val voucher = intent.getParcelableExtra<VoucherResponse>(VOUCHER_DETAILS_KEY)
 
-        ToolbarUtils.initActionBarWithTitle(activity = this, title = voucher.id)
+        ToolbarUtils.initActionBarWithTitle(
+            activity = this,
+            title = "",
+            backArrow = true)
 
         if(savedInstanceState == null) {
             addFragment(

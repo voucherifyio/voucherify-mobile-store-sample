@@ -6,6 +6,7 @@
     <string name="common_error">Error</string>
     <string name="common_hint_email">Email</string>
     <string name="common_hint_password">Password</string>
+    <string name="common_lorem_ipsum">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua</string>
 
     <!-- Titles -->
     <string name="title_login">Log in</string>
@@ -78,13 +79,10 @@
     <string name="voucher_gift_type_label">Giftcard</string>
 
     <!-- Voucher details admin -->
-    <string name="voucher_admin_details_id">ID:</string>
-    <string name="voucher_admin_details_code">Code:</string>
-    <string name="voucher_admin_details_category">Category:</string>
-    <string name="voucher_admin_details_type">Type:</string>
-    <string name="voucher_admin_details_active">Is active:</string>
-    <string name="voucher_admin_details_discount_type">Discount type:</string>
-    <string name="voucher_admin_details_discount_value">Discount value:</string>
+    <string name="voucher_admin_details_description">Description</string>
+    <string name="voucher_admin_details_category">Category</string>
+    <string name="voucher_admin_details_type">Type</string>
+    <string name="voucher_admin_details_value">Value</string>
 
     <!-- Onboarding -->
     <string name="onboarding_header_page_1">Welcome!</string>
