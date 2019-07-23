@@ -1,46 +1,46 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-              xmlns:app="http://schemas.android.com/apk/res-auto"
-              xmlns:tools="http://schemas.android.com/tools"
-              android:id="@+id/community_normal_profile_header_component"
-              android:orientation="vertical"
-              android:layout_width="match_parent"
-              android:layout_height="wrap_content"
-              android:gravity="center_horizontal"
-              android:background="@color/voucherify_background_primary"
-              app:layout_scrollFlags="scroll|enterAlways">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/community_normal_profile_header_component"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/voucherify_background_primary"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    app:layout_scrollFlags="scroll|enterAlways">
 
     <ImageView
-            android:id="@+id/avatar_image"
-            android:layout_width="75dp"
-            android:layout_height="75dp"
-            android:layout_marginTop="@dimen/margin_medium"
-            android:scaleType="centerCrop"
-            android:src="@drawable/ic_avatar_circle_24px"/>
+        android:id="@+id/avatar_image"
+        android:layout_width="75dp"
+        android:layout_height="75dp"
+        android:layout_marginTop="@dimen/margin_medium"
+        android:scaleType="centerCrop"
+        android:src="@drawable/ic_avatar_circle_24px" />
 
     <TextView
-            android:id="@+id/customer_profile_header_name"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/margin_medium"
-            android:layout_marginStart="@dimen/margin_medium"
-            android:layout_marginEnd="@dimen/margin_medium"
-            android:textAppearance="@style/Voucherify.TextAppearance.Normal"
-            android:textColor="@color/voucherify_text_light"
-            android:textSize="@dimen/text_size_large"
-            tools:text="Full Name"/>
+        android:id="@+id/customer_profile_header_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_medium"
+        android:layout_marginTop="@dimen/margin_medium"
+        android:layout_marginEnd="@dimen/margin_medium"
+        android:textAppearance="@style/Voucherify.TextAppearance.Normal"
+        android:textColor="@color/voucherify_text_light"
+        android:textSize="@dimen/text_size_large"
+        tools:text="Full Name" />
 
     <TextView
-            android:id="@+id/customer_profile_header_email"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="@dimen/margin_medium"
-            android:layout_marginEnd="@dimen/margin_medium"
-            android:textAppearance="@style/Voucherify.TextAppearance.Normal"
-            android:textColor="@color/voucherify_text_light"
-            android:textSize="@dimen/text_size_medium"
-            tools:text="voucherify@voucherify.io"/>
+        android:id="@+id/customer_profile_header_email"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_medium"
+        android:layout_marginEnd="@dimen/margin_medium"
+        android:textAppearance="@style/Voucherify.TextAppearance.Normal"
+        android:textColor="@color/voucherify_text_light"
+        android:textSize="@dimen/text_size_medium"
+        tools:text="voucherify@voucherify.io" />
 
-    <include layout="@layout/customer_profile_stats_bar"/>
+    <include layout="@layout/customer_profile_stats_bar" />
 
 </LinearLayout>

@@ -1,94 +1,108 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
-                                       android:layout_width="match_parent"
-                                       android:layout_height="match_parent"
-                                       android:padding="@dimen/spacing_medium"
-                                       android:fillViewport="true"
-                                       android:background="@color/voucherify_background">
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/voucherify_background"
+    android:fillViewport="true"
+    android:padding="@dimen/spacing_medium">
 
-    <RelativeLayout android:layout_width="match_parent"
-                    android:layout_height="match_parent">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
 
-        <LinearLayout android:orientation="vertical"
-                      android:layout_width="match_parent"
-                      android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
 
-            <TextView style="@style/Voucherify.TextAppearance.Title"
-                      android:layout_width="match_parent"
-                      android:layout_height="wrap_content"
-                      android:text="@string/order_details_address_details_label"/>
+            <TextView
+                style="@style/Voucherify.TextAppearance.Title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/order_details_address_details_label" />
 
-            <TextView style="@style/Voucherify.TextAppearance.Body"
-                      android:id="@+id/order_details_address_details"
-                      android:layout_width="match_parent"
-                      android:layout_height="wrap_content"
-                      android:text="TODO"/>
+            <TextView
+                android:id="@+id/order_details_address_details"
+                style="@style/Voucherify.TextAppearance.Body"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="TODO" />
 
-            <TextView style="@style/Voucherify.TextAppearance.Title"
-                      android:layout_width="match_parent"
-                      android:layout_height="wrap_content"
-                      android:layout_marginTop="@dimen/margin_medium"
-                      android:text="@string/order_details_payment_method_label"/>
+            <TextView
+                style="@style/Voucherify.TextAppearance.Title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_medium"
+                android:text="@string/order_details_payment_method_label" />
 
-            <TextView style="@style/Voucherify.TextAppearance.Body"
-                      android:id="@+id/order_details_payment_method"
-                      android:layout_width="match_parent"
-                      android:layout_height="wrap_content"
-                      android:text="TODO"/>
+            <TextView
+                android:id="@+id/order_details_payment_method"
+                style="@style/Voucherify.TextAppearance.Body"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="TODO" />
 
-            <View android:layout_width="match_parent"
-                  android:layout_height="1dp"
-                  android:layout_marginTop="@dimen/margin_small"
-                  android:layout_marginBottom="@dimen/margin_small"
-                  android:background="@color/voucherify_divider_default"/>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="@dimen/margin_small"
+                android:layout_marginBottom="@dimen/margin_small"
+                android:background="@color/voucherify_divider_default" />
 
-            <TextView style="@style/Voucherify.TextAppearance.Title"
-                      android:layout_width="match_parent"
-                      android:layout_height="wrap_content"
-                      android:layout_marginTop="@dimen/margin_medium"
-                      android:text="@string/order_details_cost_label"/>
+            <TextView
+                style="@style/Voucherify.TextAppearance.Title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_medium"
+                android:text="@string/order_details_cost_label" />
 
-            <TextView style="@style/Voucherify.TextAppearance.Body"
-                      android:id="@+id/order_details_cost_value"
-                      android:layout_width="match_parent"
-                      android:layout_height="wrap_content"
-                      android:text="TODO"/>
+            <TextView
+                android:id="@+id/order_details_cost_value"
+                style="@style/Voucherify.TextAppearance.Body"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="TODO" />
 
-            <TextView style="@style/Voucherify.TextAppearance.Title"
-                      android:layout_width="match_parent"
-                      android:layout_height="wrap_content"
-                      android:layout_marginTop="@dimen/margin_medium"
-                      android:text="@string/order_details_voucher_label"/>
+            <TextView
+                style="@style/Voucherify.TextAppearance.Title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_medium"
+                android:text="@string/order_details_voucher_label" />
 
-            <EditText android:layout_width="match_parent"
-                      android:layout_height="wrap_content"
-                      android:gravity="center_horizontal"
-                      android:lines="1"
-                      android:maxLength="100"
-                      android:hint="@string/order_details_voucher_hint"/>
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:hint="@string/order_details_voucher_hint"
+                android:lines="1"
+                android:maxLength="100" />
 
-            <Button style="@style/Voucherify.Base.Button.Green"
-                    android:id="@+id/order_details_voucher_validate_button"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:minHeight="@dimen/default_touch_target"
-                    android:text="@string/order_details_voucher_apply_label"/>
+            <Button
+                android:id="@+id/order_details_voucher_validate_button"
+                style="@style/Voucherify.Base.Button.Green"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:minHeight="@dimen/default_touch_target"
+                android:text="@string/order_details_voucher_apply_label" />
 
         </LinearLayout>
 
-        <LinearLayout android:layout_width="match_parent"
-                      android:layout_height="wrap_content"
-                      android:orientation="horizontal"
-                      android:layout_marginTop="@dimen/margin_large"
-                      android:layout_alignParentBottom="true">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginTop="@dimen/margin_large"
+            android:orientation="horizontal">
 
-            <TextView style="@style/Voucherify.Base.Button.Borderless.Medium"
-                      android:id="@+id/order_details_buy_button"
-                      android:layout_width="match_parent"
-                      android:layout_height="wrap_content"
-                      android:background="@drawable/selectable_view_accent"
-                      android:textColor="@color/text_selector_button_light"
-                      android:text="@string/order_details_buy_label"/>
+            <TextView
+                android:id="@+id/order_details_buy_button"
+                style="@style/Voucherify.Base.Button.Borderless.Medium"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/selectable_view_accent"
+                android:text="@string/order_details_buy_label"
+                android:textColor="@color/text_selector_button_light" />
         </LinearLayout>
 
     </RelativeLayout>

@@ -1,59 +1,58 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
-        xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:tools="http://schemas.android.com/tools"
-        android:layout_width="match_parent"
-        android:paddingLeft="@dimen/spacing_medium"
-        android:paddingRight="@dimen/spacing_medium"
-        android:background="@android:color/transparent"
-        android:paddingTop="@dimen/spacing_medium"
-        android:paddingBottom="@dimen/spacing_medium"
-        android:layout_height="wrap_content">
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@android:color/transparent"
+    android:paddingLeft="@dimen/spacing_medium"
+    android:paddingTop="@dimen/spacing_medium"
+    android:paddingRight="@dimen/spacing_medium"
+    android:paddingBottom="@dimen/spacing_medium">
 
     <ImageView
-            android:id="@+id/item_order_history_image"
-            android:layout_width="50dp"
-            android:layout_height="50dp"
-            android:src="@drawable/ic_order"/>
+        android:id="@+id/item_order_history_image"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:src="@drawable/ic_order" />
 
     <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="@dimen/margin_large"
+        android:layout_marginRight="@dimen/margin_large"
+        android:layout_toLeftOf="@+id/item_order_history_chevron"
+        android:layout_toRightOf="@id/item_order_history_image"
+        android:gravity="center_vertical"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/item_order_history_id_text"
             android:layout_width="wrap_content"
-            android:orientation="vertical"
-            android:gravity="center_vertical"
+            android:layout_height="wrap_content"
             android:layout_centerVertical="true"
-            android:layout_toRightOf="@id/item_order_history_image"
-            android:layout_toLeftOf="@+id/item_order_history_chevron"
-            android:layout_marginLeft="@dimen/margin_large"
-            android:layout_marginRight="@dimen/margin_large"
-            android:layout_height="wrap_content">
+            android:lines="1"
+            android:textAppearance="@style/Voucherify.TextAppearance.Title"
+            tools:text="TEST" />
 
         <TextView
-                android:id="@+id/item_order_history_id_text"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_centerVertical="true"
-                tools:text="TEST"
-                android:lines="1"
-                android:textAppearance="@style/Voucherify.TextAppearance.Title"/>
-
-        <TextView
-                android:id="@+id/item_order_history_products_text"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_centerVertical="true"
-                tools:text="TEST"
-                android:lines="1"
-                android:ellipsize="end"
-                android:textAppearance="@style/Voucherify.TextAppearance.Body"/>
+            android:id="@+id/item_order_history_products_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:ellipsize="end"
+            android:lines="1"
+            android:textAppearance="@style/Voucherify.TextAppearance.Body"
+            tools:text="TEST" />
 
     </LinearLayout>
 
     <ImageView
-            android:id="@+id/item_order_history_chevron"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_centerVertical="true"
-            android:src="@drawable/ic_chevron_right_24px"
-            android:layout_alignParentRight="true"/>
+        android:id="@+id/item_order_history_chevron"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:src="@drawable/ic_chevron_right_24px" />
 
 </RelativeLayout>

@@ -1,37 +1,37 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-              android:orientation="vertical"
-              android:layout_width="match_parent"
-              android:layout_height="wrap_content"
-              android:background="@color/voucherify_background">
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/voucherify_background"
+    android:orientation="vertical">
 
     <View
-            android:layout_width="match_parent"
-            android:layout_height="0.5dp"
-            android:background="@color/voucherify_grey_light"/>
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/voucherify_grey_light" />
 
     <RelativeLayout
-            android:layout_width="match_parent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/voucherify_background"
+        android:padding="@dimen/margin_medium">
+
+        <TextView
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:background="@color/voucherify_background"
-            android:padding="@dimen/margin_medium">
+            android:text="@string/shopping_cart_footer_list_total_label"
+            android:textColor="@color/voucherify_text_secondary"
+            android:textSize="@dimen/text_size_medium" />
 
         <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textColor="@color/voucherify_text_secondary"
-                android:textSize="@dimen/text_size_medium"
-                android:text="@string/shopping_cart_footer_list_total_label"/>
-
-        <TextView
-                android:id="@+id/footer_list_shopping_cart_total_price"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textColor="@color/voucherify_text_primary"
-                android:textSize="@dimen/text_size_medium"
-                android:layout_alignParentRight="true"
-                android:textStyle="bold"
-                android:text="23.24$"/>
+            android:id="@+id/footer_list_shopping_cart_total_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:text="23.24$"
+            android:textColor="@color/voucherify_text_primary"
+            android:textSize="@dimen/text_size_medium"
+            android:textStyle="bold" />
     </RelativeLayout>
 
 </LinearLayout>

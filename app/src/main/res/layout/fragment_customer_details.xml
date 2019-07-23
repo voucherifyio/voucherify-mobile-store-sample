@@ -1,101 +1,101 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
-                                       xmlns:tools="http://schemas.android.com/tools"
-                                       android:orientation="vertical"
-                                       android:layout_width="match_parent"
-                                       android:background="@color/voucherify_background"
-                                       android:layout_height="match_parent">
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/voucherify_background"
+    android:orientation="vertical">
 
     <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="vertical">
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
 
-        <include layout="@layout/customer_profile_header"/>
+        <include layout="@layout/customer_profile_header" />
 
         <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/margin_medium"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/customer_profile_description_header"
+                    style="@style/Voucherify.TextAppearance.Normal"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.25"
+                    android:text="@string/customer_profile_description_label"
+                    android:textColor="@color/voucherify_text_primary_grey" />
+
+                <TextView
+                    android:id="@+id/customer_profile_description"
+                    style="@style/Voucherify.TextAppearance.Normal"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@id/customer_profile_description"
+                    android:layout_weight="0.75"
+                    android:ellipsize="end"
+                    android:maxLines="2"
+                    tools:text="Premium user" />
+
+            </LinearLayout>
+
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_margin="@dimen/margin_medium"
-                android:orientation="vertical">
-
-            <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
+                android:layout_marginTop="@dimen/margin_large">
 
                 <TextView
-                        style="@style/Voucherify.TextAppearance.Normal"
-                        android:layout_width="0dp"
-                        android:layout_weight="0.25"
-                        android:id="@+id/customer_profile_description_header"
-                        android:layout_height="wrap_content"
-                        android:textColor="@color/voucherify_text_primary_grey"
-                        android:text="@string/customer_profile_description_label"/>
+                    android:id="@+id/customer_profile_city_header"
+                    style="@style/Voucherify.TextAppearance.Normal"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.25"
+                    android:text="@string/customer_profile_city_label"
+                    android:textColor="@color/voucherify_text_primary_grey" />
 
                 <TextView
-                        style="@style/Voucherify.TextAppearance.Normal"
-                        android:layout_width="0dp"
-                        android:layout_weight="0.75"
-                        android:id="@+id/customer_profile_description"
-                        android:layout_toRightOf="@id/customer_profile_description"
-                        android:layout_height="wrap_content"
-                        android:maxLines="2"
-                        android:ellipsize="end"
-                        tools:text="Premium user"/>
+                    android:id="@+id/customer_profile_city"
+                    style="@style/Voucherify.TextAppearance.Normal"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@id/customer_profile_city_header"
+                    android:layout_weight="0.75"
+                    android:textColor="@color/voucherify_text_primary"
+                    tools:text="Katowice" />
 
             </LinearLayout>
 
             <LinearLayout
-                    android:layout_width="match_parent"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_large">
+
+                <TextView
+                    android:id="@+id/customer_profile_email_header"
+                    style="@style/Voucherify.TextAppearance.Normal"
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="@dimen/margin_large">
+                    android:layout_weight="0.25"
+                    android:text="@string/customer_profile_email_label"
+                    android:textColor="@color/voucherify_text_primary_grey" />
 
                 <TextView
-                        style="@style/Voucherify.TextAppearance.Normal"
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="0.25"
-                        android:id="@+id/customer_profile_city_header"
-                        android:textColor="@color/voucherify_text_primary_grey"
-                        android:text="@string/customer_profile_city_label"/>
-
-                <TextView
-                        style="@style/Voucherify.TextAppearance.Normal"
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="0.75"
-                        android:id="@+id/customer_profile_city"
-                        android:layout_toRightOf="@id/customer_profile_city_header"
-                        android:textColor="@color/voucherify_text_primary"
-                        tools:text="Katowice"/>
-
-            </LinearLayout>
-
-            <LinearLayout
-                    android:layout_width="match_parent"
+                    android:id="@+id/customer_profile_email"
+                    style="@style/Voucherify.TextAppearance.Normal"
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="@dimen/margin_large">
-
-                <TextView
-                        style="@style/Voucherify.TextAppearance.Normal"
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="0.25"
-                        android:id="@+id/customer_profile_email_header"
-                        android:textColor="@color/voucherify_text_primary_grey"
-                        android:text="@string/customer_profile_email_label"/>
-
-                <TextView
-                        style="@style/Voucherify.TextAppearance.Normal"
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="0.75"
-                        android:id="@+id/customer_profile_email"
-                        android:layout_toRightOf="@id/customer_profile_email_header"
-                        android:textColor="@color/voucherify_text_primary"
-                        android:inputType="textEmailAddress"
-                        android:maxLines="2"
-                        tools:text="voucherify@voucherify.io"/>
+                    android:layout_toRightOf="@id/customer_profile_email_header"
+                    android:layout_weight="0.75"
+                    android:inputType="textEmailAddress"
+                    android:maxLines="2"
+                    android:textColor="@color/voucherify_text_primary"
+                    tools:text="voucherify@voucherify.io" />
 
             </LinearLayout>
 

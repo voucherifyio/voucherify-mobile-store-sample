@@ -1,90 +1,95 @@
 <?xml version="1.0" encoding="utf-8"?>
-<com.google.android.material.card.MaterialCardView
-        xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:tools="http://schemas.android.com/tools"
-        xmlns:app="http://schemas.android.com/apk/res-auto"
-        android:layout_width="match_parent" android:layout_height="wrap_content"
-        android:layout_marginLeft="@dimen/mtrl_card_spacing"
-        android:layout_marginTop="@dimen/mtrl_card_spacing"
-        android:layout_marginRight="@dimen/mtrl_card_spacing"
-        app:cardElevation="@dimen/elevation_low"
-        android:clipToPadding="false"
-        android:background="@color/voucherify_background">
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="@dimen/mtrl_card_spacing"
+    android:layout_marginTop="@dimen/mtrl_card_spacing"
+    android:layout_marginRight="@dimen/mtrl_card_spacing"
+    android:background="@color/voucherify_background"
+    android:clipToPadding="false"
+    app:cardElevation="@dimen/elevation_low">
 
     <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="@dimen/spacing_medium"
+        android:paddingTop="@dimen/spacing_medium"
+        android:paddingRight="@dimen/spacing_medium"
+        android:paddingBottom="@dimen/spacing_medium">
+
+        <ImageView
+            android:id="@+id/item_voucher_type_image"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:src="@drawable/ic_voucher" />
+
+        <LinearLayout
             android:layout_width="match_parent"
-            android:paddingLeft="@dimen/spacing_medium"
-            android:paddingRight="@dimen/spacing_medium"
-            android:paddingTop="@dimen/spacing_medium"
-            android:paddingBottom="@dimen/spacing_medium"
-            android:layout_height="wrap_content">
-
-        <ImageView android:layout_width="wrap_content"
-                   android:id="@+id/item_voucher_type_image"
-                   android:layout_height="wrap_content"
-                   android:layout_centerVertical="true"
-                   android:src="@drawable/ic_voucher"/>
-
-        <LinearLayout android:layout_width="match_parent"
-                      android:orientation="vertical"
-                      android:gravity="center_vertical"
-                      android:layout_toRightOf="@id/item_voucher_type_image"
-                      android:layout_marginStart="@dimen/margin_medium"
-                      android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_medium"
+            android:layout_toRightOf="@id/item_voucher_type_image"
+            android:gravity="center_vertical"
+            android:orientation="vertical">
 
             <TextView
-                    android:id="@+id/item_voucher_admin_title"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_centerVertical="true"
-                    tools:text="TEST"
-                    android:textAppearance="@style/Voucherify.TextAppearance.Title"/>
+                android:id="@+id/item_voucher_admin_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:textAppearance="@style/Voucherify.TextAppearance.Title"
+                tools:text="TEST" />
 
             <TextView
-                    android:id="@+id/item_voucher_admin_description"
+                android:id="@+id/item_voucher_admin_description"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@id/item_customer_admin_avatar"
+                android:textAppearance="@style/Voucherify.TextAppearance.Caption"
+                tools:text="description" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_small"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/item_voucher_admin_active_indicator"
+                    android:layout_width="10dp"
+                    android:layout_height="10dp"
+                    android:layout_gravity="center_vertical"
+                    android:background="@drawable/circle" />
+
+                <TextView
+                    android:id="@+id/item_voucher_admin_status"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_toRightOf="@id/item_customer_admin_avatar"
-                    android:layout_alignParentBottom="true"
-                    android:layout_centerVertical="true"
-                    tools:text="description"
-                    android:textAppearance="@style/Voucherify.TextAppearance.Caption"/>
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="@dimen/margin_small"
+                    android:textAppearance="@style/Voucherify.TextAppearance.Caption"
+                    tools:text="Test" />
 
-            <LinearLayout android:layout_width="match_parent"
-                          android:layout_height="wrap_content"
-                          android:layout_marginTop="@dimen/margin_small"
-                          android:orientation="horizontal">
-
-                <ImageView android:id="@+id/item_voucher_admin_active_indicator"
-                           android:layout_width="10dp"
-                           android:layout_height="10dp"
-                           android:layout_gravity="center_vertical"
-                           android:background="@drawable/circle"/>
+                <ImageView
+                    android:id="@+id/item_voucher_admin_type_image"
+                    android:layout_width="10dp"
+                    android:layout_height="10dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="@dimen/margin_medium"
+                    android:src="@drawable/ic_nav_vouchers" />
 
                 <TextView
-                        android:id="@+id/item_voucher_admin_status"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        tools:text="Test"
-                        android:layout_marginLeft="@dimen/margin_small"
-                        android:layout_gravity="center_vertical"
-                        android:textAppearance="@style/Voucherify.TextAppearance.Caption"/>
-
-                <ImageView android:id="@+id/item_voucher_admin_type_image"
-                           android:layout_width="10dp"
-                           android:layout_height="10dp"
-                           android:layout_gravity="center_vertical"
-                           android:src="@drawable/ic_nav_vouchers"
-                           android:layout_marginLeft="@dimen/margin_medium"/>
-
-                <TextView
-                        android:id="@+id/item_voucher_admin_type_name"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginLeft="@dimen/margin_small"
-                        tools:text="Test"
-                        android:layout_gravity="center_vertical"
-                        android:textAppearance="@style/Voucherify.TextAppearance.Caption"/>
+                    android:id="@+id/item_voucher_admin_type_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="@dimen/margin_small"
+                    android:textAppearance="@style/Voucherify.TextAppearance.Caption"
+                    tools:text="Test" />
 
             </LinearLayout>
 

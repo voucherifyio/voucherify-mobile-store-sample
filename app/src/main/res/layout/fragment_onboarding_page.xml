@@ -1,52 +1,52 @@
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
-             xmlns:tools="http://schemas.android.com/tools"
-             android:layout_width="match_parent"
-             android:layout_height="match_parent"
-             android:padding="@dimen/margin_medium">
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="@dimen/margin_medium">
 
     <FrameLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
 
         <ImageView
-                android:id="@+id/onboarding_section_image"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:adjustViewBounds="true"
-                android:background="@drawable/ic_avatar_circle_24px"
-                android:scaleType="centerInside"/>
+            android:id="@+id/onboarding_section_image"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:adjustViewBounds="true"
+            android:background="@drawable/ic_avatar_circle_24px"
+            android:scaleType="centerInside" />
 
     </FrameLayout>
 
     <LinearLayout
-            android:layout_width="match_parent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:layout_marginLeft="@dimen/margin_xlarge"
+        android:layout_marginRight="@dimen/margin_xlarge"
+        android:orientation="vertical"
+        android:padding="@dimen/margin_medium">
+
+        <TextView
+            android:id="@+id/onboarding_section_headline"
+            style="@style/TextAppearance.AppCompat.Headline"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_gravity="bottom"
-            android:orientation="vertical"
-            android:layout_marginLeft="@dimen/margin_xlarge"
-            android:layout_marginRight="@dimen/margin_xlarge"
-            android:padding="@dimen/margin_medium">
+            android:textColor="@color/voucherify_text_light"
+            android:textSize="@dimen/text_size_header"
+            tools:text="Page One" />
 
         <TextView
-                style="@style/TextAppearance.AppCompat.Headline"
-                android:id="@+id/onboarding_section_headline"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textColor="@color/voucherify_text_light"
-                android:textSize="@dimen/text_size_header"
-                tools:text="Page One"/>
-
-        <TextView
-                style="@style/TextAppearance.AppCompat.Body1"
-                android:id="@+id/onboarding_section_body"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="@dimen/margin_medium"
-                android:gravity="left"
-                android:textSize="@dimen/text_size_medium"
-                tools:text="Add a long description here about your app's important feature."
-                android:textColor="@color/voucherify_text_light"/>
+            android:id="@+id/onboarding_section_body"
+            style="@style/TextAppearance.AppCompat.Body1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_medium"
+            android:gravity="left"
+            android:textColor="@color/voucherify_text_light"
+            android:textSize="@dimen/text_size_medium"
+            tools:text="Add a long description here about your app's important feature." />
 
     </LinearLayout>
 

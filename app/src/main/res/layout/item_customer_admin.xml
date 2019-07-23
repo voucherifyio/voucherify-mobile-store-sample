@@ -1,59 +1,58 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
-        xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:tools="http://schemas.android.com/tools"
-        android:layout_width="match_parent"
-        android:paddingLeft="@dimen/spacing_medium"
-        android:paddingRight="@dimen/spacing_medium"
-        android:background="@color/voucherify_background"
-        android:paddingTop="@dimen/spacing_medium"
-        android:paddingBottom="@dimen/spacing_medium"
-        android:layout_height="wrap_content">
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/voucherify_background"
+    android:paddingLeft="@dimen/spacing_medium"
+    android:paddingTop="@dimen/spacing_medium"
+    android:paddingRight="@dimen/spacing_medium"
+    android:paddingBottom="@dimen/spacing_medium">
 
     <ImageView
-            android:id="@+id/item_customer_admin_avatar"
-            android:layout_width="@dimen/avatar_default_item_width"
-            android:layout_height="@dimen/avatar_default_item_height"
-            android:layout_centerVertical="true"
-            android:src="@drawable/ic_avatar_circle_24px"/>
+        android:id="@+id/item_customer_admin_avatar"
+        android:layout_width="@dimen/avatar_default_item_width"
+        android:layout_height="@dimen/avatar_default_item_height"
+        android:layout_centerVertical="true"
+        android:src="@drawable/ic_avatar_circle_24px" />
 
     <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="@dimen/margin_small"
+        android:layout_toLeftOf="@+id/item_customer_admin_chevron"
+        android:layout_toRightOf="@id/item_customer_admin_avatar"
+        android:gravity="center_vertical"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/item_customer_admin_name"
             android:layout_width="wrap_content"
-            android:layout_toRightOf="@id/item_customer_admin_avatar"
-            android:layout_toLeftOf="@+id/item_customer_admin_chevron"
-            android:orientation="vertical"
-            android:gravity="center_vertical"
+            android:layout_height="wrap_content"
             android:layout_centerVertical="true"
-            android:layout_marginStart="@dimen/margin_small"
-            android:layout_height="wrap_content">
+            android:textAppearance="@style/Voucherify.TextAppearance.Title"
+            android:textStyle="bold"
+            tools:text="TEST" />
 
         <TextView
-                android:id="@+id/item_customer_admin_name"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_centerVertical="true"
-                tools:text="TEST"
-                android:textStyle="bold"
-                android:textAppearance="@style/Voucherify.TextAppearance.Title"/>
-
-        <TextView
-                android:id="@+id/item_customer_admin_email"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_toRightOf="@id/item_customer_admin_avatar"
-                android:layout_alignParentBottom="true"
-                android:layout_centerVertical="true"
-                tools:text="email"
-                android:textAppearance="@style/Voucherify.TextAppearance.Caption"/>
+            android:id="@+id/item_customer_admin_email"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@id/item_customer_admin_avatar"
+            android:textAppearance="@style/Voucherify.TextAppearance.Caption"
+            tools:text="email" />
 
     </LinearLayout>
 
     <ImageView
-            android:id="@+id/item_customer_admin_chevron"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentRight="true"
-            android:layout_centerVertical="true"
-            android:src="@drawable/ic_chevron_right_24px"/>
+        android:id="@+id/item_customer_admin_chevron"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:src="@drawable/ic_chevron_right_24px" />
 
 </RelativeLayout>

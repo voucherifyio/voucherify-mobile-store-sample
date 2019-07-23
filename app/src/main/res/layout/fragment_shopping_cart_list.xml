@@ -1,45 +1,45 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-                                                   xmlns:app="http://schemas.android.com/apk/res-auto"
-                                                   android:orientation="vertical"
-                                                   android:layout_width="match_parent"
-                                                   android:clipToPadding="false"
-                                                   android:background="@color/voucherify_background"
-                                                   android:layout_height="match_parent">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/voucherify_background"
+    android:clipToPadding="false"
+    android:orientation="vertical">
 
     <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/shopping_cart_list"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_margin="0dp"
-            android:padding="0dp"
-            app:layout_constraintBottom_toTopOf="@+id/shopping_cart_list_footer"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"/>
+        android:id="@+id/shopping_cart_list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="0dp"
+        android:padding="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/shopping_cart_list_footer"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <include
-            layout="@layout/item_footer_shopping_cart"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            app:layout_constraintBottom_toTopOf="@+id/shopping_cart_list_checkout_container"
-            android:id="@+id/shopping_cart_list_footer"/>
+        android:id="@+id/shopping_cart_list_footer"
+        layout="@layout/item_footer_shopping_cart"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="@+id/shopping_cart_list_checkout_container" />
 
     <LinearLayout
-            android:id="@+id/shopping_cart_list_checkout_container"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            app:layout_constraintBottom_toBottomOf="parent">
+        android:id="@+id/shopping_cart_list_checkout_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent">
 
         <TextView
-                style="@style/Voucherify.Base.Button.Borderless.Medium"
-                android:id="@+id/shopping_cart_checkout_button"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:minHeight="@dimen/button_touch_target"
-                android:background="@drawable/selectable_view_accent"
-                android:textColor="@color/text_selector_button_light"
-                android:text="@string/shopping_cart_list_checkout_label"/>
+            android:id="@+id/shopping_cart_checkout_button"
+            style="@style/Voucherify.Base.Button.Borderless.Medium"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/selectable_view_accent"
+            android:minHeight="@dimen/button_touch_target"
+            android:text="@string/shopping_cart_list_checkout_label"
+            android:textColor="@color/text_selector_button_light" />
 
     </LinearLayout>
 
