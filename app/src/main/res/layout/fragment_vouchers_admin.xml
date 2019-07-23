@@ -1,50 +1,53 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
-                                                     xmlns:app="http://schemas.android.com/apk/res-auto"
-                                                     android:id="@+id/home_content"
-                                                     android:layout_width="match_parent"
-                                                     android:layout_height="match_parent"
-                                                     android:orientation="vertical">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/home_content"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
 
-    <RelativeLayout android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
 
-        <ImageView android:layout_width="match_parent"
-                   android:layout_height="wrap_content"
-                   android:scaleType="fitXY"
-                   android:id="@+id/vouchers_admin_tabs_background"
-                   android:src="@drawable/vouchers_background"/>
+        <ImageView
+            android:id="@+id/vouchers_admin_tabs_background"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:scaleType="fitXY"
+            android:src="@drawable/vouchers_background" />
 
         <com.google.android.material.tabs.TabLayout
-                android:id="@+id/vouchers_admin_tabs_layout"
-                style="@style/Voucherify.TabLayout"
-                app:tabBackground="@android:color/transparent"
-                app:tabSelectedTextColor="@color/voucherify_text_light"
-                app:tabTextColor="@color/voucherify_white_80"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_alignBottom="@id/vouchers_admin_tabs_background"
-                android:elevation="@dimen/elevation_low"/>
+            android:id="@+id/vouchers_admin_tabs_layout"
+            style="@style/Voucherify.TabLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@id/vouchers_admin_tabs_background"
+            android:elevation="@dimen/elevation_low"
+            app:tabBackground="@android:color/transparent"
+            app:tabSelectedTextColor="@color/voucherify_text_light"
+            app:tabTextColor="@color/voucherify_white_80" />
 
     </RelativeLayout>
 
-    <androidx.constraintlayout.widget.ConstraintLayout android:orientation="vertical"
-                                                       android:layout_width="match_parent"
-                                                       android:paddingTop="130dp"
-                                                       android:clipToPadding="false"
-                                                       android:layout_height="match_parent">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:clipToPadding="false"
+        android:orientation="vertical"
+        android:paddingTop="130dp">
 
         <androidx.viewpager.widget.ViewPager
-                android:id="@+id/vouchers_admin_tabs_pager"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_margin="0dp"
-                android:padding="0dp"
-                android:clipToPadding="false"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_behavior="@string/appbar_scrolling_view_behavior"/>
+            android:id="@+id/vouchers_admin_tabs_pager"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="0dp"
+            android:clipToPadding="false"
+            android:padding="0dp"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

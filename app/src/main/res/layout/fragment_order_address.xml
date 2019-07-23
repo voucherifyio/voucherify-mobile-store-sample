@@ -1,145 +1,151 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
-                                       android:orientation="vertical"
-                                       android:layout_width="match_parent"
-                                       android:fillViewport="true"
-                                       android:background="@color/voucherify_background"
-                                       android:layout_height="match_parent">
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/voucherify_background"
+    android:fillViewport="true"
+    android:orientation="vertical">
 
-    <RelativeLayout android:layout_width="match_parent"
-                    android:layout_height="match_parent">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
 
-        <LinearLayout android:orientation="vertical"
-                      android:layout_width="match_parent"
-                      android:layout_height="match_parent"
-                      android:padding="@dimen/spacing_medium">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:padding="@dimen/spacing_medium">
 
-            <TextView style="@style/Voucherify.TextAppearance.Title"
-                      android:layout_width="match_parent"
-                      android:layout_height="wrap_content"
-                      android:textAllCaps="false"
-                      android:textStyle="bold"
-                      android:textColor="@color/voucherify_text_primary_grey"
-                      android:text="@string/order_address_header"/>
+            <TextView
+                style="@style/Voucherify.TextAppearance.Title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/order_address_header"
+                android:textAllCaps="false"
+                android:textColor="@color/voucherify_text_primary_grey"
+                android:textStyle="bold" />
 
             <com.google.android.material.textfield.TextInputLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="@dimen/margin_medium">
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_medium">
 
                 <com.google.android.material.textfield.TextInputEditText
-                        android:id="@+id/name_order_details_et"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:hint="@string/order_address_name_hint"/>
+                    android:id="@+id/name_order_details_et"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/order_address_name_hint" />
 
             </com.google.android.material.textfield.TextInputLayout>
 
             <com.google.android.material.textfield.TextInputLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="@dimen/margin_small">
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_small">
 
                 <com.google.android.material.textfield.TextInputEditText
-                        android:id="@+id/surname_order_details_et"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:hint="@string/order_address_surname_hint"/>
+                    android:id="@+id/surname_order_details_et"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/order_address_surname_hint" />
 
             </com.google.android.material.textfield.TextInputLayout>
 
             <com.google.android.material.textfield.TextInputLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="@dimen/margin_small">
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_small">
 
                 <com.google.android.material.textfield.TextInputEditText
-                        android:id="@+id/city_order_details_et"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:hint="@string/order_address_city_hint"/>
+                    android:id="@+id/city_order_details_et"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/order_address_city_hint" />
 
             </com.google.android.material.textfield.TextInputLayout>
 
             <com.google.android.material.textfield.TextInputLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="@dimen/margin_small">
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_small">
 
                 <com.google.android.material.textfield.TextInputEditText
-                        android:id="@+id/zip_code_order_details_et"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:inputType="number"
-                        android:hint="@string/order_address_zip_code_hint"/>
+                    android:id="@+id/zip_code_order_details_et"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/order_address_zip_code_hint"
+                    android:inputType="number" />
 
             </com.google.android.material.textfield.TextInputLayout>
 
             <com.google.android.material.textfield.TextInputLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="@dimen/margin_small">
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_small">
 
                 <com.google.android.material.textfield.TextInputEditText
-                        android:id="@+id/street_and_number_order_details_et"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:hint="@string/order_address_street_hint"/>
+                    android:id="@+id/street_and_number_order_details_et"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/order_address_street_hint" />
 
             </com.google.android.material.textfield.TextInputLayout>
 
-            <TextView style="@style/Voucherify.TextAppearance.Title"
-                      android:layout_marginTop="@dimen/spacing_medium"
-                      android:layout_width="match_parent"
-                      android:layout_height="wrap_content"
-                      android:textAllCaps="false"
-                      android:textStyle="bold"
-                      android:textColor="@color/voucherify_text_primary_grey"
-                      android:text="@string/order_contact_header"/>
+            <TextView
+                style="@style/Voucherify.TextAppearance.Title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/spacing_medium"
+                android:text="@string/order_contact_header"
+                android:textAllCaps="false"
+                android:textColor="@color/voucherify_text_primary_grey"
+                android:textStyle="bold" />
 
             <com.google.android.material.textfield.TextInputLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="@dimen/margin_medium">
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_medium">
 
                 <com.google.android.material.textfield.TextInputEditText
-                        android:id="@+id/email_order_details_et"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:inputType="textEmailAddress"
-                        android:hint="@string/order_address_email_hint"/>
+                    android:id="@+id/email_order_details_et"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/order_address_email_hint"
+                    android:inputType="textEmailAddress" />
             </com.google.android.material.textfield.TextInputLayout>
 
 
             <com.google.android.material.textfield.TextInputLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="@dimen/margin_small">
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_small">
 
                 <com.google.android.material.textfield.TextInputEditText
-                        android:id="@+id/phone_order_details_et"
-                        android:layout_width="match_parent"
-                        android:inputType="phone"
-                        android:layout_height="wrap_content"
-                        android:hint="@string/order_address_phone_hint"/>
+                    android:id="@+id/phone_order_details_et"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/order_address_phone_hint"
+                    android:inputType="phone" />
             </com.google.android.material.textfield.TextInputLayout>
 
         </LinearLayout>
 
-        <LinearLayout android:layout_width="match_parent"
-                      android:layout_height="wrap_content"
-                      android:orientation="vertical"
-                      android:layout_marginTop="@dimen/margin_large"
-                      android:layout_alignParentBottom="true">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginTop="@dimen/margin_large"
+            android:orientation="vertical">
 
-            <TextView style="@style/Voucherify.Base.Button.Borderless.Medium"
-                      android:id="@+id/payment_details_order_address_button"
-                      android:layout_width="match_parent"
-                      android:layout_height="wrap_content"
-                      android:minHeight="@dimen/button_touch_target"
-                      android:background="@drawable/selectable_view_accent"
-                      android:textColor="@color/text_selector_button_light"
-                      android:text="@string/order_address_payment_details_label"/>
+            <TextView
+                android:id="@+id/payment_details_order_address_button"
+                style="@style/Voucherify.Base.Button.Borderless.Medium"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/selectable_view_accent"
+                android:minHeight="@dimen/button_touch_target"
+                android:text="@string/order_address_payment_details_label"
+                android:textColor="@color/text_selector_button_light" />
         </LinearLayout>
 
     </RelativeLayout>

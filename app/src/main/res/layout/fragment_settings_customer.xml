@@ -1,67 +1,67 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
-                                       xmlns:tools="http://schemas.android.com/tools"
-                                       android:orientation="vertical"
-                                       android:background="@color/voucherify_background"
-                                       android:layout_width="match_parent"
-                                       android:layout_height="match_parent">
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/voucherify_background"
+    android:orientation="vertical">
 
     <LinearLayout
-            android:layout_width="match_parent"
-            android:orientation="vertical"
-            android:layout_height="match_parent">
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
 
         <TextView
-                style="@style/Voucherify.Base.Settings.TextAppearance.Section"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="@dimen/margin_large"
-                android:text="@string/settings_switch_general_section_label"/>
+            style="@style/Voucherify.Base.Settings.TextAppearance.Section"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_large"
+            android:text="@string/settings_switch_general_section_label" />
 
         <RelativeLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:id="@+id/settings_customer_change_to_admin_item_container"
-                style="@style/Voucherify.List.Item"
-                android:background="@drawable/selectable_view_default"
-                android:orientation="horizontal">
+            android:id="@+id/settings_customer_change_to_admin_item_container"
+            style="@style/Voucherify.List.Item"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/selectable_view_default"
+            android:orientation="horizontal">
 
             <ImageView
-                    android:id="@+id/settings_admin_profile_image"
-                    android:layout_width="24dp"
-                    android:layout_height="24dp"
-                    android:src="@drawable/ic_account"/>
+                android:id="@+id/settings_admin_profile_image"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/ic_account" />
 
             <TextView
-                    style="@style/Voucherify.Base.Settings.TextAppearance.Header"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_centerVertical="true"
-                    android:textColor="@color/text_selector_primary"
-                    android:layout_toRightOf="@id/settings_admin_profile_image"
-                    android:layout_marginLeft="@dimen/margin_medium"
-                    android:text="@string/settings_customer_switch_admin_label"/>
+                style="@style/Voucherify.Base.Settings.TextAppearance.Header"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/margin_medium"
+                android:layout_toRightOf="@id/settings_admin_profile_image"
+                android:text="@string/settings_customer_switch_admin_label"
+                android:textColor="@color/text_selector_primary" />
 
             <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignParentRight="true"
-                    android:layout_centerVertical="true"
-                    android:src="@drawable/ic_chevron_right_24px"/>
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/ic_chevron_right_24px" />
 
         </RelativeLayout>
 
         <TextView
-                android:id="@+id/settings_customer_app_version"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:gravity="center_horizontal"
-                android:paddingBottom="@dimen/spacing_medium"
-                android:paddingTop="@dimen/spacing_medium"
-                android:layout_alignParentBottom="true"
-                android:textColor="@color/voucherify_text_secondary"
-                android:textSize="@dimen/text_size_small"
-                tools:text="Version 1.0.0(1234)"/>
+            android:id="@+id/settings_customer_app_version"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:gravity="center_horizontal"
+            android:paddingTop="@dimen/spacing_medium"
+            android:paddingBottom="@dimen/spacing_medium"
+            android:textColor="@color/voucherify_text_secondary"
+            android:textSize="@dimen/text_size_small"
+            tools:text="Version 1.0.0(1234)" />
 
     </LinearLayout>
 
