@@ -3,11 +3,14 @@ package io.voucherify.android.sample.store.ui.customer.order.payment
 import android.app.Activity
 import android.os.Bundle
 import android.view.View
+import androidx.lifecycle.Observer
 import io.voucherify.android.sample.store.R
+import io.voucherify.android.sample.store.data.local.model.LocalUser
 import io.voucherify.android.sample.store.ui.base.BaseFragment
 import io.voucherify.android.sample.store.ui.customer.order.OrderViewDelegate
 import io.voucherify.android.sample.store.ui.flow.Navigator
 import kotlinx.android.synthetic.main.fragment_payment_details.*
+import kotlinx.android.synthetic.main.view_credit_card_front.*
 import javax.inject.Inject
 
 class OrderPaymentDetailsFragment : BaseFragment() {
@@ -21,7 +24,14 @@ class OrderPaymentDetailsFragment : BaseFragment() {
     @Inject
     lateinit var navigator: Navigator
 
+    @Inject
+    lateinit var viewModel: OrderPaymentDetailsViewModel
+
     private var parentViewDelegate: OrderViewDelegate? = null
+
+    private val localUserDataObserver = Observer<LocalUser> { user ->
+        front_card_holder_name.text = "${user.firstName} ${user.lastName}"
+    }
 
     override fun fragmentLayoutId(): Int = R.layout.fragment_payment_details
 
@@ -35,6 +45,12 @@ class OrderPaymentDetailsFragment : BaseFragment() {
         super.onViewCreated(view, savedInstanceState)
 
         setViews()
+        setBindings()
+    }
+
+    private fun setBindings() {
+        viewModel.outputLocalUser()
+                .observe(this, localUserDataObserver)
     }
 
     override fun onResume() {

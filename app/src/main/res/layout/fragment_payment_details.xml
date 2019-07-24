@@ -2,136 +2,70 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/voucherify_background"
-    android:padding="@dimen/spacing_medium">
+    android:background="@color/voucherify_background">
+
+    <include layout="@layout/view_credit_card_front" />
 
     <RelativeLayout
-        android:layout_width="wrap_content"
-        android:layout_height="180dp"
-        android:layout_centerHorizontal="true"
+        android:id="@+id/payment_details_card_details_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/payment_details_card_container"
         android:layout_marginLeft="@dimen/margin_medium"
-        android:layout_marginTop="@dimen/margin_xlarge"
+        android:layout_marginTop="@dimen/margin_large"
         android:layout_marginRight="@dimen/margin_medium"
-        android:background="@color/voucherify_text_accent">
-
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="250dp"
-            android:layout_marginTop="60dp"
-            android:orientation="vertical">
-
-            <TextView
-                android:id="@+id/front_card_cvv"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:hint="@string/credit_card_cvv_front_hint"
-                android:maxWidth="60dp"
-                android:minWidth="60dp"
-                android:paddingTop="@dimen/spacing_small"
-                android:paddingBottom="@dimen/spacing_small"
-                android:shadowColor="@color/text_shadow"
-                android:shadowDx="1"
-                android:shadowDy="1"
-                android:shadowRadius="2"
-                android:textColor="@android:color/white"
-                android:textColorHint="@color/voucherify_text_semi_white"
-                android:visibility="gone" />
-
-        </LinearLayout>
+        android:paddingTop="@dimen/spacing_small"
+        android:paddingBottom="@dimen/spacing_small">
 
         <TextView
-            android:id="@+id/front_card_number"
+            android:id="@+id/payment_details_card_label"
+            style="@style/Voucherify.TextAppearance.Normal"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerVertical="true"
-            android:layout_marginLeft="50dp"
-            android:hint="@string/credit_card_number_front_hint"
-            android:shadowColor="@color/text_shadow"
-            android:shadowDx="1"
-            android:shadowDy="1"
-            android:shadowRadius="2"
-            android:textColor="@android:color/white"
-            android:textColorHint="@color/voucherify_text_semi_white"
-            android:textSize="@dimen/text_size_normal" />
+            android:text="@string/payment_details_credit_card_label"
+            android:textSize="@dimen/text_size_medium" />
 
-        <LinearLayout
+        <TextView
+            style="@style/Voucherify.TextAppearance.Normal"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="120dp"
-            android:orientation="horizontal">
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@+id/payment_details_chevron"
+            android:layout_toRightOf="@id/payment_details_card_label"
+            android:gravity="center_horizontal"
+            android:text="@string/credit_card_number_hint"
+            android:textSize="@dimen/text_size_medium" />
 
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="18dp"
-                android:orientation="vertical">
-
-                <TextView
-                    android:id="@+id/card_name_label"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/credit_card_holder_front_hint"
-                    android:textColor="@android:color/darker_gray"
-                    android:textColorHint="@color/voucherify_text_semi_white"
-                    android:textSize="9sp" />
-
-                <TextView
-                    android:id="@+id/front_card_holder_name"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:hint="@string/credit_card_holder_sample_front_label"
-                    android:maxWidth="150dp"
-                    android:minWidth="150dp"
-                    android:paddingTop="@dimen/spacing_small"
-                    android:paddingBottom="@dimen/spacing_small"
-                    android:shadowColor="@color/text_shadow"
-                    android:shadowDx="1"
-                    android:shadowDy="1"
-                    android:shadowRadius="2"
-                    android:textColor="@android:color/white"
-                    android:textColorHint="@color/voucherify_text_semi_white" />
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="18dp"
-                android:orientation="vertical">
-
-                <TextView
-                    android:id="@+id/card_expiry_label"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/credit_card_expire_date_front_hint"
-                    android:textColor="@android:color/darker_gray"
-                    android:textColorHint="@color/voucherify_text_semi_white"
-                    android:textSize="9sp" />
-
-                <TextView
-                    android:id="@+id/front_card_expiry"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:hint="@string/credit_card_expire_date_mm_yy_format_front_hint"
-                    android:maxWidth="150dp"
-                    android:minWidth="150dp"
-                    android:paddingTop="@dimen/spacing_small"
-                    android:paddingBottom="@dimen/spacing_small"
-                    android:shadowColor="@color/text_shadow"
-                    android:shadowDx="1"
-                    android:shadowDy="1"
-                    android:shadowRadius="2"
-                    android:textColor="@android:color/white"
-                    android:textColorHint="@color/voucherify_text_semi_white" />
-            </LinearLayout>
-
-        </LinearLayout>
+        <ImageView
+            android:id="@+id/payment_details_chevron"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/ic_chevron_right_24px" />
 
     </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@id/payment_details_card_details_container"
+        android:layout_marginTop="@dimen/margin_small"
+        android:background="@color/voucherify_grey_light" />
+
+    <TextView
+        style="@style/Voucherify.TextAppearance.Caption"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/payment_details_card_details_container"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/margin_xlarge"
+        android:drawableLeft="@drawable/ic_add"
+        android:drawablePadding="@dimen/spacing_small"
+        android:gravity="center"
+        android:text="@string/payment_details_credit_add_payment_option_label"
+        android:textSize="@dimen/text_size_xmedium" />
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -145,8 +79,10 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@drawable/selectable_view_accent"
+            android:minHeight="@dimen/button_touch_target"
             android:text="@string/payment_details_summary_label"
             android:textColor="@color/text_selector_button_light" />
+
     </LinearLayout>
 
 </RelativeLayout>
