@@ -130,13 +130,16 @@
 
     <!-- Payment details -->
     <string name="payment_details_summary_label">Summary</string>
+    <string name="payment_details_credit_card_label">Credit card</string>
+    <string name="payment_details_credit_add_payment_option_label">Add payment option</string>
 
     <!-- Credit card -->
     <string name="credit_card_cvv_front_hint">0000</string>
-    <string name="credit_card_number_front_hint">XXXX XXXX XXXX XXXX</string>
-    <string name="credit_card_holder_front_hint">CARD HOLDER</string>
+    <string name="credit_card_number_front_hint">XXXX XXXX XXXX 6789</string>
+    <string name="credit_card_number_hint">**** **** **** 6789</string>
+    <string name="credit_card_holder_front_hint">Card holder</string>
     <string name="credit_card_holder_sample_front_label">Joe Don</string>
-    <string name="credit_card_expire_date_front_hint">CARD EXPIRY</string>
-    <string name="credit_card_expire_date_mm_yy_format_front_hint">MM/YY</string>
+    <string name="credit_card_expire_date_front_hint">Expiry date</string>
+    <string name="credit_card_expire_date_mm_yy_format_front_hint">12/20</string>
 
 </resources>
