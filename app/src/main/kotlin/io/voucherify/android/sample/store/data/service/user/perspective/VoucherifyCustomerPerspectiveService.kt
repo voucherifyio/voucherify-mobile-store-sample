@@ -6,7 +6,22 @@ import io.voucherify.android.sample.store.data.local.persistence.LocalPersistenc
 class VoucherifyCustomerPerspectiveService(private val customersLocalPersistence: LocalPersistence<LocalCustomer>) :
     CustomerPerspectiveService {
 
+    override fun update(customer: LocalCustomer) {
+
+        val allExistingLocalCustomers = customersLocalPersistence
+            .loadAll()
+            .toMutableList()
+
+        val customerIndex = allExistingLocalCustomers.indexOfFirst { it.id == customer.id }
+        allExistingLocalCustomers.removeAt(customerIndex)
+
+        allExistingLocalCustomers.add(customerIndex, customer)
+
+        customersLocalPersistence.save(allExistingLocalCustomers)
+    }
+
     override fun switchTo(customer: LocalCustomer?) {
+
         val allExistingLocalCustomers = customersLocalPersistence
             .loadAll()
             .toMutableList()

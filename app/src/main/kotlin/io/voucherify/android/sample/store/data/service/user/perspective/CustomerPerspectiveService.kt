@@ -6,6 +6,8 @@ interface CustomerPerspectiveService {
 
     fun switchTo(customer: LocalCustomer?)
 
+    fun update(customer: LocalCustomer)
+
     fun activeCustomer(): LocalCustomer?
 
 }
