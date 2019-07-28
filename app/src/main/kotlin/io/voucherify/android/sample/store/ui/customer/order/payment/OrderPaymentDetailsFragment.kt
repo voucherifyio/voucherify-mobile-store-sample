@@ -5,7 +5,7 @@ import android.os.Bundle
 import android.view.View
 import androidx.lifecycle.Observer
 import io.voucherify.android.sample.store.R
-import io.voucherify.android.sample.store.data.local.model.LocalUser
+import io.voucherify.android.sample.store.data.local.model.LocalCustomer
 import io.voucherify.android.sample.store.ui.base.BaseFragment
 import io.voucherify.android.sample.store.ui.customer.order.OrderViewDelegate
 import io.voucherify.android.sample.store.ui.flow.Navigator
@@ -29,8 +29,8 @@ class OrderPaymentDetailsFragment : BaseFragment() {
 
     private var parentViewDelegate: OrderViewDelegate? = null
 
-    private val localUserDataObserver = Observer<LocalUser> { user ->
-        front_card_holder_name.text = "${user.firstName} ${user.lastName}"
+    private val localUserDataObserver = Observer<LocalCustomer> { customer ->
+        front_card_holder_name.text = "${customer.name ?: ""}"
     }
 
     override fun fragmentLayoutId(): Int = R.layout.fragment_payment_details
@@ -49,7 +49,7 @@ class OrderPaymentDetailsFragment : BaseFragment() {
     }
 
     private fun setBindings() {
-        viewModel.outputLocalUser()
+        viewModel.outputCustomerData()
                 .observe(this, localUserDataObserver)
     }
 

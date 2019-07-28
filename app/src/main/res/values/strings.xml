@@ -105,8 +105,7 @@
     <!-- Order address -->
     <string name="order_address_header">Address details</string>
     <string name="order_contact_header">Contact</string>
-    <string name="order_address_name_hint">Name</string>
-    <string name="order_address_surname_hint">Surname</string>
+    <string name="order_address_name_hint">Name and surname</string>
     <string name="order_address_city_hint">City</string>
     <string name="order_address_street_hint">Street and number</string>
     <string name="order_address_zip_code_hint">ZIP Code</string>
@@ -122,6 +121,8 @@
     <string name="order_details_voucher_hint">Voucher code</string>
     <string name="order_details_voucher_apply_label">Apply</string>
     <string name="order_details_buy_label">Buy</string>
+    <string name="order_details_payment_method_credit_card_type_label">Credit card</string>
+    <string name="order_details_payment_method_credit_card_number_hint">**** **** **** 6789</string>
 
     <!-- Order summary -->
     <string name="order_summary_header">Thank you!</string>

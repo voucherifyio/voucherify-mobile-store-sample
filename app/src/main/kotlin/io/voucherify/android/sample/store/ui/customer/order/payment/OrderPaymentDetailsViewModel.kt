@@ -2,18 +2,21 @@ package io.voucherify.android.sample.store.ui.customer.order.payment
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
-import io.voucherify.android.sample.store.data.local.model.LocalUser
-import io.voucherify.android.sample.store.data.service.user.UserService
+import io.voucherify.android.sample.store.data.local.model.LocalCustomer
+import io.voucherify.android.sample.store.data.service.user.perspective.CustomerPerspectiveService
 import io.voucherify.android.sample.store.ui.base.BaseViewModel
 
-class OrderPaymentDetailsViewModel(private val userService: UserService) : BaseViewModel() {
+class OrderPaymentDetailsViewModel(private val customerPerspectiveService: CustomerPerspectiveService) :
+    BaseViewModel() {
 
-    private var localUserLiveData: MutableLiveData<LocalUser> = MutableLiveData()
+    private var customerLiveData: MutableLiveData<LocalCustomer> = MutableLiveData()
 
-    fun outputLocalUser(): LiveData<LocalUser> {
+    fun outputCustomerData(): LiveData<LocalCustomer> {
 
-        localUserLiveData.value = userService.getCurrentUser()
+        customerPerspectiveService.activeCustomer()?.let {
+            customerLiveData.value = it
+        }
 
-        return localUserLiveData
+        return customerLiveData
     }
 }

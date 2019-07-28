@@ -51,17 +51,12 @@
         <item name="android:textColor">@color/text_selector_button_accent</item>
     </style>
 
-    <style name="Voucherify.TextAppearance.Button.Green">
-        <item name="android:textColor">@color/text_selector_button_light</item>
-    </style>
-
     <!-- Settings -->
     <style name="Voucherify.Base.Settings.TextAppearance" />
 
     <style name="Voucherify.Base.Settings.TextAppearance.Section">
         <item name="android:textSize">@dimen/text_size_medium</item>
         <item name="android:textColor">@color/voucherify_text_primary_grey</item>
-        <item name="android:textStyle">normal</item>
         <item name="android:paddingLeft">@dimen/spacing_medium</item>
         <item name="android:paddingRight">@dimen/spacing_medium</item>
         <item name="android:paddingTop">@dimen/spacing_small</item>
